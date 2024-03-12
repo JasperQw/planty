@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:planty/components/common/avatar.dart';
 import 'package:planty/utilities/color.dart';
 
 class PostTitleContent extends StatefulWidget {

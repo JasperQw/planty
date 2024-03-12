@@ -1,5 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:planty/components/community/post_details/post_carousel.dart';
 import 'package:planty/components/community/post_details/post_comment_input_field.dart';
