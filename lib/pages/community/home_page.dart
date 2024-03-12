@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:planty/components/community/home_caoursel.dart';
+import 'package:planty/components/community/home/collection_masked_image.dart';
+import 'package:planty/components/community/home/community_post.dart';
+import 'package:planty/components/community/home/home_caoursel.dart';
+import 'package:planty/components/community/home/marketplace_button.dart';
+import 'package:planty/components/community/home/post_thought.dart';
+import 'package:planty/components/community/home/search_bar.dart';
 import 'package:planty/utilities/color.dart';
 
 class CommunityHome extends StatefulWidget {
@@ -15,105 +20,86 @@ class _CommunityHomeState extends State<CommunityHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(children: [
-          Expanded(
+        child: Column(
+          children: [
+            Expanded(
               child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Container(
-                  height: 48,
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 16,
-                  ),
-                  child: TextField(
-                    style: const TextStyle(
-                      color: black,
-                      fontSize: 16,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const CustomSearchBar(),
+                    const SizedBox(
+                      height: 24,
                     ),
-                    onTapOutside: (event) {
-                      FocusScope.of(context).requestFocus(
-                        FocusNode(),
-                      );
-                    },
-                    keyboardType: TextInputType.text,
-                    cursorColor: focusGrey,
-                    decoration: InputDecoration(
-                      contentPadding: const EdgeInsets.symmetric(
-                        horizontal: 12,
-                        vertical: 8,
-                      ),
-                      hintText: "Seach",
-                      hintStyle: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w700,
-                          color: focusGrey),
-                      prefixIcon: const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 16),
-                        child: Icon(
-                          Icons.search,
-                          size: 24,
-                          color: focusGrey,
-                        ),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(80),
-                        borderSide: const BorderSide(
-                          color: borderGrey,
-                          width: 2,
-                        ),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(80),
-                        borderSide: const BorderSide(
-                          color: focusGrey,
-                          width: 2,
-                        ),
+                    const HomePageCarousel(),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const Text(
+                            "Community",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.w600,
+                              color: black,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 12,
+                          ),
+                          SvgPicture.asset(
+                            "assets/images/community_title_logo.svg",
+                            width: 35,
+                            height: 28,
+                          )
+                        ],
                       ),
                     ),
-                    // margin: const EdgeInsets.all(28),
-                    // height: 60,
-                    // width: double.infinity,
-                    // decoration: BoxDecoration(
-                    //   border: Border.all(color: borderGrey),
-                    //   borderRadius: BorderRadius.circular(
-                    //     80,
-                    //   ),
-                    // ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 24,
-                ),
-                const HomePageCarousel(),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      const Text(
-                        "Community",
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    const MarketplaceBtn(),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    const MaskedImageCollection(),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 16),
+                      child: Text(
+                        "Post your thoughts",
                         textAlign: TextAlign.left,
                         style: TextStyle(
                           fontSize: 30,
-                          fontWeight: FontWeight.w700,
+                          fontWeight: FontWeight.w600,
                           color: black,
                         ),
                       ),
-                      const SizedBox(
-                        width: 12,
-                      ),
-                      SvgPicture.asset(
-                        "assets/images/community_title_logo.svg",
-                        width: 35,
-                        height: 28,
-                      )
-                    ],
-                  ),
-                )
-              ],
-            ),
-          ))
-        ]),
+                    ),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    const PostThought(),
+                    const SizedBox(
+                      height: 32,
+                    ),
+                    const CommunityPost(),
+                    const SizedBox(
+                      height: 32,
+                    ),
+                  ],
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
