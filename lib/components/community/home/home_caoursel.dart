@@ -28,7 +28,7 @@ class _HomePageCarouselState extends State<HomePageCarousel> {
       children: [
         CarouselSlider(
           options: CarouselOptions(
-            height: 160.0,
+            height: MediaQuery.of(context).size.width * 0.3,
             autoPlay: true,
             initialPage: 1,
             onPageChanged: (index, reason) {

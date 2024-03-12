@@ -6,3 +6,5 @@ const background = Color(0xFFFFFFFF);
 const borderGrey = Color(0xFFEBEBEB);
 const focusGrey = Color(0xFF999999);
 const greenless = Color.fromRGBO(64, 184, 7, 0.05);
+const selectedGreen = Color(0xFF34E590);
+const unselectedGrey = Color(0xFF8E8E93);
