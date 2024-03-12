@@ -12,7 +12,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const CommunityDetails());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
