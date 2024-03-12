@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:planty/components/community/post_details/post_carousel.dart';
 import 'package:planty/components/community/post_details/post_comment_input_field.dart';
 import 'package:planty/components/community/post_details/post_details_appbar.dart';
+import 'package:planty/components/community/post_details/post_history_comment.dart';
 import 'package:planty/components/community/post_details/post_title_content.dart';
 import 'package:planty/utilities/color.dart';
 
@@ -42,8 +43,11 @@ class _PostDetailsState extends State<PostDetails> {
                     ),
                     PostCommentInputField(),
                     SizedBox(
-                      height: 120,
+                      height: 32,
                     ),
+                    PostHistoryComment(),
+                    PostHistoryComment(),
+                    PostHistoryComment(),
                   ],
                 ),
               ),
