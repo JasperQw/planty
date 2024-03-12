@@ -19,7 +19,14 @@ class _PostDetailsAppBarState extends State<PostDetailsAppBar> {
       child: AppBar(
         scrolledUnderElevation: 0,
         leadingWidth: 30,
-        leading: const Icon(Icons.arrow_back_ios_new_sharp),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.of(context, rootNavigator: true).pop();
+          },
+          child: const Icon(
+            Icons.arrow_back_ios_new_sharp,
+          ),
+        ),
         title: Container(
           height: 80,
           alignment: Alignment.centerLeft,
