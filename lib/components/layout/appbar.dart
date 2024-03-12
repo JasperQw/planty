@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:planty/components/common/avatar.dart';
 import 'package:planty/utilities/color.dart';
 
 class AppBarLayout extends StatelessWidget {
@@ -55,22 +56,11 @@ class AppBarLayout extends StatelessWidget {
           const SizedBox(
             width: 16,
           ),
-          Container(
-            width: 64,
-            height: 64,
-            clipBehavior: Clip.hardEdge,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-            ),
-            child: CircleAvatar(
-              child: Image.network(
+          const Avatar(
+            image:
                 "https://st3.depositphotos.com/2024219/31793/i/450/depositphotos_317939792-stock-photo-young-woman-isolated-yellow-background.jpg",
-                width: 64,
-                height: 64,
-                fit: BoxFit.cover,
-              ),
-            ),
-          )
+            size: 64,
+          ),
         ],
       ),
     );

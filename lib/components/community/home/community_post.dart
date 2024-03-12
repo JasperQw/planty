@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planty/components/common/avatar.dart';
 import 'package:planty/components/community/home/icon_prefix_button.dart';
 import 'package:planty/utilities/color.dart';
 
@@ -32,30 +33,18 @@ class _CommunityPostState extends State<CommunityPost> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
+          const Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
-                clipBehavior: Clip.hardEdge,
-                width: 64,
-                height: 64,
-                decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                ),
-                child: CircleAvatar(
-                  backgroundColor: Colors.transparent,
-                  child: Image.network(
+              Avatar(
+                image:
                     "https://www.shutterstock.com/image-photo/confident-caucasian-young-man-casual-600nw-2141122925.jpg",
-                    width: 64,
-                    height: 64,
-                    fit: BoxFit.cover,
-                  ),
-                ),
+                size: 64,
               ),
-              const SizedBox(
+              SizedBox(
                 width: 24,
               ),
-              const Column(
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
@@ -109,15 +98,15 @@ class _CommunityPostState extends State<CommunityPost> {
             children: [
               IconPrefixButton(
                 icon: Icons.thumb_up_outlined,
-                title: "12312",
+                title: "12,312",
                 color: black,
-                size: 32,
+                size: 24,
               ),
               IconPrefixButton(
                 icon: Icons.chat_bubble_outline,
-                title: "12312",
+                title: "12,312",
                 color: black,
-                size: 32,
+                size: 24,
               ),
             ],
           )

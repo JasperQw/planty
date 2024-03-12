@@ -8,3 +8,5 @@ const focusGrey = Color(0xFF999999);
 const greenless = Color.fromRGBO(64, 184, 7, 0.05);
 const selectedGreen = Color(0xFF34E590);
 const unselectedGrey = Color(0xFF8E8E93);
+const red = Color(0xFFF05193);
+const secondaryTextColor = Color(0xFF5C5C5F);
