@@ -86,7 +86,23 @@ class _CommunityHomeState extends State<CommunityHome> {
                 ),
                 const PostThought(),
                 const SizedBox(
-                  height: 32,
+                  height: 16,
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(
+                    left: 16.0,
+                  ),
+                  child: Text(
+                    "Latest",
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                      color: focusGrey,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 16,
                 ),
                 const CommunityPost(),
                 const SizedBox(
