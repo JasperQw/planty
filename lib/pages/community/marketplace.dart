@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:planty/components/common/general_appbar.dart';
 import 'package:planty/components/common/image_prefix_button.dart';
+import 'package:planty/components/common/title.dart';
 import 'package:planty/components/community/marketplace/intro_card.dart';
 import 'package:planty/components/community/marketplace/marketplace_searchbar.dart';
 import 'package:planty/components/community/marketplace/selling_item.dart';
+import 'package:planty/pages/community/marketplace_item_details.dart';
 import 'package:planty/utilities/color.dart';
 
 class Marketplace extends StatefulWidget {
@@ -55,17 +57,9 @@ class _MarketplaceState extends State<Marketplace> {
                     const SizedBox(
                       height: 16,
                     ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16),
-                      child: Text(
-                        "Choose Item",
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.w600,
-                          color: black,
-                        ),
-                      ),
+                    const TitleWidget(
+                      title: "Choose Item",
+                      fontSize: 30,
                     ),
                     const SizedBox(
                       height: 16,
@@ -132,15 +126,51 @@ class _MarketplaceState extends State<Marketplace> {
                       margin: const EdgeInsets.all(
                         16,
                       ),
-                      child: const Wrap(
+                      child: Wrap(
                         runSpacing: 36,
                         spacing: 36,
                         alignment: WrapAlignment.spaceBetween,
                         children: [
-                          SellingItem(),
-                          SellingItem(),
-                          SellingItem(),
-                          SellingItem(),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => const ItemDetails(),
+                                ),
+                              );
+                            },
+                            child: const SellingItem(),
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => const ItemDetails(),
+                                ),
+                              );
+                            },
+                            child: const SellingItem(),
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => const ItemDetails(),
+                                ),
+                              );
+                            },
+                            child: const SellingItem(),
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => const ItemDetails(),
+                                ),
+                              );
+                            },
+                            child: const SellingItem(),
+                          ),
                         ],
                       ),
                     ),
