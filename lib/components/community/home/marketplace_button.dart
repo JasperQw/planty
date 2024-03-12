@@ -51,16 +51,16 @@ class _MarketplaceBtnState extends State<MarketplaceBtn> {
                 Text(
                   "Marketplace",
                   style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                  ),
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white),
                 ),
                 Text(
                   "Get 2nd Hand Items and Giveaways Now",
                   style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500,
-                  ),
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white),
                 )
               ],
             ),

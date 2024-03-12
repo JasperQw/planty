@@ -35,9 +35,14 @@ class _CustomSearchBarState extends State<CustomSearchBar> {
           ),
           hintText: "Seach",
           hintStyle: const TextStyle(
-              fontSize: 16, fontWeight: FontWeight.w600, color: focusGrey),
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+            color: focusGrey,
+          ),
           prefixIcon: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
+            padding: EdgeInsets.symmetric(
+              horizontal: 16,
+            ),
             child: Icon(
               Icons.search,
               size: 24,
@@ -48,14 +53,14 @@ class _CustomSearchBarState extends State<CustomSearchBar> {
             borderRadius: BorderRadius.circular(80),
             borderSide: const BorderSide(
               color: borderGrey,
-              width: 2,
+              width: 1,
             ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(80),
             borderSide: const BorderSide(
               color: focusGrey,
-              width: 2,
+              width: 1,
             ),
           ),
         ),

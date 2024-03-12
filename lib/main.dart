@@ -1,5 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:planty/components/layout/appbar.dart';
 import 'package:planty/firebase_options.dart';
 import 'package:planty/pages/community/home_page.dart';
 import 'package:planty/utilities/color.dart';
@@ -21,8 +23,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Planty',
-      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: background),
-      home: const CommunityHome(),
+      theme: ThemeData.light().copyWith(scaffoldBackgroundColor: background),
+      home: const Scaffold(
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(
+            80,
+          ),
+          child: AppBarLayout(),
+        ),
+        body: CommunityHome(),
+      ),
     );
   }
 }

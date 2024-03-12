@@ -36,9 +36,9 @@ class _MaskedImageState extends State<MaskedImage> {
             child: Text(
               widget.title,
               style: const TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w600,
-              ),
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white),
             ),
           )
         ],
