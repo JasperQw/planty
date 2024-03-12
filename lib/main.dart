@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:planty/components/layout/appbar.dart';
 import 'package:planty/firebase_options.dart';
+import 'package:planty/pages/community/community_details.dart';
 import 'package:planty/pages/community/home_page.dart';
-import 'package:planty/pages/community/post_detail.dart';
 import 'package:planty/utilities/color.dart';
 
 void main() async {
@@ -12,7 +12,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+  runApp(const CommunityDetails());
 }
 
 class MyApp extends StatefulWidget {
