@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:planty/pages/community/community_details.dart';
 
 class MaskedImage extends StatefulWidget {
   final String imagePath;
