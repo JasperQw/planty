@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:planty/components/common/avatar.dart';
-import 'package:planty/components/community/home/icon_prefix_button.dart';
+import 'package:planty/components/common/icon_prefix_button.dart';
 import 'package:planty/pages/community/post_detail.dart';
 import 'package:planty/utilities/color.dart';
 

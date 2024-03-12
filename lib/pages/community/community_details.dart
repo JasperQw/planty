@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:planty/components/common/general_appbar.dart';
+import 'package:planty/components/common/title.dart';
 import 'package:planty/components/community/community_details/community_introduction.dart';
 import 'package:planty/components/community/home/community_post.dart';
 import 'package:planty/components/community/home/post_thought.dart';
@@ -62,17 +63,9 @@ class _CommunityDetailsState extends State<CommunityDetails> {
                     const SizedBox(
                       height: 16,
                     ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16),
-                      child: Text(
-                        "Post your thoughts",
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.w600,
-                          color: black,
-                        ),
-                      ),
+                    const TitleWidget(
+                      title: "Post your thoughts",
+                      fontSize: 30,
                     ),
                     const SizedBox(
                       height: 16,
