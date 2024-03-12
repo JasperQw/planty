@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:planty/utilities/color.dart';
 
 class PlanningIntroduction extends StatelessWidget {
-  const PlanningIntroduction({super.key});
+  const PlanningIntroduction({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class PlanningIntroduction extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         color: green,
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(15),
         boxShadow: const [
           BoxShadow(
             color: Color.fromRGBO(0, 0, 0, 0.25),
@@ -55,20 +55,16 @@ class PlanningIntroduction extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(
-            width: 8,
-          ),
-          Align(
-            alignment: Alignment.centerRight,
-            child: Image.asset(
-              "assets/image/planning_intro.png",
-              width: 100,
-              height: 80,
-              fit:BoxFit.cover,
+          SizedBox(width: 8),
+            Image.asset(
+              "assets/images/planning_intro.png",
+              width: 130,
+              height: 110,
+              fit: BoxFit.cover,
             ),
-          ),
         ],
       ),
     );
   }
 }
+
