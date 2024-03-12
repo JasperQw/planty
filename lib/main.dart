@@ -5,6 +5,8 @@ import 'package:planty/components/layout/appbar.dart';
 import 'package:planty/firebase_options.dart';
 import 'package:planty/pages/community/home_page.dart';
 import 'package:planty/utilities/color.dart';
+import 'package:planty/pages/monitoring/monitor_main.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,7 +29,7 @@ class _MyAppState extends State<MyApp> {
     const CommunityHome(),
     const CommunityHome(),
     const CommunityHome(),
-    const CommunityHome(),
+    const MonitorMain(),
     const CommunityHome(),
   ];
   Widget currentFragment = const CommunityHome();
