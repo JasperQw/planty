@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart' show BorderRadius, BoxDecoration, BoxFit, BoxShadow, BuildContext, ButtonStyle, Center, ClipRRect, Color, Colors, Column, Container, CrossAxisAlignment, CustomScrollView, EdgeInsets, ElevatedButton, Expanded, FlexibleSpaceBar, FontWeight, Icon, Icons, Image, Key, MainAxisAlignment, MaterialStateProperty, MediaQuery, Offset, Padding, Radius, Row, Scaffold, SizedBox, SliverAppBar, SliverToBoxAdapter, Spacer, State, StatefulWidget, Text, TextStyle, Widget;
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/material.dart';
 
 class MonitorMain extends StatefulWidget {
   const MonitorMain({Key? key}) : super(key: key);
@@ -17,12 +16,14 @@ class _MonitorMainState extends State<MonitorMain> {
         slivers: [
           // Monitor main page header
           SliverAppBar(
-            expandedHeight: 300,
+            expandedHeight: 200,
             flexibleSpace: FlexibleSpaceBar(
               background: ClipRRect(
                 borderRadius: const BorderRadius.only(
-                  bottomLeft: Radius.circular(30.0), // set the bottom left radius
-                  bottomRight: Radius.circular(30.0), // set the bottom right radius
+                  bottomLeft:
+                      Radius.circular(30.0), // set the bottom left radius
+                  bottomRight:
+                      Radius.circular(30.0), // set the bottom right radius
                 ),
                 child: Image.asset(
                   "assets/images/image 61.png",
@@ -41,96 +42,162 @@ class _MonitorMainState extends State<MonitorMain> {
                 child: Container(
                   height: 380,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 255, 255, 255),
+                    color: const Color.fromARGB(255, 255, 255, 255),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.withOpacity(0.5),
                         spreadRadius: 5,
                         blurRadius: 7,
-                        offset: Offset(0, 3), // changes position of shadow
+                        offset:
+                            const Offset(0, 3), // changes position of shadow
                       ),
                     ],
                   ),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start, // changed to start
+                    mainAxisAlignment:
+                        MainAxisAlignment.start, // changed to start
                     children: <Widget>[
-                      const Padding(
+                      Padding(
                         // added padding
-                        padding: EdgeInsets.only(top: 40.0), // top margin 40
+                        padding:
+                            const EdgeInsets.only(top: 40.0), // top margin 40
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Icon(Icons.camera_alt, size: 50), // Replace with your first icon
-                                Text(
-                                  'Agricultural Drone Thermal Imaging',
-                                  style: TextStyle(fontSize: 16),
-                                ),
-                              ],
+                            Flexible(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Image.asset(
+                                    "assets/images/IOT Sensors Feedback.png",
+                                    width: 50,
+                                    height: 50,
+                                  ),
+                                  const Text(
+                                    'IOT Sensors Feedback',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Icon(Icons.home, size: 50), // Replace with your second icon
-                                Text('Text 2'), // Replace with your second text
-                              ],
+                            Flexible(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Image.asset(
+                                    "assets/images/Agricultural Drone.png",
+                                    width: 50,
+                                    height: 50,
+                                  ),
+                                  const Text(
+                                    'Agricultural Drone Thermal Imaging',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Icon(Icons.school, size: 50), // Replace with your third icon
-                                Text('Text 3'), // Replace with your third text
-                              ],
+                            Flexible(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Image.asset(
+                                    "assets/images/Irrigation System.png",
+                                    width: 50,
+                                    height: 50,
+                                  ),
+                                  const Text(
+                                    'Smart Irrigation System',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Icon(Icons.settings, size: 50), // Replace with your fourth icon
-                                Text('Text 4'), // Replace with your fourth text
-                              ],
+                            Flexible(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Image.asset(
+                                    "assets/images/Fertigation System.png",
+                                    width: 50,
+                                    height: 50,
+                                  ),
+                                  const Text(
+                                    'Smart Fertigation System',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ],
                         ),
                       ),
 
-                      const SizedBox(height: 50.0),
+                      const SizedBox(height: 20.0),
 
                       // Button 1
-                      Container(
+                      SizedBox(
                         height: 50.0, // set the height of the button
-                        width: MediaQuery.of(context).size.width - 100, // set the width of the button
+                        width: MediaQuery.of(context).size.width -
+                            100, // set the width of the button
                         child: ElevatedButton.icon(
                           onPressed: () {},
                           label: const Text(
-                            'bla bla bla bla bla bla bla bla ',
-                            style: TextStyle(color: Colors.white), // set the text color to white
+                            'No IOT yet? Grab It Now!',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                            ), // set the text color to white
                           ),
-                          icon: const Icon(Icons.add, color: Colors.white), // set the icon color to white
+                          icon: Image.asset(
+                            "assets/images/no IOT.png",
+                            width: 50,
+                            height: 50,
+                          ), // set the icon color to white
                           style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all<Color>(Colors.red), // set the button color to red
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                              Colors.red,
+                            ), // set the button color to red
                           ),
                         ),
                       ),
 
                       // Button 2
                       Padding(
-                        padding: EdgeInsets.only(top: 30.0), // top margin 40
-                        child: Container(
+                        padding:
+                            const EdgeInsets.only(top: 15.0), // top margin 40
+                        child: SizedBox(
                           height: 50.0, // set the height of the button
-                          width: MediaQuery.of(context).size.width - 100, // set the width of the button
+                          width: MediaQuery.of(context).size.width -
+                              100, // set the width of the button
                           child: ElevatedButton.icon(
                             onPressed: () {},
                             label: const Text(
-                              'bla bla bla bla bla bla bla bla ',
-                              style: TextStyle(color: Colors.white), // set the text color to white
+                              'Monitor your frarm with IOT',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                              ), // set the text color to white
                             ),
-                            icon: const Icon(Icons.add, color: Colors.white), // set the icon color to white
+                            icon: Image.asset(
+                              "assets/images/got IOT.png",
+                              width: 50,
+                              height: 50,
+                            ), // set the icon color to white
                             style: ButtonStyle(
-                              backgroundColor:
-                                  MaterialStateProperty.all<Color>(Colors.green), // set the button color to red
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  Colors.green), // set the button color to red
                             ),
                           ),
                         ),
@@ -140,12 +207,37 @@ class _MonitorMainState extends State<MonitorMain> {
                       Spacer(), // Add this to push the next container to the bottom
                       Container(
                         height: 50.0, // set the height of the container
-                        width: MediaQuery.of(context).size.width, // set the width of the container
-                        color: Color.fromARGB(255, 234, 195, 94), // set the color of the container
-                        child: const Center(
-                          child: Text(
-                            'Bottom Container',
-                            style: TextStyle(color: Colors.white), // set the text color to white
+                        width: MediaQuery.of(context)
+                            .size
+                            .width, // set the width of the container
+                        color: const Color.fromARGB(255, 234, 195,
+                            94), // set the color of the container
+                        child: Center(
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 10.0, right: 2.0),
+                                child: Image.asset(
+                                  "assets/images/attention.png", // Replace 'your_icon.png' with your icon path
+                                  width:
+                                      24, // Adjust the width of the icon as needed
+                                  height:
+                                      24, // Adjust the height of the icon as needed
+                                ),
+                              ),
+                              const Expanded(
+                                child: Text(
+                                  'Your Smart Irrigation System Requires Attention',
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                  ), // set the text color to white
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -171,7 +263,8 @@ class _MonitorMainState extends State<MonitorMain> {
                         color: Colors.grey.withOpacity(0.5),
                         spreadRadius: 5,
                         blurRadius: 7,
-                        offset: Offset(0, 3), // changes position of shadow
+                        offset:
+                            const Offset(0, 3), // changes position of shadow
                       ),
                     ],
                   ),
@@ -181,33 +274,84 @@ class _MonitorMainState extends State<MonitorMain> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         const Text(
-                          'Header',
-                          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                          'Crop Health',
+                          style: TextStyle(
+                              fontSize: 25, fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         const Text(
-                          'This is a text line',
-                          style: TextStyle(fontSize: 16),
+                          'From Leaves to Algorithms: Safeguarding Crops with AI',
+                          style: TextStyle(fontSize: 16, color: Colors.grey),
                         ),
-                        const SizedBox(height: 10), // add a space of 10 before the row of containers
+                        const SizedBox(
+                            height:
+                                10), // add a space of 10 before the row of containers
                         Row(
                           children: <Widget>[
                             Expanded(
-                              child: Container(
-                                height: 250, // set the height of the container
-                                decoration: BoxDecoration(
-                                  color: Colors.red, // set the color of the container
-                                  borderRadius: BorderRadius.circular(10.0), // set the border radius of the container
+                              child: GestureDetector(
+                                onTap: () {
+                                  // Add your onTap functionality here
+                                },
+                                child: Container(
+                                  height:
+                                      250, // set the height of the container
+                                  decoration: BoxDecoration(
+                                    color: const Color(
+                                        0xFFE9FFD7), // set the color of the container
+                                    borderRadius: BorderRadius.circular(
+                                        10.0), // set the border radius of the container
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.grey.withOpacity(
+                                            0.5), // specify the shadow color
+                                        spreadRadius:
+                                            5, // extent of shadow spreading
+                                        blurRadius: 7, // blur radius
+                                        offset: const Offset(
+                                            0, 3), // offset from the container
+                                      ),
+                                    ],
+                                  ),
+                                  child: Image.asset(
+                                    "assets/images/plant pest prediction.png",
+                                  ),
                                 ),
                               ),
                             ),
-                            const SizedBox(width: 5), // add a space of 10 between the two containers
+
+                            const SizedBox(
+                              width: 20,
+                            ), // add a space of 10 between the two containers
+
                             Expanded(
-                              child: Container(
-                                height: 250, // set the height of the container
-                                decoration: BoxDecoration(
-                                  color: Colors.blue, // set the color of the container
-                                  borderRadius: BorderRadius.circular(10.0), // set the border radius of the container
+                              child: GestureDetector(
+                                onTap: () {
+                                  // Add your onTap functionality here
+                                },
+                                child: Container(
+                                  height:
+                                      250, // set the height of the container
+                                  decoration: BoxDecoration(
+                                    color: const Color(
+                                        0xFFD9EDFF), // set the color of the container
+                                    borderRadius: BorderRadius.circular(
+                                        10.0), // set the border radius of the container
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.grey.withOpacity(
+                                            0.5), // specify the shadow color
+                                        spreadRadius:
+                                            5, // extent of shadow spreading
+                                        blurRadius: 7, // blur radius
+                                        offset: const Offset(
+                                            0, 3), // offset from the container
+                                      ),
+                                    ],
+                                  ),
+                                  child: Image.asset(
+                                    "assets/images/plant disease detction.png", // Replace 'your_image.png' with your image path // adjust the fit of the image within the container
+                                  ),
                                 ),
                               ),
                             ),
