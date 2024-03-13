@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:planty/utilities/color.dart';
 
-class SoilButton extends StatefulWidget {
-  const SoilButton({super.key});
+class PestButton extends StatefulWidget {
+  const PestButton({super.key});
 
   @override
-  State<SoilButton> createState() => _SoilButtonState();
+  State<PestButton> createState() => _PestButtonState();
 }
 
-class _SoilButtonState extends State<SoilButton> {
+class _PestButtonState extends State<PestButton> {
   @override
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-        width: double.infinity,
+        width: 150,
         margin: const EdgeInsets.symmetric(
           horizontal: 0,
         ),
@@ -31,26 +31,25 @@ class _SoilButtonState extends State<SoilButton> {
                 offset: Offset(0, 4),
               )
             ]),
-        child: Row(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset(
-              "assets/images/soil.png",
-              width: 46,
-              height: 46,),
+            Image.asset("assets/images/plant_pest.png",
+            width: 90,
+            height: 90,),
             SizedBox(
-              width: 10,
+              height: 10,
             ),
-            Text(
-              "Soil Preparation Tutorial",
+            Text("Plant Pest",
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w500,
                 color: Colors.black,
               ),
-            )
-          ]
-        ),
+            ),
+          ],
+        )
     );
   }
-} 
+}
