@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:planty/components/planning/knowledge_image_collection.dart';
 
 class KnowledgeContainer extends StatelessWidget {
   const KnowledgeContainer({super.key});
@@ -59,6 +60,10 @@ class KnowledgeContainer extends StatelessWidget {
               color: Colors.black,
             )
           ),
+          SizedBox(
+            height: 15,
+          ),
+          const KnowledgeImageCollection(),
         ],
       )
     );
