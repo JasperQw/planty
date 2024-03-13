@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planty/components/planning/knowledge_container.dart';
 import 'package:planty/components/planning/planning_introduction.dart';
 
 class PlanningHome extends StatefulWidget {
@@ -19,7 +20,10 @@ class  _PlanningHomeState extends State <PlanningHome> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const PlanningIntroduction(),
-                
+                const SizedBox(
+                  height: 20
+                ),
+                const KnowledgeContainer(),
               ]
             ),))
       ],
