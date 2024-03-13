@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:planty/components/planning/knowledge_container.dart';
 import 'package:planty/components/planning/planning_introduction.dart';
+import 'package:planty/components/planning/tutorial_container.dart';
 
 class PlanningHome extends StatefulWidget {
   const PlanningHome({super.key});
@@ -24,6 +25,11 @@ class  _PlanningHomeState extends State <PlanningHome> {
                   height: 20
                 ),
                 const KnowledgeContainer(),
+                const SizedBox(
+                  height: 20
+                ),
+                const TutorialContainer(),
+                
               ]
             ),))
       ],
