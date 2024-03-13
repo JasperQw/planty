@@ -42,7 +42,7 @@ class _PostThoughtState extends State<PostThought> {
             const Avatar(
               image:
                   "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-              size: 64,
+              size: 54,
             ),
             const SizedBox(
               width: 12,

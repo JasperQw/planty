@@ -23,7 +23,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int currentPageIndex = 0;
+  int currentPageIndex = 1;
   List<Widget> fragmentList = [
     const CommunityHome(),
     const CommunityHome(),

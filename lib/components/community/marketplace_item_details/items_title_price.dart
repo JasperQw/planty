@@ -17,31 +17,31 @@ class _ItemsTitlePriceState extends State<ItemsTitlePrice> {
     NumberFormat formatter = NumberFormat.decimalPatternDigits(
       decimalDigits: 2,
     );
-    return Padding(
+    return Container(
+      width: double.infinity,
       padding: const EdgeInsets.all(16.0),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Wrap(
+        alignment: WrapAlignment.spaceBetween,
+        runSpacing: 20,
         children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  "Item",
-                  style: TextStyle(
-                    color: unselectedGrey,
-                    fontSize: 14,
-                  ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                "Item",
+                style: TextStyle(
+                  color: unselectedGrey,
+                  fontSize: 14,
                 ),
-                Text(
-                  widget.title,
-                  style: const TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                  ),
-                )
-              ],
-            ),
+              ),
+              Text(
+                widget.title,
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                ),
+              )
+            ],
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
