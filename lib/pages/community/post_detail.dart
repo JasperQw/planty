@@ -17,43 +17,39 @@ class _PostDetailsState extends State<PostDetails> {
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.light().copyWith(scaffoldBackgroundColor: background),
-      home: const Scaffold(
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(
-            80,
-          ),
-          child: PostDetailsAppBar(),
+    return const Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(
+          80,
         ),
-        body: Column(
-          children: [
-            Expanded(
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    PostCarousel(),
-                    SizedBox(
-                      height: 24,
-                    ),
-                    PostTitleContent(),
-                    SizedBox(
-                      height: 12,
-                    ),
-                    PostCommentInputField(),
-                    SizedBox(
-                      height: 32,
-                    ),
-                    PostHistoryComment(),
-                    PostHistoryComment(),
-                    PostHistoryComment(),
-                  ],
-                ),
+        child: PostDetailsAppBar(),
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  PostCarousel(),
+                  SizedBox(
+                    height: 24,
+                  ),
+                  PostTitleContent(),
+                  SizedBox(
+                    height: 12,
+                  ),
+                  PostCommentInputField(),
+                  SizedBox(
+                    height: 32,
+                  ),
+                  PostHistoryComment(),
+                  PostHistoryComment(),
+                  PostHistoryComment(),
+                ],
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

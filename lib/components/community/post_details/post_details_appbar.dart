@@ -21,7 +21,7 @@ class _PostDetailsAppBarState extends State<PostDetailsAppBar> {
         leadingWidth: 30,
         leading: GestureDetector(
           onTap: () {
-            Navigator.of(context, rootNavigator: true).pop();
+            Navigator.of(context).pop();
           },
           child: const Icon(
             Icons.arrow_back_ios_new_sharp,

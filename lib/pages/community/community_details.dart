@@ -27,79 +27,75 @@ class CommunityDetails extends StatefulWidget {
 class _CommunityDetailsState extends State<CommunityDetails> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.light().copyWith(scaffoldBackgroundColor: background),
-      home: Scaffold(
-        appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(
-            80,
-          ),
-          child: GeneralAppBar(
-            title: widget.title,
-            withBackBtn: true,
-          ),
+    return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(
+          80,
         ),
-        body: Column(
-          children: [
-            Expanded(
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Image.asset(
-                      widget.image,
-                      width: double.infinity,
-                      fit: BoxFit.cover,
+        child: GeneralAppBar(
+          title: widget.title,
+          withBackBtn: true,
+        ),
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset(
+                    widget.image,
+                    width: double.infinity,
+                    fit: BoxFit.cover,
+                  ),
+                  const SizedBox(
+                    height: 32,
+                  ),
+                  CommunityIntroduction(
+                    title: widget.introductionTitle,
+                    introduction: widget.introduction,
+                    membersAmount: widget.membersAmount,
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  const TitleWidget(
+                    title: "Post your thoughts",
+                    fontSize: 30,
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  const PostThought(),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(
+                      left: 16.0,
                     ),
-                    const SizedBox(
-                      height: 32,
-                    ),
-                    CommunityIntroduction(
-                      title: widget.introductionTitle,
-                      introduction: widget.introduction,
-                      membersAmount: widget.membersAmount,
-                    ),
-                    const SizedBox(
-                      height: 16,
-                    ),
-                    const TitleWidget(
-                      title: "Post your thoughts",
-                      fontSize: 30,
-                    ),
-                    const SizedBox(
-                      height: 16,
-                    ),
-                    const PostThought(),
-                    const SizedBox(
-                      height: 16,
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.only(
-                        left: 16.0,
+                    child: Text(
+                      "Latest",
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        color: focusGrey,
                       ),
-                      child: Text(
-                        "Latest",
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600,
-                          color: focusGrey,
-                        ),
-                      ),
                     ),
-                    const SizedBox(
-                      height: 16,
-                    ),
-                    const CommunityPost(),
-                    const SizedBox(
-                      height: 32,
-                    ),
-                  ],
-                ),
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  const CommunityPost(),
+                  const SizedBox(
+                    height: 32,
+                  ),
+                ],
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

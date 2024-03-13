@@ -43,8 +43,8 @@ class AppBarLayout extends StatelessWidget {
                   bottom: 5,
                   left: -5,
                   child: Container(
-                    width: 13,
-                    height: 13,
+                    width: 15,
+                    height: 15,
                     alignment: Alignment.center,
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
@@ -54,7 +54,7 @@ class AppBarLayout extends StatelessWidget {
                       "2",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontSize: 8,
+                        fontSize: 10,
                         color: Colors.white,
                       ),
                     ),

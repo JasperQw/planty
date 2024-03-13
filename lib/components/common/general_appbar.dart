@@ -24,7 +24,7 @@ class _GeneralAppBarState extends State<GeneralAppBar> {
         leading: widget.withBackBtn == true
             ? GestureDetector(
                 onTap: () {
-                  Navigator.of(context, rootNavigator: true).pop();
+                  Navigator.of(context).pop();
                 },
                 child: const Icon(
                   Icons.arrow_back_ios_new_sharp,

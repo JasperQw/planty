@@ -19,170 +19,166 @@ class _MarketplaceState extends State<Marketplace> {
   bool isFree = false;
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.light().copyWith(scaffoldBackgroundColor: background),
-      home: Scaffold(
-        appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(
-            80,
-          ),
-          child: GeneralAppBar(
-            title: "Marketplace",
-            withBackBtn: true,
-          ),
+    return Scaffold(
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(
+          80,
         ),
-        body: Column(
-          children: [
-            Expanded(
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    isFree
-                        ? const IntroductionCard(
-                            title:
-                                "Enhance Farming Experience Through Free Farm Tools",
-                            image: "assets/images/marketplace_free.png",
-                          )
-                        : const IntroductionCard(
-                            title:
-                                "Kick Start a Greener Future Through Used Crops Tools",
-                            image: "assets/images/marketplace.png",
+        child: GeneralAppBar(
+          title: "Marketplace",
+          withBackBtn: true,
+        ),
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  isFree
+                      ? const IntroductionCard(
+                          title:
+                              "Enhance Farming Experience Through Free Farm Tools",
+                          image: "assets/images/marketplace_free.png",
+                        )
+                      : const IntroductionCard(
+                          title:
+                              "Kick Start a Greener Future Through Used Crops Tools",
+                          image: "assets/images/marketplace.png",
+                        ),
+                  const SizedBox(
+                    height: 24,
+                  ),
+                  const MarketplaceSearchBar(),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  const TitleWidget(
+                    title: "Choose Item",
+                    fontSize: 30,
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  Container(
+                    margin: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                    ),
+                    width: double.infinity,
+                    child: const Wrap(
+                      runSpacing: 24.0,
+                      spacing: 32.0,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: ImagePrefixButton(
+                            image: "assets/images/seed.png",
+                            title: "Seeds",
+                            color: black,
+                            size: 28,
                           ),
-                    const SizedBox(
-                      height: 24,
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: ImagePrefixButton(
+                            image: "assets/images/tractor.png",
+                            title: "Tractors",
+                            color: black,
+                            size: 28,
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: ImagePrefixButton(
+                            image: "assets/images/iot.png",
+                            title: "IoT",
+                            color: black,
+                            size: 28,
+                          ),
+                        ),
+                      ],
                     ),
-                    const MarketplaceSearchBar(),
-                    const SizedBox(
-                      height: 16,
-                    ),
-                    const TitleWidget(
-                      title: "Choose Item",
-                      fontSize: 30,
-                    ),
-                    const SizedBox(
-                      height: 16,
-                    ),
-                    Container(
-                      margin: const EdgeInsets.symmetric(
-                        horizontal: 16,
-                      ),
-                      width: double.infinity,
-                      child: const Wrap(
-                        runSpacing: 24.0,
-                        spacing: 32.0,
+                  ),
+                  const Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: ImagePrefixButton(
-                              image: "assets/images/seed.png",
-                              title: "Seeds",
-                              color: black,
-                              size: 28,
+                          Text(
+                            "New Items",
+                            style: TextStyle(
+                              fontSize: 17,
                             ),
                           ),
-                          Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: ImagePrefixButton(
-                              image: "assets/images/tractor.png",
-                              title: "Tractors",
-                              color: black,
-                              size: 28,
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: ImagePrefixButton(
-                              image: "assets/images/iot.png",
-                              title: "IoT",
-                              color: black,
-                              size: 28,
-                            ),
+                          Text(
+                            "View All",
+                            style:
+                                TextStyle(fontSize: 14, color: unselectedGrey),
                           ),
                         ],
-                      ),
+                      )),
+                  Container(
+                    width: double.infinity,
+                    margin: const EdgeInsets.all(
+                      16,
                     ),
-                    const Padding(
-                        padding: EdgeInsets.all(16.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              "New Items",
-                              style: TextStyle(
-                                fontSize: 17,
+                    child: Wrap(
+                      runSpacing: 36,
+                      spacing: 36,
+                      alignment: WrapAlignment.spaceBetween,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => const ItemDetails(),
                               ),
-                            ),
-                            Text(
-                              "View All",
-                              style: TextStyle(
-                                  fontSize: 14, color: unselectedGrey),
-                            ),
-                          ],
-                        )),
-                    Container(
-                      width: double.infinity,
-                      margin: const EdgeInsets.all(
-                        16,
-                      ),
-                      child: Wrap(
-                        runSpacing: 36,
-                        spacing: 36,
-                        alignment: WrapAlignment.spaceBetween,
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (context) => const ItemDetails(),
-                                ),
-                              );
-                            },
-                            child: const SellingItem(),
-                          ),
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (context) => const ItemDetails(),
-                                ),
-                              );
-                            },
-                            child: const SellingItem(),
-                          ),
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (context) => const ItemDetails(),
-                                ),
-                              );
-                            },
-                            child: const SellingItem(),
-                          ),
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (context) => const ItemDetails(),
-                                ),
-                              );
-                            },
-                            child: const SellingItem(),
-                          ),
-                        ],
-                      ),
+                            );
+                          },
+                          child: const SellingItem(),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => const ItemDetails(),
+                              ),
+                            );
+                          },
+                          child: const SellingItem(),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => const ItemDetails(),
+                              ),
+                            );
+                          },
+                          child: const SellingItem(),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => const ItemDetails(),
+                              ),
+                            );
+                          },
+                          child: const SellingItem(),
+                        ),
+                      ],
                     ),
-                    const SizedBox(
-                      height: 32,
-                    ),
-                  ],
-                ),
+                  ),
+                  const SizedBox(
+                    height: 32,
+                  ),
+                ],
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

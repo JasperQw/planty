@@ -12,3 +12,4 @@ const red = Color(0xFFF05193);
 const secondaryTextColor = Color(0xFF5C5C5F);
 const darkGreen = Color(0xFF3A614F);
 const starColor = Color(0xFFFF981F);
+const replyColor = Color(0xFFF8F7F3);

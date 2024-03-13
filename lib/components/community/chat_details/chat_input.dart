@@ -1,36 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:planty/components/common/avatar.dart';
 import 'package:planty/utilities/color.dart';
 
-class PostCommentInputField extends StatefulWidget {
-  const PostCommentInputField({super.key});
+class ChatInput extends StatefulWidget {
+  const ChatInput({super.key});
 
   @override
-  State<PostCommentInputField> createState() => _PostCommentInputFieldState();
+  State<ChatInput> createState() => _ChatInputState();
 }
 
-class _PostCommentInputFieldState extends State<PostCommentInputField> {
+class _ChatInputState extends State<ChatInput> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 16,
-      ),
       alignment: Alignment.topLeft,
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Avatar(
-            image:
-                "https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg",
-            size: 54,
-          ),
           Expanded(
             child: Container(
               clipBehavior: Clip.hardEdge,
-              margin: const EdgeInsets.symmetric(
-                horizontal: 16,
-              ),
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(
@@ -54,7 +42,7 @@ class _PostCommentInputFieldState extends State<PostCommentInputField> {
                     horizontal: 16,
                     vertical: 24,
                   ),
-                  hintText: "Say something...",
+                  hintText: "Type here...",
                   hintStyle: TextStyle(
                     color: focusGrey,
                   ),
