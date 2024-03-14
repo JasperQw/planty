@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planty/pages/monitoring/iot_pairing.dart';
 
 class MonitorMain extends StatefulWidget {
   const MonitorMain({Key? key}) : super(key: key);
@@ -40,7 +41,7 @@ class _MonitorMainState extends State<MonitorMain> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20.0),
                 child: Container(
-                  height: 380,
+                  height: 400,
                   decoration: BoxDecoration(
                     color: const Color.fromARGB(255, 255, 255, 255),
                     boxShadow: [
@@ -144,7 +145,7 @@ class _MonitorMainState extends State<MonitorMain> {
                         ),
                       ),
 
-                      const SizedBox(height: 20.0),
+                      const SizedBox(height: 30.0),
 
                       // Button 1
                       SizedBox(
@@ -176,13 +177,21 @@ class _MonitorMainState extends State<MonitorMain> {
                       // Button 2
                       Padding(
                         padding:
-                            const EdgeInsets.only(top: 15.0), // top margin 40
+                            const EdgeInsets.only(top: 20.0), // top margin 40
                         child: SizedBox(
                           height: 50.0, // set the height of the button
                           width: MediaQuery.of(context).size.width -
                               100, // set the width of the button
                           child: ElevatedButton.icon(
-                            onPressed: () {},
+                            onPressed: () {
+                              // Navigate to the other page here
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        iotPairing()), // Replace OtherPage() with the page you want to navigate to
+                              );
+                            },
                             label: const Text(
                               'Monitor your frarm with IOT',
                               style: TextStyle(
@@ -204,7 +213,7 @@ class _MonitorMainState extends State<MonitorMain> {
                       ),
 
                       // Bottom wording
-                      Spacer(), // Add this to push the next container to the bottom
+                      const Spacer(), // Add this to push the next container to the bottom
                       Container(
                         height: 50.0, // set the height of the container
                         width: MediaQuery.of(context)
