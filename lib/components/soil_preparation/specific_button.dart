@@ -1,34 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:planty/components/planning/soil_method.dart';
 import 'package:planty/utilities/color.dart';
 
-class SoilButton extends StatefulWidget {
-  const SoilButton({super.key});
+class SpecificButton extends StatefulWidget {
+  const SpecificButton({super.key});
 
   @override
-  State<SoilButton> createState() => _SoilButtonState();
+  State<SpecificButton> createState() => _SpecificButtonState();
 }
 
-class _SoilButtonState extends State<SoilButton> {
+class _SpecificButtonState extends State<SpecificButton> {
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => const SoilMethod(),
-          ),
-        );
-      },
-      child:Container(
-        alignment: Alignment.center,
-          width: double.infinity,
-          margin: const EdgeInsets.symmetric(
+    return Container(
+      alignment: Alignment.center,
+      width: 250,
+      margin: const EdgeInsets.symmetric(
             horizontal: 0,
           ),
           padding: const EdgeInsets.symmetric(
-            horizontal: 18,
-            vertical: 10,
+            horizontal: 17,
+            vertical: 15,
           ),
           decoration: BoxDecoration(
               color: replyColor,
@@ -40,27 +31,27 @@ class _SoilButtonState extends State<SoilButton> {
                   offset: Offset(0, 4),
                 )
               ]),
-          child: Row(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset(
-                "assets/images/soil.png",
-                width: 46,
-                height: 46,),
+              Image.asset("assets/images/specific_plant_method.png",
+              width: 230,
+              height: 150,
+              fit: BoxFit.fill,),
               SizedBox(
-                width: 10,
+                height: 15,
               ),
               Text(
-                "Soil Preparation Tutorial",
+                "Finding for\nspecific plants?",
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
                   color: Colors.black,
                 ),
+                textAlign: TextAlign.center,
               )
-            ]
+            ],
           ),
-      )
     );
   }
-} 
+}

@@ -32,7 +32,7 @@ class _KnowledgeImageState extends State<KnowledgeImage> {
             bottom: 0,
             child: Container(
               padding: const EdgeInsets.all(10),
-              color: Colors.grey.withOpacity(0.65), // Grey background with opacity
+              color: Colors.white.withOpacity(0.5), // White background with opacity
               child: FittedBox(
                 fit: BoxFit.scaleDown,
                 alignment: Alignment.centerLeft,
@@ -40,7 +40,7 @@ class _KnowledgeImageState extends State<KnowledgeImage> {
                   widget.plantName,
                   style: const TextStyle(
                     fontSize: 15,
-                    fontWeight: FontWeight.w400,
+                    fontWeight: FontWeight.w500,
                     color: Colors.black,
                   ),
                 ),
