@@ -37,7 +37,8 @@ class _DroneButtonState extends State<DroneButton> {
           children: [
             Image.asset("assets/images/drone_image_plotter.png",
             width: 115,
-            height: 100,),
+            height: 100,
+            fit: BoxFit.fill,),
             SizedBox(
               height: 10,
             ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:planty/components/common/general_appbar.dart';
+import 'package:planty/components/common/appbar_with_shadow.dart';
+//import 'package:planty/components/common/general_appbar.dart';
 import 'package:planty/components/soil_preparation/general_button.dart';
 import 'package:planty/components/soil_preparation/specific_button.dart';
 
@@ -18,7 +19,7 @@ class _SoilMethodState extends State<SoilMethod> {
         preferredSize: Size.fromHeight(
           80,
         ),
-        child: GeneralAppBar(
+        child: AppBarWithShadow(
           title: "Soil Preparation Tutorial",
           withBackBtn: true,
         ),

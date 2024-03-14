@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planty/components/planning/soil_method.dart';
+import 'package:planty/pages/planning/soil_method.dart';
 import 'package:planty/utilities/color.dart';
 
 class SoilButton extends StatefulWidget {

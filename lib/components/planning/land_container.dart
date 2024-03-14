@@ -65,13 +65,18 @@ class LandContainer extends StatelessWidget {
             height: 15,
           ),
           Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const SmartplotButton(),
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+              Expanded( // Use Expanded widget to make the button part responsive
+                child: SmartplotButton(),
+              ),
               SizedBox(width: 20),
-              const DroneButton(),
+              Expanded( // Use Expanded widget to make the button part responsive
+                child: DroneButton(),
+              ),
             ],
-          ),
+            ),
+          
         ],
       )
     );
