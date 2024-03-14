@@ -39,10 +39,10 @@ class TutorialContainer extends StatelessWidget {
                 "assets/images/planting_tutorial.svg",
                 width: 30,
                 height:30),
-              SizedBox(
+              const SizedBox(
                 width: 12,
               ),
-              Text(
+              const Text(
               "Planting Tutorial",
                 style: TextStyle(
                   fontSize: 20,
@@ -52,7 +52,7 @@ class TutorialContainer extends StatelessWidget {
               ),
             ],
           ),
-          Text(
+          const Text(
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
             style:TextStyle(
               fontSize: 12,
@@ -60,7 +60,7 @@ class TutorialContainer extends StatelessWidget {
               color: Colors.black,
             )
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           const SoilButton(),

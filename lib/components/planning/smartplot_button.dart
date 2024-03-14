@@ -37,10 +37,10 @@ class _SmartplotButtonState extends State<SmartplotButton> {
               height: 100,
               fit: BoxFit.fill,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Text(
+            const Text(
               "SmartPlot Planner",
               textAlign: TextAlign.center,
               style: TextStyle(

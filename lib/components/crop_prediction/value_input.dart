@@ -26,13 +26,13 @@ class _ValueInputState extends State<ValueInput> {
       children: [
         Text(
           widget.inputTitle,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w600,
             color: Colors.black,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         TextField(
@@ -44,12 +44,12 @@ class _ValueInputState extends State<ValueInput> {
           decoration: InputDecoration(
             filled: true,
             fillColor: Colors.grey.withOpacity(0.5),
-            contentPadding: EdgeInsets.symmetric(
+            contentPadding: const EdgeInsets.symmetric(
               horizontal: 16,
               vertical: 15,
             ),
             hintText: widget.inputHint,
-            hintStyle: TextStyle(
+            hintStyle: const TextStyle(
                     fontSize: 14,
                     color: focusGrey,
                   ),
@@ -63,7 +63,7 @@ class _ValueInputState extends State<ValueInput> {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         )
       ],

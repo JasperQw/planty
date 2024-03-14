@@ -40,10 +40,10 @@ class LandContainer extends StatelessWidget {
                 "assets/images/land_management.svg",
                 width: 30,
                 height:30),
-              SizedBox(
+              const SizedBox(
                 width: 12,
               ),
-              Text(
+              const Text(
               "Land Management",
                 style: TextStyle(
                   fontSize: 20,
@@ -53,7 +53,7 @@ class LandContainer extends StatelessWidget {
               ),
             ],
           ),
-          Text(
+          const Text(
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
             style:TextStyle(
               fontSize: 12,
@@ -61,10 +61,10 @@ class LandContainer extends StatelessWidget {
               color: Colors.black,
             )
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
-          Row(
+          const Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
               Expanded( // Use Expanded widget to make the button part responsive
@@ -76,7 +76,6 @@ class LandContainer extends StatelessWidget {
               ),
             ],
             ),
-          
         ],
       )
     );

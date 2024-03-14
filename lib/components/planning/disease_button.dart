@@ -38,10 +38,10 @@ class _DiseaseButtonState extends State<DiseaseButton> {
             Image.asset("assets/images/plant_disease.png",
             width: 90,
             height: 90,),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Text("Plant Disease",
+            const Text("Plant Disease",
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w500,

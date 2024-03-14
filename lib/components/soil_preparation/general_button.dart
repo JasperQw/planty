@@ -38,7 +38,7 @@ class _GeneralButtonState extends State<GeneralButton> {
               width: 230,
               height: 170,
               fit: BoxFit.fill,),
-              Text(
+              const Text(
                 "General Method",
                 style: TextStyle(
                   fontSize: 18,

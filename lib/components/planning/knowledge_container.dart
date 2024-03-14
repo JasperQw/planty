@@ -39,10 +39,10 @@ class KnowledgeContainer extends StatelessWidget {
                 "assets/images/ph_plant.svg",
                 width: 30,
                 height:30),
-              SizedBox(
+              const SizedBox(
                 width: 12,
               ),
-              Text(
+              const Text(
               "Plant Knowledge",
                 style: TextStyle(
                   fontSize: 20,
@@ -52,7 +52,7 @@ class KnowledgeContainer extends StatelessWidget {
               ),
             ],
           ),
-          Text(
+          const Text(
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
             style:TextStyle(
               fontSize: 12,
@@ -60,7 +60,7 @@ class KnowledgeContainer extends StatelessWidget {
               color: Colors.black,
             )
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           const KnowledgeImageCollection(),

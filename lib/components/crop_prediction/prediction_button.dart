@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planty/pages/planning/prediction_result.dart';
 import 'package:planty/utilities/color.dart';
 
 class PredictionButton extends StatefulWidget {
@@ -11,8 +12,16 @@ class PredictionButton extends StatefulWidget {
 class _PredictionButtonState extends State<PredictionButton> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
+    return GestureDetector(
+      onTap: (){
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context)=> const PredictionResult()
+          )
+        );
+      },
+      child:Container(
+        alignment: Alignment.center,
         width: double.infinity,
         margin: const EdgeInsets.symmetric(
           horizontal: 16,
@@ -32,7 +41,7 @@ class _PredictionButtonState extends State<PredictionButton> {
           )
         ]
       ),
-      child: Column(
+      child: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -45,6 +54,7 @@ class _PredictionButtonState extends State<PredictionButton> {
           ),
         ],
       ),
+      )
     );
   }
 }

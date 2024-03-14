@@ -13,8 +13,8 @@ class CropPrediction extends StatefulWidget {
 class _CropPredictionState extends State<CropPrediction> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const PreferredSize(
+    return const Scaffold(
+      appBar: PreferredSize(
         preferredSize: Size.fromHeight(
           80,
         ),
@@ -31,37 +31,37 @@ class _CropPredictionState extends State<CropPrediction> {
             SizedBox(
               height: 20,
             ),
-            const ValueInput(
+            ValueInput(
               inputTitle: "Land size (in sq ft)", 
               inputHint: "Fill in the land size..."),
-            const ValueInput(
+            ValueInput(
               inputTitle: "Average ratio of Nitrogen content", 
               inputHint: "Fill in the nitrogen ratio..."),
-            const ValueInput(
+            ValueInput(
               inputTitle: "Average temperature (in °C)", 
               inputHint: "Fill in the average temperature..."),
-            const ValueInput(
+            ValueInput(
               inputTitle: "Average pH value of soil", 
               inputHint: "Fill in the average soil pH value..."),
-            const ValueInput(
+            ValueInput(
               inputTitle: "Average rainfall (in mm)", 
               inputHint: "Fill in the average rainfall ..."),
-            const ValueInput(
+            ValueInput(
               inputTitle: "Light intensity (in lumens per square)", 
               inputHint: "Fill in the light intensity..."),
-            const ValueInput(
+            ValueInput(
               inputTitle: "Average hudmidity (in g.kg-1)", 
               inputHint: "Fill in the average humidity..."),
-            const ValueInput(
+            ValueInput(
               inputTitle: "Ratio of Phosphorus Content", 
               inputHint: "Fill in the phosphorus ratio..."),
-            const ValueInput(
+            ValueInput(
               inputTitle: "Ratio of Potassium Content", 
               inputHint: "Fill in the potassium ratio..."),
             SizedBox(
               height: 20,
             ),
-            const PredictionButton(),
+            PredictionButton(),
             SizedBox(
               height: 20,
             )

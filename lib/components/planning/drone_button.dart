@@ -39,10 +39,10 @@ class _DroneButtonState extends State<DroneButton> {
             width: 115,
             height: 100,
             fit: BoxFit.fill,),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Text(
+            const Text(
               "Agriculture Drone Image Plotter",
               textAlign: TextAlign.center,
               style: TextStyle(

@@ -40,10 +40,10 @@ class PestContainer extends StatelessWidget {
                 "assets/images/bug.svg",
                 width: 30,
                 height:30),
-              SizedBox(
+              const SizedBox(
                 width: 12,
               ),
-              Text(
+              const Text(
               "Plant Pest and Disease",
                 style: TextStyle(
                   fontSize: 20,
@@ -53,7 +53,7 @@ class PestContainer extends StatelessWidget {
               ),
             ],
           ),
-          Text(
+          const Text(
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
             style:TextStyle(
               fontSize: 12,
@@ -61,15 +61,15 @@ class PestContainer extends StatelessWidget {
               color: Colors.black,
             )
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
-          Row(
+          const Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const PestButton(),
+              PestButton(),
               SizedBox(width: 20),
-              const DiseaseButton(),
+              DiseaseButton(),
             ],
           ),
         ],

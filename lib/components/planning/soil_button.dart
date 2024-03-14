@@ -47,10 +47,10 @@ class _SoilButtonState extends State<SoilButton> {
                 "assets/images/soil.png",
                 width: 46,
                 height: 46,),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
-              Text(
+              const Text(
                 "Soil Preparation Tutorial",
                 style: TextStyle(
                   fontSize: 18,

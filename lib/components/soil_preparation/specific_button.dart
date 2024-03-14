@@ -38,10 +38,10 @@ class _SpecificButtonState extends State<SpecificButton> {
               width: 230,
               height: 150,
               fit: BoxFit.fill,),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
-              Text(
+              const Text(
                 "Finding for\nspecific plants?",
                 style: TextStyle(
                   fontSize: 18,
