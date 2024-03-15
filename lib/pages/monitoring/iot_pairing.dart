@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:planty/pages/monitoring/iot_intergration.dart';
 
 // ignore: camel_case_types
 class iotPairing extends StatelessWidget {
@@ -17,6 +17,7 @@ class iotPairing extends StatelessWidget {
             color: Colors.black,
           ),
         ),
+        centerTitle: true,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -97,30 +98,41 @@ class iotPairing extends StatelessWidget {
                 }
                 // Other segmentations
                 else {
-                  return Container(
-                    margin: const EdgeInsets.all(20.0),
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 206, 242, 183),
-                      borderRadius:
-                          BorderRadius.circular(10.0), // Add curved corners
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey
-                              .withOpacity(0.5), // Set shadow color and opacity
-                          spreadRadius:
-                              5, // Set how far the shadow should spread
-                          blurRadius: 7, // Set the blur radius
-                          offset: const Offset(0, 3), // Set the shadow offset
+                  return GestureDetector(
+                    onTap: () {
+                      // Add your navigation logic here
+                      // For example:
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const iotIntergration()),
+                      );
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.all(20.0),
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 206, 242, 183),
+                        borderRadius:
+                            BorderRadius.circular(10.0), // Add curved corners
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(
+                                0.5), // Set shadow color and opacity
+                            spreadRadius:
+                                5, // Set how far the shadow should spread
+                            blurRadius: 7, // Set the blur radius
+                            offset: const Offset(0, 3), // Set the shadow offset
+                          ),
+                        ],
+                      ),
+                      height: 50,
+                      width: 50,
+                      child: Center(
+                        child: Text(
+                          'Area ${index + 1}',
+                          style: const TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.w600),
                         ),
-                      ],
-                    ),
-                    height: 50,
-                    width: 50,
-                    child: Center(
-                      child: Text(
-                        'Area ${index + 1}',
-                        style: const TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600),
                       ),
                     ),
                   );
