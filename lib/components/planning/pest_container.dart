@@ -67,9 +67,13 @@ class PestContainer extends StatelessWidget {
           const Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              PestButton(),
+              Expanded(
+                child:PestButton(),
+              ),
               SizedBox(width: 20),
-              DiseaseButton(),
+              Expanded(
+                child:DiseaseButton(),
+              )
             ],
           ),
         ],
