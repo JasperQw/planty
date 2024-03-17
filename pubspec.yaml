@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  bulleted_list: ^0.0.1+0.1a
   carousel_slider: ^4.2.1
   cloud_firestore: ^4.15.8
   cupertino_icons: ^1.0.2
@@ -41,6 +42,9 @@ dependencies:
   flutter_sticky_widgets: ^0.0.3
   flutter_svg: ^2.0.10+1
   intl: ^0.19.0
+  sliding_up_panel: ^2.0.0+1
+  video_player: ^2.8.3
+  webview_flutter: ^4.7.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0

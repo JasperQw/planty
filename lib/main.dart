@@ -4,6 +4,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:planty/components/layout/appbar.dart';
 import 'package:planty/firebase_options.dart';
 import 'package:planty/pages/community/home_page.dart';
+import 'package:planty/pages/planning/John_Innes_method_pop_up.dart';
+import 'package:planty/pages/planning/planning_home.dart';
 import 'package:planty/utilities/color.dart';
 
 void main() async {
@@ -26,11 +28,11 @@ class _MyAppState extends State<MyApp> {
   List<Widget> fragmentList = [
     const CommunityHome(),
     const CommunityHome(),
-    const CommunityHome(),
+    const PlanningHome(),
     const CommunityHome(),
     const CommunityHome(),
   ];
-  Widget currentFragment = const CommunityHome();
+  Widget currentFragment = const John_Innes_method_pop_up();
   // This widget is the root of your application.
 
   Color iconColor(index) {
