@@ -7,7 +7,6 @@ import 'package:planty/components/community/marketplace_item_details/items_title
 import 'package:planty/components/community/marketplace_item_details/location.dart';
 import 'package:planty/components/community/marketplace_item_details/negotiate_button.dart';
 import 'package:planty/components/community/marketplace_item_details/seller_info.dart';
-import 'package:planty/utilities/color.dart';
 
 class ItemDetails extends StatefulWidget {
   const ItemDetails({super.key});

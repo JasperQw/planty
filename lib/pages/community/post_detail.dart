@@ -4,7 +4,6 @@ import 'package:planty/components/community/post_details/post_comment_input_fiel
 import 'package:planty/components/community/post_details/post_details_appbar.dart';
 import 'package:planty/components/community/post_details/post_history_comment.dart';
 import 'package:planty/components/community/post_details/post_title_content.dart';
-import 'package:planty/utilities/color.dart';
 
 class PostDetails extends StatefulWidget {
   const PostDetails({super.key});
@@ -15,6 +14,7 @@ class PostDetails extends StatefulWidget {
 
 class _PostDetailsState extends State<PostDetails> {
   int currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
