@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:planty/pages/monitoring/iot_pairing.dart';
+import 'package:planty/pages/monitoring/promotion_iot.dart';
 
 class MonitorMain extends StatefulWidget {
   const MonitorMain({Key? key}) : super(key: key);
@@ -153,7 +154,14 @@ class _MonitorMainState extends State<MonitorMain> {
                         width: MediaQuery.of(context).size.width -
                             100, // set the width of the button
                         child: ElevatedButton.icon(
-                          onPressed: () {},
+                          onPressed: () {
+                            //Navigate to promotion_iot.dart
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const PromotionIOT()),
+                            );
+                          },
                           label: const Text(
                             'No IOT yet? Grab It Now!',
                             style: TextStyle(
