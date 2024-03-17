@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:planty/components/common/appbar_with_shadow.dart';
+import 'package:planty/components/planning/video_player.dart';
 import 'package:planty/utilities/color.dart';
 
 class PlantKnowledge extends StatefulWidget {
@@ -58,49 +57,6 @@ class _PlantKnowledgeState extends State<PlantKnowledge> {
   void initState() {
     super.initState();
   }
-
-  // String testyoutubeUrl =
-  //     "https://www.youtube.com/watch?v=bSpOU-5aq-8&ab_channel=WickedWombat";
-  // late YoutubePlayerController playercontroller;
-  // VideoPlayerController? playerController;
-  // late VoidCallback listener;
-  // @override
-  // void initState() {
-  //   // final videoID = YoutubePlayer.convertUrlToId(testyoutubeUrl);
-  //   // playercontroller = YoutubePlayerController(
-  //   //     initialVideoId: videoID!,
-  //   //     flags: const YoutubePlayerFlags(
-  //   //       autoPlay: true,
-  //   //     ));
-  //   super.initState();
-
-  //   // listener = () {
-  //   //   setState(() {});
-  //   // };
-  // }
-
-  // void createVideo() {
-  //   playerController = VideoPlayerController.network(
-  //       "https://r3---sn-vgqsknez.googlevideo.com/videoplayback?source=youtube&mime=video%2Fmp4&itag=22&key=cms1&requiressl=yes&beids=%5B9466592%5D&ratebypass=yes&fexp=9466586,23724337&ei=g3jiWvfCL4O_8wScopaICA&signature=43C209DD37289D74DB39A9BBF7BC442EAC049426.14B818F50F4FA686C13AF5DD1C2A498A9D64ECC9&fvip=3&pl=16&sparams=dur,ei,expire,id,initcwndbps,ip,ipbits,ipbypass,itag,lmt,mime,mip,mm,mn,ms,mv,pl,ratebypass,requiressl,source&ip=54.163.50.118&lmt=1524616041346022&expire=1524813027&ipbits=0&dur=1324.768&id=o-AJvotKVxbyFDCz5LQ1HWQ8TvNoHXWb2-86a_50k3EV0f&rm=sn-p5qyz7s&req_id=e462183e4575a3ee&ipbypass=yes&mip=96.244.254.218&redirect_counter=2&cm2rm=sn-p5qe7l7s&cms_redirect=yes&mm=34&mn=sn-vgqsknez&ms=ltu&mt=1524791367&mv=m")
-  //     ..addListener(listener)
-  //     ..setVolume(1.0)
-  //     ..initialize()
-  //     ..play();
-
-  //   if (playerController!.value.isPlaying) {
-  //     playerController!.pause();
-  //   } else {
-  //     playerController!.initialize();
-  //     playerController!.play();
-  //   }
-  // }
-
-  // @override
-  // void deactivate() {
-  //   playerController!.setVolume(0.0);
-  //   playerController!.removeListener(listener);
-  //   super.deactivate();
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -185,11 +141,11 @@ class _PlantKnowledgeState extends State<PlantKnowledge> {
                                   Container(
                                       margin: const EdgeInsets.fromLTRB(
                                           0, 0, 115, 0),
-                                      child: Text("Plantae",
+                                      child: const Text("Plantae",
                                           style: TextStyle(
                                               color: Colors.grey,
                                               fontWeight: FontWeight.w200))),
-                                  Text("Grasses",
+                                  const Text("Grasses",
                                       style: TextStyle(
                                           color: Colors.grey,
                                           fontWeight: FontWeight.w200))
@@ -220,151 +176,145 @@ class _PlantKnowledgeState extends State<PlantKnowledge> {
                                           color: black,
                                           fontWeight: FontWeight.bold))),
                               Container(
-                                  margin:
-                                      const EdgeInsets.fromLTRB(0, 20, 30, 10),
-                                  child: Column(
-                                    children: <Widget>[
-                                      Row(
-                                        children: <Widget>[
-                                          SvgPicture.asset(
-                                              'images/Sun_icon.svg'),
-                                          Container(
-                                            margin:
-                                                const EdgeInsets.only(left: 10),
-                                            constraints: const BoxConstraints(
-                                                minWidth: 110, maxWidth: 110),
-                                            child: Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text("Sunlight"),
-                                                Text("N/A")
-                                              ],
-                                            ),
+                                margin:
+                                    const EdgeInsets.fromLTRB(0, 20, 30, 10),
+                                child: Column(
+                                  children: <Widget>[
+                                    Row(
+                                      children: <Widget>[
+                                        SvgPicture.asset('images/Sun_icon.svg'),
+                                        Container(
+                                          margin:
+                                              const EdgeInsets.only(left: 10),
+                                          constraints: const BoxConstraints(
+                                              minWidth: 110, maxWidth: 110),
+                                          child: const Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text("Sunlight"),
+                                              Text("N/A")
+                                            ],
                                           ),
-                                          const SizedBox(width: 50),
-                                          SvgPicture.asset(
-                                              'images/humidity_icon.svg'),
-                                          Container(
-                                            margin:
-                                                const EdgeInsets.only(left: 10),
-                                            constraints: const BoxConstraints(
-                                                minWidth: 120, maxWidth: 120),
-                                            child: Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text("Amount of water"),
-                                                Text("N/A")
-                                              ],
-                                            ),
+                                        ),
+                                        const SizedBox(width: 50),
+                                        SvgPicture.asset(
+                                            'images/humidity_icon.svg'),
+                                        Container(
+                                          margin:
+                                              const EdgeInsets.only(left: 10),
+                                          constraints: const BoxConstraints(
+                                              minWidth: 120, maxWidth: 120),
+                                          child: const Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text("Amount of water"),
+                                              Text("N/A")
+                                            ],
                                           ),
-                                        ],
-                                      ),
-                                      const SizedBox(
-                                        height: 20,
-                                      ),
-                                      Row(
-                                        children: <Widget>[
-                                          SvgPicture.asset(
-                                              'images/Temperature_icon.svg'),
-                                          Container(
-                                            margin:
-                                                const EdgeInsets.only(left: 10),
-                                            constraints: const BoxConstraints(
-                                                minWidth: 110, maxWidth: 110),
-                                            child: Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text("Temperature"),
-                                                Text("N/A")
-                                              ],
-                                            ),
+                                        ),
+                                      ],
+                                    ),
+                                    const SizedBox(
+                                      height: 20,
+                                    ),
+                                    Row(
+                                      children: <Widget>[
+                                        SvgPicture.asset(
+                                            'images/Temperature_icon.svg'),
+                                        Container(
+                                          margin:
+                                              const EdgeInsets.only(left: 10),
+                                          constraints: const BoxConstraints(
+                                              minWidth: 110, maxWidth: 110),
+                                          child: const Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text("Temperature"),
+                                              Text("N/A")
+                                            ],
                                           ),
-                                          const SizedBox(width: 50),
-                                          SvgPicture.asset(
-                                              'images/soil_ph_icon.svg'),
-                                          Container(
-                                            margin:
-                                                const EdgeInsets.only(left: 10),
-                                            constraints: const BoxConstraints(
-                                                minWidth: 120, maxWidth: 120),
-                                            child: Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text("Soil pH"),
-                                                Text("N/A")
-                                              ],
-                                            ),
+                                        ),
+                                        const SizedBox(width: 50),
+                                        SvgPicture.asset(
+                                            'images/soil_ph_icon.svg'),
+                                        Container(
+                                          margin:
+                                              const EdgeInsets.only(left: 10),
+                                          constraints: const BoxConstraints(
+                                              minWidth: 120, maxWidth: 120),
+                                          child: const Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text("Soil pH"),
+                                              Text("N/A")
+                                            ],
                                           ),
-                                        ],
-                                      ),
-                                      const SizedBox(height: 20),
-                                      Row(
-                                        children: <Widget>[
-                                          const SizedBox(
-                                            width: 10,
+                                        ),
+                                      ],
+                                    ),
+                                    const SizedBox(height: 20),
+                                    Row(
+                                      children: <Widget>[
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        SvgPicture.asset(
+                                            'images/Safety_distance_icon.svg'),
+                                        const SizedBox(
+                                          width: 9,
+                                        ),
+                                        Container(
+                                          margin:
+                                              const EdgeInsets.only(left: 10),
+                                          constraints: const BoxConstraints(
+                                              minWidth: 105, maxWidth: 105),
+                                          child: const Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text("Safety distance"),
+                                              Text("N/A")
+                                            ],
                                           ),
-                                          SvgPicture.asset(
-                                              'images/Safety_distance_icon.svg'),
-                                          const SizedBox(
-                                            width: 9,
+                                        ),
+                                        const SizedBox(width: 50),
+                                        SvgPicture.asset(
+                                            'images/soil_type_icon.svg'),
+                                        Container(
+                                          margin:
+                                              const EdgeInsets.only(left: 3),
+                                          constraints: const BoxConstraints(
+                                              minWidth: 120, maxWidth: 120),
+                                          child: const Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text("Soil Type"),
+                                              Text("N/A")
+                                            ],
                                           ),
-                                          Container(
-                                            margin:
-                                                const EdgeInsets.only(left: 10),
-                                            constraints: const BoxConstraints(
-                                                minWidth: 105, maxWidth: 105),
-                                            child: Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text("Safety distance"),
-                                                Text("N/A")
-                                              ],
-                                            ),
-                                          ),
-                                          const SizedBox(width: 50),
-                                          SvgPicture.asset(
-                                              'images/soil_type_icon.svg'),
-                                          Container(
-                                            margin:
-                                                const EdgeInsets.only(left: 3),
-                                            constraints: const BoxConstraints(
-                                                minWidth: 120, maxWidth: 120),
-                                            child: Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text("Soil Type"),
-                                                Text("N/A")
-                                              ],
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  )),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
                               Container(
                                   margin:
                                       const EdgeInsets.fromLTRB(0, 20, 30, 10),
@@ -372,18 +322,6 @@ class _PlantKnowledgeState extends State<PlantKnowledge> {
                                       style: TextStyle(
                                           color: black,
                                           fontWeight: FontWeight.bold))),
-
-                              // child: BulletedList(
-                              //   bullet: Container(
-                              //     decoration: BoxDecoration(
-                              //         shape: BoxShape.circle,
-                              //         color: Colors.black),
-                              //     width: 20 / 4,
-                              //     height: 20 / 4,
-                              //   ),
-                              //   listItems: plant_weedmanagement,
-                              //   listOrder: ListOrder.ordered,
-                              // ),
 
                               Container(
                                   margin:
@@ -641,12 +579,15 @@ class _PlantKnowledgeState extends State<PlantKnowledge> {
                                 ),
                               ),
                               Container(
-                                  margin:
-                                      const EdgeInsets.fromLTRB(0, 10, 30, 0),
-                                  child: const Text("Harvesting Time:",
-                                      style: TextStyle(
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.w200))),
+                                margin: const EdgeInsets.fromLTRB(0, 10, 30, 0),
+                                child: const Text(
+                                  "Harvesting Time:",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w200,
+                                  ),
+                                ),
+                              ),
                               Container(
                                 margin: const EdgeInsets.fromLTRB(5, 10, 30, 0),
                                 child: Column(
@@ -683,12 +624,15 @@ class _PlantKnowledgeState extends State<PlantKnowledge> {
                                 ),
                               ),
                               Container(
-                                  margin:
-                                      const EdgeInsets.fromLTRB(0, 20, 30, 0),
-                                  child: const Text("SUGGESTED CROP ROTATION",
-                                      style: TextStyle(
-                                          color: black,
-                                          fontWeight: FontWeight.w200))),
+                                margin: const EdgeInsets.fromLTRB(0, 20, 30, 0),
+                                child: const Text(
+                                  "SUGGESTED CROP ROTATION",
+                                  style: TextStyle(
+                                    color: black,
+                                    fontWeight: FontWeight.w200,
+                                  ),
+                                ),
+                              ),
                               Container(
                                 margin:
                                     const EdgeInsets.fromLTRB(0, 20, 30, 20),
@@ -705,19 +649,22 @@ class _PlantKnowledgeState extends State<PlantKnowledge> {
                                     borderRadius: const BorderRadius.all(
                                         Radius.circular(10)),
                                     child: Image.asset(
-                                      "images/crop_rotation_mock.png",
+                                      "assets/images/crop_rotation_mock.png",
                                       fit: BoxFit.contain,
                                     ),
                                   ),
                                 ),
                               ),
                               Container(
-                                  margin:
-                                      const EdgeInsets.fromLTRB(0, 10, 50, 0),
-                                  child: const Text("CROP GROWTH TUTORIAL",
-                                      style: TextStyle(
-                                          color: black,
-                                          fontWeight: FontWeight.w200))),
+                                margin: const EdgeInsets.fromLTRB(0, 10, 50, 0),
+                                child: const Text(
+                                  "CROP GROWTH TUTORIAL",
+                                  style: TextStyle(
+                                    color: black,
+                                    fontWeight: FontWeight.w200,
+                                  ),
+                                ),
+                              ),
                               Container(
                                 margin:
                                     const EdgeInsets.fromLTRB(0, 20, 30, 20),
@@ -733,7 +680,7 @@ class _PlantKnowledgeState extends State<PlantKnowledge> {
                                   child: ClipRRect(
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(30)),
-                                    child: Placeholder(),
+                                    child: VideoPlayerComponent(),
                                   ),
                                 ),
                               ),

@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:planty/components/layout/appbar.dart';
+import 'package:planty/components/planning/video_player.dart';
 import 'package:planty/firebase_options.dart';
 import 'package:planty/pages/community/home_page.dart';
 import 'package:planty/pages/planning/planning_home.dart';
