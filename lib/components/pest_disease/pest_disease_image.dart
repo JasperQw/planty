@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 
 class PestDiseaseImage extends StatefulWidget {
   final String imagePath;
-  const PestDiseaseImage({
-    required this.imagePath,
-    super.key});
+  const PestDiseaseImage({required this.imagePath, super.key});
 
   @override
   State<PestDiseaseImage> createState() => _PestDiseaseImageState();
@@ -15,8 +13,9 @@ class _PestDiseaseImageState extends State<PestDiseaseImage> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
+      constraints: BoxConstraints(minHeight: 230),
       margin: const EdgeInsets.symmetric(
-          horizontal: 16,
+        horizontal: 16,
       ),
       padding: const EdgeInsets.symmetric(
         horizontal: 0,
@@ -31,8 +30,7 @@ class _PestDiseaseImageState extends State<PestDiseaseImage> {
               blurRadius: 4,
               offset: Offset(0, 4),
             )
-          ]
-      ),
+          ]),
       child: Image.asset(
         widget.imagePath,
         fit: BoxFit.fill,
