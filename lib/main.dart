@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:planty/components/layout/appbar.dart';
+import 'package:planty/components/planning/video_player.dart';
 import 'package:planty/firebase_options.dart';
 import 'package:planty/pages/community/home_page.dart';
 import 'package:planty/pages/planning/John_Innes_method_pop_up.dart';
@@ -32,7 +33,7 @@ class _MyAppState extends State<MyApp> {
     const CommunityHome(),
     const CommunityHome(),
   ];
-  Widget currentFragment = const John_Innes_method_pop_up();
+  Widget currentFragment = const PlanningHome();
   // This widget is the root of your application.
 
   Color iconColor(index) {
