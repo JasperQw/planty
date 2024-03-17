@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:planty/pages/monitoring/iot_pairing.dart';
+import 'package:planty/pages/monitoring/plant_disease_detcetion.dart';
 import 'package:planty/pages/monitoring/promotion_iot.dart';
 
 class MonitorMain extends StatefulWidget {
@@ -305,11 +306,10 @@ class _MonitorMainState extends State<MonitorMain> {
                                 10), // add a space of 10 before the row of containers
                         Row(
                           children: <Widget>[
+                            //Plant Pest Prediction Button
                             Expanded(
                               child: GestureDetector(
-                                onTap: () {
-                                  // Add your onTap functionality here
-                                },
+                                onTap: () {},
                                 child: Container(
                                   height:
                                       250, // set the height of the container
@@ -341,10 +341,17 @@ class _MonitorMainState extends State<MonitorMain> {
                               width: 20,
                             ), // add a space of 10 between the two containers
 
+                            //Plant Disease Detection Button
                             Expanded(
                               child: GestureDetector(
                                 onTap: () {
                                   // Add your onTap functionality here
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const PlantDiseaseDetection()),
+                                  );
                                 },
                                 child: Container(
                                   height:
