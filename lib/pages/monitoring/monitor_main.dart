@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:planty/pages/monitoring/iot_pairing.dart';
 import 'package:planty/pages/monitoring/plant_disease_detcetion.dart';
+import 'package:planty/pages/monitoring/plant_pest_prediction.dart';
 import 'package:planty/pages/monitoring/promotion_iot.dart';
 
 class MonitorMain extends StatefulWidget {
@@ -309,7 +310,15 @@ class _MonitorMainState extends State<MonitorMain> {
                             //Plant Pest Prediction Button
                             Expanded(
                               child: GestureDetector(
-                                onTap: () {},
+                                onTap: () {
+                                  // Add your onTap functionality here
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const PlantPestPrediction()),
+                                  );
+                                },
                                 child: Container(
                                   height:
                                       250, // set the height of the container
