@@ -4,8 +4,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:planty/components/layout/appbar.dart';
 import 'package:planty/firebase_options.dart';
 import 'package:planty/pages/community/home_page.dart';
-import 'package:planty/pages/planning/John_Innes_method_pop_up.dart';
 import 'package:planty/pages/planning/planning_home.dart';
+import 'package:planty/pages/planning/general_soil_tutorial_1.dart';
 import 'package:planty/utilities/color.dart';
 
 void main() async {
@@ -32,7 +32,7 @@ class _MyAppState extends State<MyApp> {
     const CommunityHome(),
     const CommunityHome(),
   ];
-  Widget currentFragment = const John_Innes_method_pop_up();
+  Widget currentFragment = const general_soil_tutorial_1();
   // This widget is the root of your application.
 
   Color iconColor(index) {
