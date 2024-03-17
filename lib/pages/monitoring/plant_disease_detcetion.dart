@@ -11,7 +11,7 @@ class PlantDiseaseDetection extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Plant Disease Detection',
+          'PLANT DISEASE DETECTION',
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
