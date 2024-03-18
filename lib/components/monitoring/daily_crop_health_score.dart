@@ -2,7 +2,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
 class DailyCropHealthScore extends StatefulWidget {
-  const DailyCropHealthScore({Key? key}) : super(key: key);
+  const DailyCropHealthScore({super.key});
   @override
   State<DailyCropHealthScore> createState() => _DailyCropHealthScoreState();
 }
@@ -83,7 +83,6 @@ class _LineChart extends StatelessWidget {
   Widget build(BuildContext context) {
     return LineChart(
       isShowingMainData ? sampleData1 : sampleData2,
-      duration: const Duration(milliseconds: 250),
     );
   }
 
@@ -122,10 +121,10 @@ class _LineChart extends StatelessWidget {
         bottomTitles: AxisTitles(
           sideTitles: bottomTitles,
         ),
-        rightTitles: const AxisTitles(
+        rightTitles: AxisTitles(
           sideTitles: SideTitles(showTitles: false),
         ),
-        topTitles: const AxisTitles(
+        topTitles: AxisTitles(
           sideTitles: SideTitles(showTitles: false),
         ),
         leftTitles: AxisTitles(
@@ -139,7 +138,7 @@ class _LineChart extends StatelessWidget {
         lineChartBarData1_3,
       ];
 
-  LineTouchData get lineTouchData2 => const LineTouchData(
+  LineTouchData get lineTouchData2 => LineTouchData(
         enabled: false,
       );
 
@@ -147,10 +146,10 @@ class _LineChart extends StatelessWidget {
         bottomTitles: AxisTitles(
           sideTitles: bottomTitles,
         ),
-        rightTitles: const AxisTitles(
+        rightTitles: AxisTitles(
           sideTitles: SideTitles(showTitles: false),
         ),
-        topTitles: const AxisTitles(
+        topTitles: AxisTitles(
           sideTitles: SideTitles(showTitles: false),
         ),
         leftTitles: AxisTitles(
@@ -193,13 +192,6 @@ class _LineChart extends StatelessWidget {
     return Text(text, style: style, textAlign: TextAlign.center);
   }
 
-  SideTitles leftTitles() => SideTitles(
-        showTitles: true,
-        getTitlesWidget: leftTitleWidgets,
-        interval: 1,
-        reservedSize: 40,
-      );
-
   Widget bottomTitleWidgets(double value, TitleMeta meta) {
     const style = TextStyle(
       fontWeight: FontWeight.bold,
@@ -220,21 +212,28 @@ class _LineChart extends StatelessWidget {
         text = const Text('');
         break;
     }
-    return SideTitleWidget(
-      axisSide: meta.axisSide,
-      space: 10,
-      child: text,
-    );
+    return text;
   }
 
   SideTitles get bottomTitles => SideTitles(
         showTitles: true,
-        getTitlesWidget: bottomTitleWidgets,
+        getTitles: (value) {
+          switch (value.toInt()) {
+            case 2:
+              return '10 January';
+            case 7:
+              return '20 January';
+            case 12:
+              return '30 January';
+            default:
+              return '';
+          }
+        },
         interval: 1,
         reservedSize: 32,
       );
 
-  FlGridData get gridData => const FlGridData(show: false);
+  FlGridData get gridData => FlGridData(show: false);
 
   FlBorderData get borderData => FlBorderData(
         show: true,
@@ -249,10 +248,10 @@ class _LineChart extends StatelessWidget {
 
   LineChartBarData get lineChartBarData1_1 => LineChartBarData(
         isCurved: true,
-        color: Colors.green,
+        colors: [Colors.green],
         barWidth: 8,
         isStrokeCapRound: true,
-        dotData: const FlDotData(show: false),
+        dotData: FlDotData(show: false),
         belowBarData: BarAreaData(show: false),
         spots: [
           FlSpot(1, 1),
@@ -267,13 +266,13 @@ class _LineChart extends StatelessWidget {
 
   LineChartBarData get lineChartBarData1_2 => LineChartBarData(
         isCurved: true,
-        color: Colors.pink,
+        colors: [Colors.pink],
         barWidth: 8,
         isStrokeCapRound: true,
-        dotData: const FlDotData(show: false),
+        dotData: FlDotData(show: false),
         belowBarData: BarAreaData(
           show: false,
-          color: Colors.pink.withOpacity(0),
+          colors: [Colors.pink.withOpacity(0)],
         ),
         spots: const [
           FlSpot(1, 1),
@@ -287,10 +286,10 @@ class _LineChart extends StatelessWidget {
 
   LineChartBarData get lineChartBarData1_3 => LineChartBarData(
         isCurved: true,
-        color: Colors.cyan,
+        colors: [Colors.cyan],
         barWidth: 8,
         isStrokeCapRound: true,
-        dotData: const FlDotData(show: false),
+        dotData: FlDotData(show: false),
         belowBarData: BarAreaData(show: false),
         spots: const [
           FlSpot(1, 2.8),
@@ -304,10 +303,10 @@ class _LineChart extends StatelessWidget {
   LineChartBarData get lineChartBarData2_1 => LineChartBarData(
         isCurved: true,
         curveSmoothness: 0,
-        color: Colors.green.withOpacity(0.5),
+        colors: [Colors.green.withOpacity(0.5)],
         barWidth: 4,
         isStrokeCapRound: true,
-        dotData: const FlDotData(show: false),
+        dotData: FlDotData(show: false),
         belowBarData: BarAreaData(show: false),
         spots: const [
           FlSpot(1, 1),
@@ -322,13 +321,13 @@ class _LineChart extends StatelessWidget {
 
   LineChartBarData get lineChartBarData2_2 => LineChartBarData(
         isCurved: true,
-        color: Colors.pink.withOpacity(0.5),
+        colors: [Colors.pink.withOpacity(0.5)],
         barWidth: 4,
         isStrokeCapRound: true,
-        dotData: const FlDotData(show: false),
+        dotData: FlDotData(show: false),
         belowBarData: BarAreaData(
           show: true,
-          color: Colors.pink.withOpacity(0.2),
+          colors: [Colors.pink.withOpacity(0.2)],
         ),
         spots: const [
           FlSpot(1, 1.5),
@@ -343,10 +342,10 @@ class _LineChart extends StatelessWidget {
   LineChartBarData get lineChartBarData2_3 => LineChartBarData(
         isCurved: true,
         curveSmoothness: 0,
-        color: Colors.cyan.withOpacity(0.5),
+        colors: [Colors.cyan.withOpacity(0.5)],
         barWidth: 2,
         isStrokeCapRound: true,
-        dotData: const FlDotData(show: true),
+        dotData: FlDotData(show: true),
         belowBarData: BarAreaData(show: false),
         spots: const [
           FlSpot(1, 3.8),
@@ -356,4 +355,10 @@ class _LineChart extends StatelessWidget {
           FlSpot(13, 4.5),
         ],
       );
+
+  leftTitles() {}
 }
+
+mixin TitleMeta {}
+
+AxisTitles({required SideTitles sideTitles}) {}

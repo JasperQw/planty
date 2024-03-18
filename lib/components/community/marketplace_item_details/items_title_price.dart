@@ -14,9 +14,8 @@ class ItemsTitlePrice extends StatefulWidget {
 class _ItemsTitlePriceState extends State<ItemsTitlePrice> {
   @override
   Widget build(BuildContext context) {
-    NumberFormat formatter = NumberFormat.decimalPatternDigits(
-      decimalDigits: 2,
-    );
+    NumberFormat formatter = NumberFormat.decimalPattern();
+    formatter.maximumFractionDigits = 2;
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(16.0),

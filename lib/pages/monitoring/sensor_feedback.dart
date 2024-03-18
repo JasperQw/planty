@@ -42,7 +42,7 @@ class SensorFeedback extends StatelessWidget {
                   height: 350,
                   width: MediaQuery.of(context).size.width -
                       20, // Set the height of the graph
-                  child: const DailyCropHealthScore(),
+                  //child: const DailyCropHealthScore(),
                 ),
 
                 const SizedBox(
