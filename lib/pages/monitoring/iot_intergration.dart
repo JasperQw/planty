@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:planty/components/monitoring/planted_plant.dart';
+import 'package:planty/pages/monitoring/drone_pairing.dart';
+import 'package:planty/pages/monitoring/fertigation_pairing.dart';
+import 'package:planty/pages/monitoring/irrigation_pairing.dart';
 import 'package:planty/pages/monitoring/sensor_feedback.dart';
 
 class iotIntergration extends StatelessWidget {
@@ -117,37 +121,46 @@ class iotIntergration extends StatelessWidget {
 
                     // Smart Irrigation System
                     Expanded(
-                      child: Container(
-                        margin: const EdgeInsets.all(10),
-                        height: 200,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: const Color.fromARGB(255, 255, 255, 255),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Expanded(
-                              child: FittedBox(
-                                fit: BoxFit.cover, // or BoxFit.fill
-                                child: Image.asset(
-                                    "assets/images/Irrigation System.png"),
-                              ),
-                            ),
-                            const Flexible(
-                              child: Text(
-                                'Smart Irrigation System',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
+                      child:GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const IrrigationPairing()),
+                          );
+                        },
+                        child: Container(
+                          margin: const EdgeInsets.all(10),
+                          height: 200,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Expanded(
+                                child: FittedBox(
+                                  fit: BoxFit.cover, // or BoxFit.fill
+                                  child: Image.asset(
+                                      "assets/images/Irrigation System.png"),
                                 ),
                               ),
-                            ),
-                          ],
+                              const Flexible(
+                                child: Text(
+                                  'Smart Irrigation System',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
+                    ),   
                   ],
                 ),
 
@@ -158,34 +171,43 @@ class iotIntergration extends StatelessWidget {
                   children: <Widget>[
                     //Agricultural Drone Thermal Imaging
                     Expanded(
-                      child: Container(
-                        margin: const EdgeInsets.all(10),
-                        height: 200,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: const Color.fromARGB(255, 255, 255, 255),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Expanded(
-                              child: FittedBox(
-                                fit: BoxFit.cover, // or BoxFit.fill
-                                child: Image.asset(
-                                    "assets/images/Agricultural Drone.png"),
-                              ),
-                            ),
-                            const Flexible(
-                              child: Text(
-                                'Agricultural Drone Thermal Imaging',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
+                      child:GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const DronePairing()),
+                          );
+                        },
+                        child: Container(
+                          margin: const EdgeInsets.all(10),
+                          height: 200,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Expanded(
+                                child: FittedBox(
+                                  fit: BoxFit.cover, // or BoxFit.fill
+                                  child: Image.asset(
+                                      "assets/images/Agricultural Drone.png"),
                                 ),
                               ),
-                            ),
-                          ],
+                              const Flexible(
+                                child: Text(
+                                  'Agricultural Drone Thermal Imaging',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -194,34 +216,43 @@ class iotIntergration extends StatelessWidget {
 
                     // Smart Fertigation System
                     Expanded(
-                      child: Container(
-                        margin: const EdgeInsets.all(10),
-                        height: 200,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: const Color.fromARGB(255, 255, 255, 255),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Expanded(
-                              child: FittedBox(
-                                fit: BoxFit.cover, // or BoxFit.fill
-                                child: Image.asset(
-                                    "assets/images/Fertigation System.png"),
-                              ),
-                            ),
-                            const Flexible(
-                              child: Text(
-                                'Smart Fertigation System',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
+                      child:GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const FertigationPairing()),
+                          );
+                        },
+                        child: Container(
+                          margin: const EdgeInsets.all(10),
+                          height: 200,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Expanded(
+                                child: FittedBox(
+                                  fit: BoxFit.cover, // or BoxFit.fill
+                                  child: Image.asset(
+                                      "assets/images/Fertigation System.png"),
                                 ),
                               ),
-                            ),
-                          ],
+                              const Flexible(
+                                child: Text(
+                                  'Smart Fertigation System',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),

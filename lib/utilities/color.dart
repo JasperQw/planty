@@ -13,3 +13,4 @@ const secondaryTextColor = Color(0xFF5C5C5F);
 const darkGreen = Color(0xFF3A614F);
 const starColor = Color(0xFFFF981F);
 const replyColor = Color(0xFFF8F7F3);
+const blue = Color(0xff426af5);
