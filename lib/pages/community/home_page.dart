@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:planty/components/common/title.dart';
 import 'package:planty/components/community/home/collection_masked_image.dart';
 import 'package:planty/components/community/home/community_post.dart';
 import 'package:planty/components/community/home/home_caoursel.dart';
@@ -69,24 +70,32 @@ class _CommunityHomeState extends State<CommunityHome> {
                 const SizedBox(
                   height: 16,
                 ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16),
-                  child: Text(
-                    "Post your thoughts",
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.w600,
-                      color: black,
-                    ),
-                  ),
+                const TitleWidget(
+                  title: "Post your thoughts",
+                  fontSize: 30,
                 ),
                 const SizedBox(
                   height: 16,
                 ),
                 const PostThought(),
                 const SizedBox(
-                  height: 32,
+                  height: 16,
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(
+                    left: 16.0,
+                  ),
+                  child: Text(
+                    "Latest",
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                      color: focusGrey,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 16,
                 ),
                 const CommunityPost(),
                 const SizedBox(

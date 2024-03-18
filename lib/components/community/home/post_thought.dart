@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:planty/components/community/home/icon_prefix_button.dart';
+import 'package:planty/components/common/avatar.dart';
+import 'package:planty/components/common/icon_prefix_button.dart';
 import 'package:planty/utilities/color.dart';
 
 class PostThought extends StatefulWidget {
@@ -38,22 +39,10 @@ class _PostThoughtState extends State<PostThought> {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              clipBehavior: Clip.hardEdge,
-              width: 56,
-              height: 56,
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-              ),
-              child: CircleAvatar(
-                backgroundColor: Colors.transparent,
-                child: Image.network(
+            const Avatar(
+              image:
                   "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-                  width: 64,
-                  height: 64,
-                  fit: BoxFit.cover,
-                ),
-              ),
+              size: 54,
             ),
             const SizedBox(
               width: 12,
