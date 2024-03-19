@@ -1,8 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:planty/components/common/appbar_with_shadow.dart';
-import 'package:planty/components/planning/drone_image_new_project_button.dart';
 
 class smart_plot_planner_project extends StatelessWidget {
   const smart_plot_planner_project({super.key});
@@ -105,7 +102,7 @@ class smart_plot_planner_project extends StatelessWidget {
                                   children: <Widget>[
                                     Image.asset("images/new_project_icon.png"),
                                     const Text(
-                                      "Choose Project",
+                                      "New Project",
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16),

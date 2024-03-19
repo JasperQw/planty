@@ -33,8 +33,10 @@ class _GeneralAppBarState extends State<GeneralAppBar> {
             : null,
         title: Container(
           height: 80,
-          alignment: Alignment.center,
+          margin: const EdgeInsets.only(left: 20),
+          alignment: Alignment.centerLeft,
           child: Text(
+            textAlign: TextAlign.start,
             widget.title,
             style: const TextStyle(
               fontWeight: FontWeight.w600,

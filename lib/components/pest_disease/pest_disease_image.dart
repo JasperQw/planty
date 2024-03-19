@@ -12,8 +12,9 @@ class _PestDiseaseImageState extends State<PestDiseaseImage> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      clipBehavior: Clip.hardEdge,
       width: double.infinity,
-      constraints: BoxConstraints(minHeight: 230),
+      constraints: const BoxConstraints(minHeight: 230, maxHeight: 300),
       margin: const EdgeInsets.symmetric(
         horizontal: 16,
       ),
@@ -33,7 +34,7 @@ class _PestDiseaseImageState extends State<PestDiseaseImage> {
           ]),
       child: Image.asset(
         widget.imagePath,
-        fit: BoxFit.fill,
+        fit: BoxFit.cover,
       ),
     );
   }

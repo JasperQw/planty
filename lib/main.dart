@@ -2,11 +2,11 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:planty/components/layout/appbar.dart';
-import 'package:planty/components/planning/video_player.dart';
 import 'package:planty/firebase_options.dart';
 import 'package:planty/pages/community/home_page.dart';
 import 'package:planty/pages/planning/planning_home.dart';
-import 'package:planty/pages/planning/general_soil_tutorial_1.dart';
+import 'package:planty/pages/planning/plant_disease_knowledge_search.dart';
+import 'package:planty/pages/planning/prediction_result.dart';
 import 'package:planty/utilities/color.dart';
 import 'package:planty/pages/monitoring/monitor_main.dart';
 
@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
     const MonitorMain(),
     const CommunityHome(),
   ];
-  Widget currentFragment = const general_soil_tutorial_1();
+  Widget currentFragment = const PredictionResult();
   // This widget is the root of your application.
 
   Color iconColor(index) {
