@@ -35,10 +35,11 @@ class _AppBarWithShadowState extends State<AppBarWithShadow> {
               : null,
           title: Container(
             height: 80,
-            alignment: Alignment.center,
+            margin: const EdgeInsets.only(left: 20),
+            alignment: Alignment.centerLeft,
             child: Text(
               widget.title,
-              textAlign: TextAlign.left,
+              textAlign: TextAlign.start,
               style: const TextStyle(
                 fontWeight: FontWeight.w600,
                 fontSize: 20,

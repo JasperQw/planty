@@ -16,7 +16,7 @@ class _VideoPlayerComponentState extends State<VideoPlayerComponent> {
   void initState() {
     controller = VideoController(
       videoPlayerController:
-          VideoPlayerController.asset("assets/videos/example.mp4"),
+          VideoPlayerController.asset("assets/videos/zea_mays_tutorial.mp4"),
       videoConfig: VideoConfig(
         // height: 260,
         // autoInitialize: true,

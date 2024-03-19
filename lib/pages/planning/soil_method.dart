@@ -84,32 +84,34 @@ class _SoilMethodState extends State<SoilMethod> {
                 color: Colors.white,
                 borderRadius: radius,
               ),
-              child: SingleChildScrollView(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Image.asset("images/big_question_mark.png"),
-                    const Text("John Innes method",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 24)),
-                    Container(
-                        decoration: BoxDecoration(
-                            color: Colors.amber[50],
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(20))),
-                        clipBehavior: Clip.hardEdge,
-                        margin: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                        child: Flexible(
-                            child: Text(
-                          description,
-                          textAlign: TextAlign.center,
-                          style: const TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w400),
-                        )))
-                  ],
+              child: Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Image.asset("images/big_question_mark.png"),
+                      const Text("John Innes method",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 24)),
+                      Container(
+                          decoration: BoxDecoration(
+                              color: Colors.amber[50],
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(20))),
+                          clipBehavior: Clip.hardEdge,
+                          margin: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                          padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                          child: Flexible(
+                              child: Text(
+                            description,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.w400),
+                          ))),
+                    ],
+                  ),
                 ),
               ),
             ),
