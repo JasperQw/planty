@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planty/components/common/appbar_with_shadow.dart';
 import 'package:planty/pages/monitoring/iot_intergration.dart';
 
 // ignore: camel_case_types
@@ -8,16 +9,13 @@ class iotPairing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Land Segmentation For IOT',
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
-      ),
+      //Land Segmentation For IOT
+      appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(80),
+          child: AppBarWithShadow(
+            title: "Land Segmentation For IOT",
+            withBackBtn: true,
+          )),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

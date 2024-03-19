@@ -10,45 +10,32 @@ class PlanningHome extends StatefulWidget {
   const PlanningHome({super.key});
 
   @override
-  State <PlanningHome> createState() =>  _PlanningHomeState();
+  State<PlanningHome> createState() => _PlanningHomeState();
 }
 
-class  _PlanningHomeState extends State <PlanningHome> {
+class _PlanningHomeState extends State<PlanningHome> {
   @override
   Widget build(BuildContext context) {
     return const Column(
       children: [
         Expanded(
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                PlanningIntroduction(),
-                SizedBox(
-                  height: 20
-                ),
-                KnowledgeContainer(),
-                SizedBox(
-                  height: 20
-                ),
-                TutorialContainer(),
-                SizedBox(
-                  height: 20
-                ),
-                LandContainer(),
-                SizedBox(
-                  height: 20
-                ),
-                PredictionContainer(),
-                SizedBox(
-                  height: 20
-                ),
-                PestContainer(),
-                SizedBox(
-                  height: 20
-                ),
-              ]
-            ),))
+            child: SingleChildScrollView(
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            PlanningIntroduction(),
+            SizedBox(height: 20),
+            KnowledgeContainer(),
+            SizedBox(height: 20),
+            TutorialContainer(),
+            SizedBox(height: 20),
+            LandContainer(),
+            SizedBox(height: 20),
+            PredictionContainer(),
+            SizedBox(height: 20),
+            PestContainer(),
+            SizedBox(height: 20),
+          ]),
+        ))
       ],
     );
   }

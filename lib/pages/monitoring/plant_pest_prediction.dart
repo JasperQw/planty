@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planty/components/common/appbar_with_shadow.dart';
 import 'package:planty/components/monitoring/plant_pest_prediction/protips_button.dart';
 import 'package:planty/components/monitoring/plant_pest_prediction/icon_button.dart';
 import 'package:planty/components/monitoring/plant_pest_prediction/plant_pest.dart';
@@ -9,16 +10,13 @@ class PlantPestPrediction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Plant Pest Prediction',
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
-      ),
+      //Plant Pest Prediction
+      appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(80),
+          child: AppBarWithShadow(
+            title: "Plant Pest Prediction",
+            withBackBtn: true,
+          )),
       body: Container(
         color: Colors.white,
         width: MediaQuery.of(context).size.width,

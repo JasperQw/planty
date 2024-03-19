@@ -20,17 +20,17 @@ class _SmartFertigationState extends State<SmartFertigation> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
-            preferredSize: Size.fromHeight(80),
-            child: AppBarWithShadow(
-              title: "Smart Fertigation System",
-              withBackBtn: true,
-            )),
+          preferredSize: Size.fromHeight(80),
+          child: AppBarWithShadow(
+            title: "Smart Fertigation System",
+            withBackBtn: true,
+          )),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
-                height: 20,
+              height: 20,
             ),
             Container(
               alignment: Alignment.center,
@@ -69,18 +69,16 @@ class _SmartFertigationState extends State<SmartFertigation> {
                       Text(
                         "Heavy rain at 5.00 pm",
                         style: TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.w700,
-                          color: Colors.white
-                        ),
+                            fontSize: 22,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white),
                       ),
                       Text(
                         "Reschedule your fertigation at the evening",
                         style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.white
-                        ),
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white),
                       )
                     ],
                   )
@@ -88,32 +86,31 @@ class _SmartFertigationState extends State<SmartFertigation> {
               ),
             ),
             const SizedBox(
-                height: 20,
+              height: 20,
             ),
             const Row(
               children: [
                 SizedBox(width: 20),
-                Expanded(child:AverageSoilMoisture()),
+                Expanded(child: AverageSoilMoisture()),
                 SizedBox(width: 20),
-                Expanded(child:AverageSoilPH()),
+                Expanded(child: AverageSoilPH()),
                 SizedBox(width: 20),
               ],
             ),
             const SizedBox(
-                height: 20,
+              height: 20,
             ),
             const SoilNutrients(),
             const SizedBox(
-                height: 20,
+              height: 20,
             ),
             const FertigationSchedule(),
             const SizedBox(
-                height: 20,
+              height: 20,
             ),
             Container(
               margin: const EdgeInsets.symmetric(
-                horizontal: 20
-              ), // Adjust the margin values as needed
+                  horizontal: 20), // Adjust the margin values as needed
               child: Image.asset(
                 "assets/images/irrigation_graph.png",
                 height: 200,
@@ -122,11 +119,11 @@ class _SmartFertigationState extends State<SmartFertigation> {
               ),
             ),
             const SizedBox(
-                height: 20,
+              height: 20,
             ),
             const FertigationTask(),
             const SizedBox(
-                height: 20,
+              height: 20,
             ),
           ],
         ),

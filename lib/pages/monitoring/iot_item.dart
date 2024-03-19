@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:planty/components/common/appbar_with_shadow.dart';
 import 'package:planty/components/monitoring/promotion/iot_item_details.dart';
 import 'package:planty/components/monitoring/promotion/iot_item_header.dart';
 import 'package:planty/components/monitoring/promotion/iot_quotation.dart';
@@ -14,17 +15,14 @@ class IOTitem extends StatefulWidget {
 class _IOTitemState extends State<IOTitem> {
   @override
   Widget build(BuildContext context) {
+    //IOT Service
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'IOT Services',
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
-      ),
+      appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(80),
+          child: AppBarWithShadow(
+            title: "IOT Services",
+            withBackBtn: true,
+          )),
       body: Container(
         color: const Color.fromARGB(255, 249, 249, 249),
         width: MediaQuery.of(context).size.width,
