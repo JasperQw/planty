@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:planty/components/common/appbar_with_shadow.dart';
@@ -62,18 +61,17 @@ class _PlantKnowledgeState extends State<PlantKnowledge> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(
-          80,
+        appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(
+            80,
+          ),
+          child: AppBarWithShadow(
+            title: "Plant Knowledge",
+            withBackBtn: true,
+          ),
         ),
-        child: AppBarWithShadow(
-          title: "Plant Knowledge",
-          withBackBtn: true,
-        ),
-      ),
-      body: Container(
-        constraints: const BoxConstraints.expand(),
-        child: SingleChildScrollView(
+        body: Container(
+          constraints: const BoxConstraints.expand(),
           child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -201,7 +199,7 @@ class _PlantKnowledgeState extends State<PlantKnowledge> {
                                             ],
                                           ),
                                         ),
-                                        const SizedBox(width: 50),
+                                        const SizedBox(width: 30),
                                         SvgPicture.asset(
                                             'images/humidity_icon.svg'),
                                         Container(
@@ -245,7 +243,7 @@ class _PlantKnowledgeState extends State<PlantKnowledge> {
                                             ],
                                           ),
                                         ),
-                                        const SizedBox(width: 50),
+                                        const SizedBox(width: 35),
                                         SvgPicture.asset(
                                             'images/soil_ph_icon.svg'),
                                         Container(
@@ -293,7 +291,7 @@ class _PlantKnowledgeState extends State<PlantKnowledge> {
                                             ],
                                           ),
                                         ),
-                                        const SizedBox(width: 50),
+                                        const SizedBox(width: 35),
                                         SvgPicture.asset(
                                             'images/soil_type_icon.svg'),
                                         Container(
@@ -694,8 +692,6 @@ class _PlantKnowledgeState extends State<PlantKnowledge> {
                   ),
                 ),
               ]),
-        ),
-      ),
-    );
+        ));
   }
 }
