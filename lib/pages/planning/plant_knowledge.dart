@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:planty/components/common/appbar_with_shadow.dart';
@@ -61,17 +62,18 @@ class _PlantKnowledgeState extends State<PlantKnowledge> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(
-            80,
-          ),
-          child: AppBarWithShadow(
-            title: "Plant Knowledge",
-            withBackBtn: true,
-          ),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(
+          80,
         ),
-        body: Container(
-          constraints: const BoxConstraints.expand(),
+        child: AppBarWithShadow(
+          title: "Plant Knowledge",
+          withBackBtn: true,
+        ),
+      ),
+      body: Container(
+        constraints: const BoxConstraints.expand(),
+        child: SingleChildScrollView(
           child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -692,6 +694,8 @@ class _PlantKnowledgeState extends State<PlantKnowledge> {
                   ),
                 ),
               ]),
-        ));
+        ),
+      ),
+    );
   }
 }
