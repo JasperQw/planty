@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:planty/components/layout/appbar.dart';
 import 'package:planty/firebase_options.dart';
 import 'package:planty/pages/community/home_page.dart';
+import 'package:planty/pages/home/home_page.dart';
 import 'package:planty/pages/planning/planning_home.dart';
 import 'package:planty/pages/planning/plant_disease_knowledge_search.dart';
 import 'package:planty/pages/planning/prediction_result.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   int currentPageIndex = 1;
   List<Widget> fragmentList = [
-    const CommunityHome(),
+    const HomePage(),
     const CommunityHome(),
     const PlanningHome(),
     const MonitorMain(),

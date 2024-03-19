@@ -15,7 +15,7 @@ class _MonitorMainState extends State<MonitorMain> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 232, 232, 232),
+      backgroundColor: const Color.fromARGB(255, 235, 235, 235),
       body: CustomScrollView(
         slivers: [
           // Monitor main page header
