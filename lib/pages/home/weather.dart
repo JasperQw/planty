@@ -170,7 +170,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
                             padding: const EdgeInsets.only(
                                 right: 10, bottom: 10, top: 10),
                             child: Container(
-                              margin: const EdgeInsets.all(10.0),
+                              margin: const EdgeInsets.only(
+                                  top: 10.0, right: 10, left: 10),
                               child: Material(
                                 elevation: 3,
                                 borderRadius: BorderRadius.circular(10),
