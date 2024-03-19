@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AverageSoilMoisture extends StatefulWidget {
-  const AverageSoilMoisture({super.key});
+class AverageSoilPH extends StatefulWidget {
+  const AverageSoilPH({super.key});
 
   @override
-  State<AverageSoilMoisture> createState() => _AverageSoilMoistureState();
+  State<AverageSoilPH> createState() => _AverageSoilPHState();
 }
 
-class _AverageSoilMoistureState extends State<AverageSoilMoisture> {
+class _AverageSoilPHState extends State<AverageSoilPH> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,27 +32,33 @@ class _AverageSoilMoistureState extends State<AverageSoilMoisture> {
                 )
               ],
             ),
-      child: Column(
+      child: const Column(
         mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(
+              SizedBox(
                 height: 20,
               ),
-              const Text(
-                "Average Soil Moisture",
+              Text(
+                "Average Soil pH",
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
                   color: Colors.grey
                 ),
               ),
+              SizedBox(
+                height: 50,
+              ),
               Center(
-                child:Image.asset(
-                  "assets/images/irrigation_chart.png",
-                  width: 110,
-                  height: 110,
-                  //fit: BoxFit.fill,
+                child:Text(
+                  "7.6 pH",
+                  textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.black
+                  ),
                 )
               )
             ]

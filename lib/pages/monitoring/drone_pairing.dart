@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:planty/components/common/appbar_with_shadow.dart';
+import 'package:planty/pages/monitoring/drone_image_feedback.dart';
 import 'package:planty/utilities/color.dart';
 
 class DronePairing extends StatefulWidget {
@@ -54,7 +55,7 @@ class _DronePairingState extends State<DronePairing> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const DronePairing()),
+                      builder: (context) => const DroneImageFeedback()),
                 );
               },
               child: const Text(
