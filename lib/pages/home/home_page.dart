@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:planty/components/home/activities_suggestion_model.dart';
 import 'package:planty/components/home/news_model.dart';
 import 'package:planty/pages/home/weather.dart';
@@ -13,10 +15,18 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 247, 247, 247),
-      resizeToAvoidBottomInset: false,
-      body: SingleChildScrollView(
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Color.fromARGB(255, 249, 249, 249),
+            Color.fromARGB(255, 249, 249, 249), // Adjust as needed
+          ],
+        ),
+      ),
+      child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -31,42 +41,30 @@ class _HomePageState extends State<HomePage> {
               ),
               child: Stack(
                 children: <Widget>[
-                  ClipRRect(
-                    borderRadius: const BorderRadius.only(
-                      bottomLeft: Radius.circular(25),
-                      bottomRight: Radius.circular(25),
-                    ),
-                    child: Image.asset(
-                      'assets/images/blue-sky.gif',
-                      fit: BoxFit.cover,
-                      width: MediaQuery.of(context).size.width,
-                      height: 225,
-                    ),
-                  ),
                   Container(
                     padding:
                         const EdgeInsets.only(top: 30, left: 20, right: 20),
                     child: const TextField(
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
                       decoration: InputDecoration(
                         labelText: "Search",
-                        labelStyle: TextStyle(color: Colors.white),
+                        labelStyle: TextStyle(color: Colors.black),
                         hintText: "Search",
-                        hintStyle: TextStyle(color: Colors.white),
-                        prefixIcon: Icon(Icons.search, color: Colors.white),
+                        hintStyle: TextStyle(color: Colors.black),
+                        prefixIcon: Icon(Icons.search, color: Colors.black),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(25.0)),
-                          borderSide: BorderSide(color: Colors.white),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(25.0)),
-                          borderSide: BorderSide(color: Colors.white),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
                       ),
                     ),
                   ),
                   Align(
-                    alignment: Alignment(0.0, 1.0),
+                    alignment: const Alignment(0.0, 1.0),
                     child: SizedBox(
                       height: 10,
                       width: 10,
@@ -88,26 +86,128 @@ class _HomePageState extends State<HomePage> {
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(25),
                                 ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: <Widget>[
-                                    Container(
-                                      padding: const EdgeInsets.only(
-                                          top: 15, left: 20, right: 20),
-                                      child: const Column(
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(25),
+                                    image: const DecorationImage(
+                                      image: AssetImage(
+                                          'assets/images/w7.png'), // Replace with your image
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  child: const Row(
+                                    children: [
+                                      Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          Image(
-                                            image: AssetImage(
-                                                'assets/images/sunny.png'),
-                                            height: 185,
-                                            fit: BoxFit.fill,
+                                          SizedBox(height: 15),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                left:
+                                                    20), // Add your desired padding here
+                                            child: Text(
+                                              '27°',
+                                              textAlign: TextAlign.start,
+                                              style: TextStyle(
+                                                color: Color.fromARGB(
+                                                    255, 255, 255, 255),
+                                                fontSize: 80,
+                                                fontWeight: FontWeight.w700,
+                                              ),
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                left: 20,
+                                                bottom:
+                                                    10), // Add your desired padding here
+                                            child: Text(
+                                              'Thursday, 7 March',
+                                              textAlign: TextAlign.start,
+                                              style: TextStyle(
+                                                color: Color.fromARGB(
+                                                    255, 255, 255, 255),
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w400,
+                                              ),
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                left: 20,
+                                                bottom:
+                                                    10), // Add your desired padding here
+                                            child: Row(
+                                              children: <Widget>[
+                                                Icon(
+                                                  Icons.location_on,
+                                                  color: Colors.white,
+                                                  size: 20,
+                                                ),
+                                                Text(
+                                                  'Petaling Jaya',
+                                                  textAlign: TextAlign.start,
+                                                  style: TextStyle(
+                                                    color: Color.fromARGB(
+                                                        255, 255, 255, 255),
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w300,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                         ],
                                       ),
-                                    ),
-                                  ],
+                                      SizedBox(width: 28),
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.end,
+                                        children: [
+                                          SizedBox(height: 30),
+                                          Align(
+                                            alignment: Alignment.topRight,
+                                            child: Icon(
+                                              Icons.wb_sunny_rounded,
+                                              color: Colors.white,
+                                              size: 50,
+                                            ),
+                                          ),
+                                          SizedBox(height: 50),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                left: 20,
+                                                bottom:
+                                                    3), // Add your desired padding here
+                                            child: Text(
+                                              'Humidity: 30%\t\t\t\t\t',
+                                              textAlign: TextAlign.start,
+                                              style: TextStyle(
+                                                color: Color.fromARGB(
+                                                    255, 255, 255, 255),
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.w400,
+                                              ),
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                left: 20, bottom: 10),
+                                            child: Text(
+                                                'Precipitation: \n18mm in last 24h',
+                                                textAlign: TextAlign.start,
+                                                style: TextStyle(
+                                                  color: Color.fromARGB(
+                                                      255, 255, 255, 255),
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.w400,
+                                                )),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
@@ -186,7 +286,7 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.circular(10),
                           child: Container(
                             height: 150,
-                            width: 130,
+                            width: 120,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: Color.fromARGB(255, 233, 250, 209),
