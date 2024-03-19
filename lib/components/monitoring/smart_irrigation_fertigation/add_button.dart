@@ -33,7 +33,7 @@ class _AddButtonState extends State<AddButton> {
           vertical: 5,
         ),
         decoration: BoxDecoration(
-          color: blue,
+          color: green,
           borderRadius: BorderRadius.circular(10),
           boxShadow: const [
             BoxShadow(

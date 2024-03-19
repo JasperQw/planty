@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:planty/components/common/appbar_with_shadow.dart';
 import 'package:planty/components/monitoring/smart_irrigation_fertigation/calendar.dart';
+import 'package:planty/components/monitoring/smart_irrigation_fertigation/weekday.dart';
 import 'package:planty/utilities/color.dart';
 
 class IrrigationSchedulePopUp extends StatefulWidget {
@@ -131,6 +132,7 @@ class _IrrigationSchedulePopUpState extends State<IrrigationSchedulePopUp> {
                   color: Colors.black
                 ),
               ),
+              const SizedBox(height: 10,),
               TextField(
                 keyboardType: TextInputType.datetime,
                 maxLines: null,
@@ -140,12 +142,12 @@ class _IrrigationSchedulePopUpState extends State<IrrigationSchedulePopUp> {
                 decoration: InputDecoration(
                   filled: true,
                   fillColor:Colors.grey.withOpacity(0.1),
-                  contentPadding:EdgeInsets.symmetric(
+                  contentPadding:const EdgeInsets.symmetric(
                     horizontal: 0,
                     vertical: 15,
                   ),
                   labelText: "Duration, min*",
-                  hintStyle: TextStyle(
+                  hintStyle: const TextStyle(
                     fontSize: 14,
                     color: focusGrey,
                   ),                   
@@ -161,12 +163,12 @@ class _IrrigationSchedulePopUpState extends State<IrrigationSchedulePopUp> {
                 decoration: InputDecoration(
                   filled: true,
                   fillColor:Colors.grey.withOpacity(0.1),
-                  contentPadding:EdgeInsets.symmetric(
+                  contentPadding:const EdgeInsets.symmetric(
                     horizontal: 0,
                     vertical: 15,
                   ),
                   labelText: "Repeats*",
-                  hintStyle: TextStyle(
+                  hintStyle: const TextStyle(
                     fontSize: 14,
                     color: focusGrey,
                   ),                   
@@ -181,6 +183,54 @@ class _IrrigationSchedulePopUpState extends State<IrrigationSchedulePopUp> {
                   color: Colors.black
                 ),
               ),
+              const SizedBox(height: 15,),
+              const Row(
+                children: [
+                  WeekdayChoice(weekday: "S"),
+                  SizedBox(width: 15,),
+                  WeekdayChoice(weekday: "M"),
+                  SizedBox(width: 15,),
+                  WeekdayChoice(weekday: "T"),
+                  SizedBox(width: 15,),
+                  WeekdayChoice(weekday: "W"),
+                  SizedBox(width: 15,),
+                  WeekdayChoice(weekday: "T"),
+                  SizedBox(width: 15,),
+                  WeekdayChoice(weekday: "F"),
+                  SizedBox(width: 15,),
+                  WeekdayChoice(weekday: "S"), 
+                ],
+              ),const SizedBox(height: 30,),
+              Container(
+                width: double.infinity,
+                alignment: Alignment.center,
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 0,
+                ),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 15,
+                  vertical: 15,
+                ),
+                decoration: BoxDecoration(
+                  color: green,
+                  borderRadius: BorderRadius.circular(10),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Color.fromRGBO(0, 0, 0, 0.25),
+                      blurRadius: 4,
+                      offset: Offset(0, 4),
+                    )
+                  ],
+                ),
+                child: const Text(
+                  "Create",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white
+                  ),
+                ),
+              )
             ],
           )
         ),
