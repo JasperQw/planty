@@ -17,7 +17,6 @@ class iotPairing extends StatelessWidget {
             color: Colors.black,
           ),
         ),
-        centerTitle: true,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,

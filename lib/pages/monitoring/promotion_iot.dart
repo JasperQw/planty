@@ -51,7 +51,6 @@ class _PromotionIOTState extends State<PromotionIOT> {
             color: Colors.black,
           ),
         ),
-        centerTitle: true,
       ),
       body: Container(
         color: const Color.fromARGB(255, 249, 249, 249),

@@ -14,14 +14,13 @@ class iotIntergration extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'AREA 1 IOT MONITORING',
+          'Area 1 - IOT Intergration',
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: Colors.black,
           ),
         ),
-        centerTitle: true,
       ),
       body: Container(
         color: const Color.fromARGB(255, 249, 249, 249),
@@ -121,12 +120,13 @@ class iotIntergration extends StatelessWidget {
 
                     // Smart Irrigation System
                     Expanded(
-                      child:GestureDetector(
+                      child: GestureDetector(
                         onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const IrrigationPairing()),
+                                builder: (context) =>
+                                    const IrrigationPairing()),
                           );
                         },
                         child: Container(
@@ -160,7 +160,7 @@ class iotIntergration extends StatelessWidget {
                           ),
                         ),
                       ),
-                    ),   
+                    ),
                   ],
                 ),
 
@@ -171,7 +171,7 @@ class iotIntergration extends StatelessWidget {
                   children: <Widget>[
                     //Agricultural Drone Thermal Imaging
                     Expanded(
-                      child:GestureDetector(
+                      child: GestureDetector(
                         onTap: () {
                           Navigator.push(
                             context,
@@ -216,12 +216,13 @@ class iotIntergration extends StatelessWidget {
 
                     // Smart Fertigation System
                     Expanded(
-                      child:GestureDetector(
+                      child: GestureDetector(
                         onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const FertigationPairing()),
+                                builder: (context) =>
+                                    const FertigationPairing()),
                           );
                         },
                         child: Container(

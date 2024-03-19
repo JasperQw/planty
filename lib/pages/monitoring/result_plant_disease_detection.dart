@@ -20,7 +20,6 @@ class ResultPlantDiseaseDetection extends StatelessWidget {
             color: Colors.black,
           ),
         ),
-        centerTitle: true,
       ),
       body: Container(
         color: Colors.white,

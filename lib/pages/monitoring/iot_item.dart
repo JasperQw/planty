@@ -17,14 +17,13 @@ class _IOTitemState extends State<IOTitem> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'IOT SERVICES',
+          'IOT Services',
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
             color: Colors.black,
           ),
         ),
-        centerTitle: true,
       ),
       body: Container(
         color: const Color.fromARGB(255, 249, 249, 249),
