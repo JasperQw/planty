@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:planty/components/common/appbar_with_shadow.dart';
+import 'package:planty/pages/monitoring/smart_fertigation.dart';
 import 'package:planty/utilities/color.dart';
 
 class FertigationPairing extends StatefulWidget {
@@ -51,10 +52,10 @@ class _FertigationPairingState extends State<FertigationPairing> {
             
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
+                Navigator.of(context).push(
                   MaterialPageRoute(
-                      builder: (context) => const FertigationPairing()),
+                    builder: (context) => const SmartFertigation(),
+                  ),
                 );
               },
               child: const Text(

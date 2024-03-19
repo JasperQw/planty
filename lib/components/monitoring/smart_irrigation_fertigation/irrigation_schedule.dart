@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:planty/components/monitoring/smart_irrigation/add_button.dart';
+import 'package:planty/components/monitoring/smart_irrigation_fertigation/add_button.dart';
 
 class IrrigationSchedule extends StatefulWidget {
   const IrrigationSchedule({super.key});

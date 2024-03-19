@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:planty/components/common/appbar_with_shadow.dart';
-import 'package:planty/components/monitoring/smart_irrigation/average_soil_moisture.dart';
-import 'package:planty/components/monitoring/smart_irrigation/daily_water_consumption.dart';
-import 'package:planty/components/monitoring/smart_irrigation/irrigation_schedule.dart';
-import 'package:planty/components/monitoring/smart_irrigation/irrigation_task.dart';
-import 'package:planty/components/monitoring/smart_irrigation/soil_moisture.dart';
+import 'package:planty/components/monitoring/smart_irrigation_fertigation/average_soil_moisture.dart';
+import 'package:planty/components/monitoring/smart_irrigation_fertigation/daily_water_consumption.dart';
+import 'package:planty/components/monitoring/smart_irrigation_fertigation/irrigation_schedule.dart';
+import 'package:planty/components/monitoring/smart_irrigation_fertigation/irrigation_task.dart';
+import 'package:planty/components/monitoring/smart_irrigation_fertigation/soil_moisture.dart';
 
 class SmartIrrigation extends StatefulWidget {
   const SmartIrrigation({super.key});

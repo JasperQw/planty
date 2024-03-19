@@ -14,3 +14,7 @@ const darkGreen = Color(0xFF3A614F);
 const starColor = Color(0xFFFF981F);
 const replyColor = Color(0xFFF8F7F3);
 const blue = Color(0xff426af5);
+const peach = Color(0xfff29492);
+const orange = Color(0xffff715b);
+const lightGreen = Color(0xff34d1bf);
+const indigo = Color(0xff6665dd);
