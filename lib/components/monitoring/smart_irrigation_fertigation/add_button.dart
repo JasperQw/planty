@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:planty/components/monitoring/smart_irrigation_fertigation/irrigation_schedule_popup.dart';
+import 'package:planty/pages/monitoring/irrigation_schedule_popup.dart';
 import 'package:planty/utilities/color.dart';
 
 class AddButton extends StatefulWidget {
