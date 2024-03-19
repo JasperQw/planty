@@ -9,7 +9,7 @@ class SensorFeedback extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'IOT SENSORS FEEDBACK',
+          'Iot Sensor Feedback',
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,

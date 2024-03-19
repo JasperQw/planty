@@ -10,7 +10,7 @@ class iotPairing extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'LAND SEGMENTATION FOR IOT',
+          'Land Segmentation For IOT',
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,

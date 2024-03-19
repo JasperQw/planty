@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:planty/components/home/activities_suggestion_model.dart';
 import 'package:planty/components/home/news_model.dart';
+import 'package:planty/pages/home/weather.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -124,30 +125,41 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   const SizedBox(height: 130),
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25),
-                      color: const Color.fromARGB(255, 247, 90, 90),
-                    ),
-                    padding: const EdgeInsets.all(10.0),
-                    child: const Row(
-                      children: <Widget>[
-                        Icon(
-                          Icons.sunny,
-                          color: Colors.white,
-                          size: 30,
-                        ),
-                        SizedBox(width: 10),
-                        Expanded(
-                          child: Text(
-                            'Extreme Hot Weather for 3 days Continuously ',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                            ),
+                  GestureDetector(
+                    // Add this
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                WeatherScreen()), // Replace with your next page
+                      );
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: const Color.fromARGB(255, 247, 90, 90),
+                      ),
+                      padding: const EdgeInsets.all(10.0),
+                      child: const Row(
+                        children: <Widget>[
+                          Icon(
+                            Icons.sunny,
+                            color: Colors.white,
+                            size: 30,
                           ),
-                        )
-                      ],
+                          SizedBox(width: 10),
+                          Expanded(
+                            child: Text(
+                              'Extreme Hot Weather for 3 days Continuously ',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   const SizedBox(height: 20),

@@ -44,7 +44,7 @@ class _PromotionIOTState extends State<PromotionIOT> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'IOT SERVICES',
+          'IOT Services',
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,

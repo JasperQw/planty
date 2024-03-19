@@ -11,7 +11,7 @@ class PlantPestPrediction extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'PLANT PEST PREDICTION',
+          'Plant Pest Prediction',
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
