@@ -11,10 +11,31 @@ class PestInfo extends StatefulWidget {
 }
 
 class _PestInfoState extends State<PestInfo> {
+  //Mock data
+  String gg = "a";
+  String characteristic = """
+- Small, soft-bodied insects typically found on the undersides of leaves.
+- Aphids come in various colors, including green, black, brown, yellow, or red.
+- They reproduce rapidly, leading to infestations.
+- Aphids suck plant sap, causing leaves to curl, yellow, or distort.
+- They secrete a sticky substance called honeydew, which attracts ants and promotes mold growth.
+""";
+
+  String prevention = """
+- Inspect plants regularly for signs of aphid infestation, such as curled leaves or the presence of ants.
+- Use a strong stream of water to wash aphids off plants.
+- Introduce natural predators of aphids, such as ladybugs or lacewings, to the garden.
+- Prune and dispose of heavily infested plant parts.
+- Apply insecticidal soap or neem oil to affected plants.
+- Use reflective mulch or row covers to deter aphids from infesting plants.
+- Rotate crops to prevent aphids from building up in the soil.
+- Encourage biodiversity in the garden to maintain a balance of pests and beneficial insects.
+""";
+
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        appBar: PreferredSize(
+    return Scaffold(
+        appBar: const PreferredSize(
             preferredSize: Size.fromHeight(80),
             child: AppBarWithShadow(
               title: "Pest Info",
@@ -25,7 +46,7 @@ class _PestInfoState extends State<PestInfo> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Text(
@@ -33,14 +54,13 @@ class _PestInfoState extends State<PestInfo> {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
               ),
               PestDiseaseDetails(
-                  title: "Pest Characterisitcs",
-                  description:
-                      "- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam arcu a sem luctus, sit amet mattis turpis consequat. Nullam vitae nulla ac purus rutrum scelerisque. Curabitur nec feugiat libero."),
+                title: "Pest Characterisitcs",
+                description: characteristic,
+              ),
               PestDiseaseImage(imagePath: "assets/images/aphid.png"),
               PestDiseaseDetails(
                   title: "Pest Prevention Methodologies",
-                  description:
-                      "-the physical features of the pests likely to be encountered\n-characteristics of the damage they cause\n-their development and biology\n-whether they are continuous, sporadic or potential pests\n-what is your control goal")
+                  description: prevention)
             ],
           ),
         ));
