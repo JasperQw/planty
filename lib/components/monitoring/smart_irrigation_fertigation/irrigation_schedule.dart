@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:planty/components/monitoring/smart_irrigation_fertigation/add_button.dart';
 
 class IrrigationSchedule extends StatefulWidget {
@@ -37,10 +36,10 @@ class _IrrigationScheduleState extends State<IrrigationSchedule> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Row(
+          const Row(
             children: [
               SizedBox(
                 width: 10,
