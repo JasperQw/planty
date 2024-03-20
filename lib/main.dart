@@ -28,7 +28,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   int currentPageIndex = 1;
   List<Widget> fragmentList = [
-    const CommunityHome(),
+    const HomePage(),
     const CommunityHome(),
     const PlanningHome(),
     const MonitorMain(),
