@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:planty/components/common/appbar_with_shadow.dart';
+import 'package:planty/pages/planning/smart_plot_planner_input_data.dart';
 
 class smart_plot_planner_project extends StatelessWidget {
   const smart_plot_planner_project({super.key});
@@ -77,7 +78,11 @@ class smart_plot_planner_project extends StatelessWidget {
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) =>
+                                const smart_plot_planner_input_data()));
+                      },
                       child: Container(
                         margin: const EdgeInsets.fromLTRB(50, 20, 40, 20),
                         constraints: const BoxConstraints(
