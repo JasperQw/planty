@@ -23,105 +23,110 @@ class drone_image_plotter_intro extends StatelessWidget {
           withBackBtn: true,
         ),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            margin: const EdgeInsets.only(bottom: 10),
-            constraints: const BoxConstraints(
-                minWidth: 500,
-                maxWidth: double.infinity,
-                minHeight: 270,
-                maxHeight: 270),
-            child: Image.asset(
-              "images/drone_image_plotter.png",
-              fit: BoxFit.fill,
-            ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              SvgPicture.asset("images/info.svg"),
-              const SizedBox(
-                width: 10,
-              ),
-              const Text(
-                "How does it work",
-                style: TextStyle(fontWeight: FontWeight.w900, fontSize: 18),
-              )
-            ],
-          ),
-          Container(
-            margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
-            constraints: const BoxConstraints(
-                minWidth: 450, maxWidth: 450, maxHeight: double.infinity),
-            child: Card(
-              shadowColor: Colors.black,
-              elevation: 10,
-              surfaceTintColor: Colors.amber[50],
-              color: Colors.amber[50],
-              shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(30))),
-              child: const ClipRRect(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-                child: Padding(
-                    padding: EdgeInsets.fromLTRB(25, 20, 25, 20),
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text(
-                            introduction1,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 16),
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Text(introduction2,
-                                    textAlign: TextAlign.justify,
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w600)),
-                              ]),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(25, 0, 35, 0),
-                            child: Text(
-                              introduction3,
-                              textAlign: TextAlign.justify,
-                              style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(25, 0, 15, 0),
-                            child: Text(
-                              introduction4,
-                              textAlign: TextAlign.justify,
-                              style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(25, 0, 15, 0),
-                            child: Text(
-                              introduction5,
-                              textAlign: TextAlign.justify,
-                              style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                        ])),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Container(
+              margin: const EdgeInsets.only(bottom: 10),
+              constraints: const BoxConstraints(
+                  minWidth: 500,
+                  maxWidth: double.infinity,
+                  minHeight: 270,
+                  maxHeight: 270),
+              child: Image.asset(
+                "images/drone_image_plotter.png",
+                fit: BoxFit.fill,
               ),
             ),
-          ),
-          Drone_image_plotter_button()
-        ],
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                SvgPicture.asset("images/info.svg"),
+                const SizedBox(
+                  width: 10,
+                ),
+                const Text(
+                  "How does it work",
+                  style: TextStyle(fontWeight: FontWeight.w900, fontSize: 18),
+                )
+              ],
+            ),
+            Container(
+              margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+              constraints: const BoxConstraints(
+                  minWidth: 450, maxWidth: 450, maxHeight: double.infinity),
+              child: Card(
+                shadowColor: Colors.black,
+                elevation: 10,
+                surfaceTintColor: Colors.amber[50],
+                color: Colors.amber[50],
+                shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(30))),
+                child: const ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  child: Padding(
+                      padding: EdgeInsets.fromLTRB(25, 20, 25, 20),
+                      child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              introduction1,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(fontSize: 16),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Text(introduction2,
+                                      textAlign: TextAlign.justify,
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w600)),
+                                ]),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(25, 0, 35, 0),
+                              child: Text(
+                                introduction3,
+                                textAlign: TextAlign.justify,
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(25, 0, 15, 0),
+                              child: Text(
+                                introduction4,
+                                textAlign: TextAlign.justify,
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(25, 0, 15, 0),
+                              child: Text(
+                                introduction5,
+                                textAlign: TextAlign.justify,
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ])),
+                ),
+              ),
+            ),
+            Drone_image_plotter_button(),
+            SizedBox(
+              height: 30,
+            )
+          ],
+        ),
       ),
     );
   }
