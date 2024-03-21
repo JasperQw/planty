@@ -39,18 +39,28 @@ class _SoilMethodState extends State<SoilMethod> {
         ),
         body: Stack(children: <Widget>[
           Container(
-            margin: const EdgeInsets.only(top: 100),
+            margin: const EdgeInsets.only(
+              top: 50,
+            ),
             child: const Center(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  GeneralButton(),
-                  SizedBox(
-                    height: 50,
-                  ),
-                  SpecificButton(),
-                ],
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: 60,
+                    ),
+                    GeneralButton(),
+                    SizedBox(
+                      height: 50,
+                    ),
+                    SpecificButton(),
+                    SizedBox(
+                      height: 120,
+                    )
+                  ],
+                ),
               ),
             ),
           ),
