@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:planty/components/common/appbar_with_shadow.dart';
 import 'package:planty/components/monitoring/planted_plant.dart';
 import 'package:planty/pages/monitoring/drone_pairing.dart';
 import 'package:planty/pages/monitoring/fertigation_pairing.dart';
@@ -12,16 +13,12 @@ class iotIntergration extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Area 1 - IOT Intergration',
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
-      ),
+      appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(80),
+          child: AppBarWithShadow(
+            title: "Land 1 - IOT Integration",
+            withBackBtn: true,
+          )),
       body: Container(
         color: const Color.fromARGB(255, 249, 249, 249),
         width: MediaQuery.of(context).size.width,
