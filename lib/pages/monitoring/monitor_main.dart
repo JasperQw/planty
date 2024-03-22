@@ -67,6 +67,7 @@ class _MonitorMainState extends State<MonitorMain> {
                             const EdgeInsets.only(top: 40.0), // top margin 40
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Flexible(
                               child: Column(
@@ -78,7 +79,7 @@ class _MonitorMainState extends State<MonitorMain> {
                                     height: 50,
                                   ),
                                   const Text(
-                                    'IOT Sensors Feedback',
+                                    'IoT Sensors Feedback',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       fontSize: 16,
@@ -165,7 +166,7 @@ class _MonitorMainState extends State<MonitorMain> {
                             );
                           },
                           label: const Text(
-                            'No IOT yet? Grab It Now!',
+                            'No IoT yet? Grab It Now!',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 18,
@@ -203,7 +204,11 @@ class _MonitorMainState extends State<MonitorMain> {
                               );
                             },
                             label: const Text(
-                              'Monitor your frarm with IOT',
+<<<<<<< HEAD
+                              'Monitor your farm with IOT',
+=======
+                              'Monitor your frarm with IoT',
+>>>>>>> Serena/planning
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 18,
@@ -231,33 +236,28 @@ class _MonitorMainState extends State<MonitorMain> {
                             .width, // set the width of the container
                         color: const Color.fromARGB(255, 234, 195,
                             94), // set the color of the container
-                        child: Center(
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 10.0, right: 2.0),
-                                child: Image.asset(
-                                  "assets/images/attention.png", // Replace 'your_icon.png' with your icon path
-                                  width:
-                                      24, // Adjust the width of the icon as needed
-                                  height:
-                                      24, // Adjust the height of the icon as needed
-                                ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 10.0, right: 2.0),
+                              child: Image.asset(
+                                "assets/images/attention.png", // Replace 'your_icon.png' with your icon path
+                                width:
+                                    24, // Adjust the width of the icon as needed
+                                height:
+                                    24, // Adjust the height of the icon as needed
                               ),
-                              const Expanded(
-                                child: Text(
-                                  'Your Smart Irrigation System Requires Attention',
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 16,
-                                  ), // set the text color to white
-                                ),
-                              ),
-                            ],
-                          ),
+                            ),
+                            Text(
+                              'Your Smart Irrigation System Requires Attention',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                              ), // set the text color to white
+                            ),
+                          ],
                         ),
                       ),
                     ],

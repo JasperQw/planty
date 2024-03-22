@@ -73,6 +73,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.12.0"
+  chewie:
+    dependency: "direct main"
+    description:
+      name: chewie
+      sha256: "8bc4ac4cf3f316e50a25958c0f5eb9bb12cf7e8308bb1d74a43b230da2cfc144"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.7.5"
+  chewie_audio:
+    dependency: "direct main"
+    description:
+      name: chewie_audio
+      sha256: "73948a8b9841d050433af3498a1f8b11320bd5a2cd70b449bdbe16d4405e97c5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.5.0"
   clock:
     dependency: transitive
     description:
@@ -262,6 +278,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_drawing_board:
+    dependency: "direct main"
+    description:
+      name: flutter_drawing_board
+      sha256: "82700847d7f367c9af1eaf186c88f74a6be821dbe783871e4736bf724f015192"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.7.0+2"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -270,6 +294,15 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.1"
+  flutter_painter:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: a3a30eccda4ba50fdc2742859c30fa931557d831
+      url: "https://github.com/Harishwarrior/flutter_painter.git"
+    source: git
+    version: "1.0.1"
   flutter_rating_bar:
     dependency: "direct main"
     description:
@@ -344,6 +377,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
+  image_painter:
+    dependency: "direct main"
+    description:
+      name: image_painter
+      sha256: "8eaaebc1175699d3d6f60308d77500199af166d47cfb6690ad411de39afd17e9"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.6.1"
   intl:
     dependency: "direct main"
     description:
@@ -432,6 +473,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
+  open_file:
+    dependency: "direct main"
+    description:
+      name: open_file
+      sha256: a5a32d44acb7c899987d0999e1e3cbb0a0f1adebbf41ac813ec6d2d8faa0af20
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.3.2"
   package_info_plus:
     dependency: transitive
     description:
@@ -464,6 +513,54 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.1"
+  path_provider:
+    dependency: "direct main"
+    description:
+      name: path_provider
+      sha256: b27217933eeeba8ff24845c34003b003b2b22151de3c908d0e679e8fe1aa078b
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.2"
+  path_provider_android:
+    dependency: transitive
+    description:
+      name: path_provider_android
+      sha256: "477184d672607c0a3bf68fbbf601805f92ef79c82b64b4d6eb318cbca4c48668"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.2"
+  path_provider_foundation:
+    dependency: transitive
+    description:
+      name: path_provider_foundation
+      sha256: "5a7999be66e000916500be4f15a3633ebceb8302719b47b9cc49ce924125350f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.2"
+  path_provider_linux:
+    dependency: transitive
+    description:
+      name: path_provider_linux
+      sha256: f7a1fe3a634fe7734c8d3f2766ad746ae2a2884abe22e241a8b301bf5cac3279
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.1"
+  path_provider_platform_interface:
+    dependency: transitive
+    description:
+      name: path_provider_platform_interface
+      sha256: "88f5779f72ba699763fa3a3b06aa4bf6de76c8e5de842cf6f29e2e06476c2334"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.2"
+  path_provider_windows:
+    dependency: transitive
+    description:
+      name: path_provider_windows
+      sha256: "8bc9f22eee8690981c22aa7fc602f5c85b497a6fb2ceb35ee5a5e5ed85ad8170"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.1"
   petitparser:
     dependency: transitive
     description:
@@ -472,6 +569,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.0.2"
+  phosphor_flutter:
+    dependency: "direct main"
+    description:
+      name: phosphor_flutter
+      sha256: "3b3e6e4cbda8208f8c1431b0999842f0b76db73853dd824fd4847a9f0166931a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
+  platform:
+    dependency: transitive
+    description:
+      name: platform
+      sha256: "12220bb4b65720483f8fa9450b4332347737cf8213dd2840d8b2c823e47243ec"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.4"
   plugin_platform_interface:
     dependency: transitive
     description:
@@ -773,6 +886,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.3.0"
+  xdg_directories:
+    dependency: transitive
+    description:
+      name: xdg_directories
+      sha256: faea9dee56b520b55a566385b84f2e8de55e7496104adada9962e0bd11bcff1d
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.4"
   xml:
     dependency: transitive
     description:

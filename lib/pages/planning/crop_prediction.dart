@@ -19,7 +19,7 @@ class _CropPredictionState extends State<CropPrediction> {
           80,
         ),
         child: AppBarWithShadow(
-          title: "Let's predict your crop yield...",
+          title: "Crop Yield Prediction",
           withBackBtn: true,
         ),
       ),

@@ -53,8 +53,9 @@ class LandContainer extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(height: 5,),
           const Text(
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "Discover effective land management techniques and optimize your space allocation with our land plotters.",
             style:TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.w400,

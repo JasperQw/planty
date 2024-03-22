@@ -51,8 +51,9 @@ class KnowledgeContainer extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 5,),
               const Text(
-                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                  "Explore the depths of plant knowledge to unearth invaluable wisdom that nurtures and enhances the growth of your green companions.",
                   style: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w400,

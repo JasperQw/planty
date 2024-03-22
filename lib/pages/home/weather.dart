@@ -22,9 +22,9 @@ class _WeatherScreenState extends State<WeatherScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 249, 249, 249),
+      backgroundColor: const Color.fromARGB(255, 249, 249, 249),
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Weather',
           style: TextStyle(color: Colors.black, fontSize: 20),
         ),
@@ -264,12 +264,12 @@ class _WeatherScreenState extends State<WeatherScreen> {
               ],
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               buildDot(_currentPage == 0),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
               buildDot(_currentPage == 1),
             ],
           ),
@@ -282,7 +282,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
     return Container(
       width: 10,
       height: 10,
-      margin: EdgeInsets.symmetric(vertical: 10),
+      margin: const EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: isActive ? Colors.green : Colors.grey,

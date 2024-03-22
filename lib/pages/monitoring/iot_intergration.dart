@@ -13,12 +13,16 @@ class iotIntergration extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(80),
-          child: AppBarWithShadow(
-            title: "Land 1 - IOT Integration",
-            withBackBtn: true,
-          )),
+      appBar: AppBar(
+        title: const Text(
+          'Area 1 - IOT Intergration',
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+        ),
+      ),
       body: Container(
         color: const Color.fromARGB(255, 249, 249, 249),
         width: MediaQuery.of(context).size.width,

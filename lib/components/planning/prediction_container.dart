@@ -60,8 +60,9 @@ class PredictionContainer extends StatelessWidget {
                 ),
               ],
             ),
+            const SizedBox(height: 5,),
             const Text(
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+              "Empower your agricultural planning by utilizing our advanced crop yield prediction tool, allowing you to anticipate and strategize your harvests with precision and foresight.",
               style:TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w400,

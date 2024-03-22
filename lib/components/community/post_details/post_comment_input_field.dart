@@ -22,7 +22,7 @@ class _PostCommentInputFieldState extends State<PostCommentInputField> {
         children: [
           const Avatar(
             image:
-                "https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg",
+                "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
             size: 54,
           ),
           Expanded(

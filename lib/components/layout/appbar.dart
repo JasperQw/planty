@@ -68,7 +68,7 @@ class AppBarLayout extends StatelessWidget {
           ),
           const Avatar(
             image:
-                "https://st3.depositphotos.com/2024219/31793/i/450/depositphotos_317939792-stock-photo-young-woman-isolated-yellow-background.jpg",
+                "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
             size: 64,
           ),
         ],

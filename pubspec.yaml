@@ -31,6 +31,8 @@ dependencies:
   bulleted_list: ^0.0.1+0.1a
   carousel_slider: ^4.2.1
   charts_flutter: ^0.12.0
+  chewie: ^1.7.5
+  chewie_audio: ^1.5.0
   cloud_firestore: ^4.15.8
   cupertino_icons: ^1.0.2
   dots_indicator: ^3.0.0
@@ -40,12 +42,20 @@ dependencies:
   firebase_storage: ^11.6.9
   flutter:
     sdk: flutter
+  flutter_drawing_board: ^0.7.0+2
+  flutter_painter:
+    git:
+      url: https://github.com/Harishwarrior/flutter_painter.git
   flutter_rating_bar: ^4.0.1
   flutter_screenutil: ^5.9.0
   flutter_sticky_widgets: ^0.0.3
   flutter_svg: ^2.0.10+1
   flutter_video_view: ^2.0.2+1
+  image_painter: ^0.6.1
   intl: ^0.17.0
+  open_file: ^3.3.2
+  path_provider: ^2.1.2
+  phosphor_flutter: ^2.0.1
   sliding_up_panel: ^2.0.0+1
   video_player: ^2.6.0
   webview_flutter: ^4.7.0
