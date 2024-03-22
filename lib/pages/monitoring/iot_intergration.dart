@@ -13,16 +13,12 @@ class iotIntergration extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Area 1 - IOT Intergration',
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
-      ),
+      appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(80),
+          child: AppBarWithShadow(
+            title: "Area 1 - IOT Integration",
+            withBackBtn: true,
+          )),
       body: Container(
         color: const Color.fromARGB(255, 249, 249, 249),
         width: MediaQuery.of(context).size.width,
@@ -47,10 +43,17 @@ class iotIntergration extends StatelessWidget {
                   alignment: Alignment.center,
                   height: 200,
                   width: MediaQuery.of(context).size.width,
-                  padding: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: const Color.fromARGB(255, 255, 255, 255),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black45,
+                        offset: Offset(0, 3),
+                        blurRadius: 2,
+                      ),
+                    ],
                   ),
                   child: const NotePlantedPlant(),
                 ),
@@ -88,6 +91,13 @@ class iotIntergration extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: const Color.fromARGB(255, 255, 255, 255),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black45,
+                                offset: Offset(0, 3),
+                                blurRadius: 2,
+                              ),
+                            ],
                           ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -136,6 +146,13 @@ class iotIntergration extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: const Color.fromARGB(255, 255, 255, 255),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black45,
+                                offset: Offset(0, 3),
+                                blurRadius: 2,
+                              ),
+                            ],
                           ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -186,6 +203,13 @@ class iotIntergration extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: const Color.fromARGB(255, 255, 255, 255),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black45,
+                                offset: Offset(0, 3),
+                                blurRadius: 2,
+                              ),
+                            ],
                           ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -232,6 +256,13 @@ class iotIntergration extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: const Color.fromARGB(255, 255, 255, 255),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black45,
+                                offset: Offset(0, 3),
+                                blurRadius: 2,
+                              ),
+                            ],
                           ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,

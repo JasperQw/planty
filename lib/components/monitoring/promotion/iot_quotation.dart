@@ -70,12 +70,12 @@ class _iotQuotationState extends State<iotQuotation> {
                   ),
                   prefixIcon: const Icon(
                     Icons.email,
-                    color: Colors.lightGreen,
+                    color: Colors.blue,
                   ),
                   hintText: "Enter your Email",
-                  hintStyle: const TextStyle(color: Colors.lightGreen),
+                  hintStyle: const TextStyle(color: Colors.blue),
                   filled: true,
-                  fillColor: Colors.lightGreen[50],
+                  fillColor: Colors.blue[50],
                 ),
               ),
               const SizedBox(
@@ -93,12 +93,12 @@ class _iotQuotationState extends State<iotQuotation> {
                   ),
                   prefixIcon: const Icon(
                     Icons.person,
-                    color: Colors.purple,
+                    color: Colors.blue,
                   ),
                   hintText: "Enter your Phone Number",
-                  hintStyle: const TextStyle(color: Colors.purple),
+                  hintStyle: const TextStyle(color: Colors.blue),
                   filled: true,
-                  fillColor: Colors.purple[50],
+                  fillColor: Colors.blue[50],
                 ),
               ),
             ],
@@ -112,20 +112,56 @@ class _iotQuotationState extends State<iotQuotation> {
           padding: const EdgeInsets.only(
               left: 20.0, top: 10.0, right: 20.0, bottom: 10.0),
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              // Show the dialog
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    actionsAlignment: MainAxisAlignment.center,
+                    title: const Text('Success', textAlign: TextAlign.center),
+                    content: const Column(
+                      mainAxisSize: MainAxisSize
+                          .min, // Set to min to prevent column occupying whole screen height
+                      children: [
+                        Icon(
+                          Icons.check_circle,
+                          color: Colors.green,
+                          size: 36,
+                        ),
+                        SizedBox(
+                          height:
+                              10, // Use height instead of width as this is a Column
+                        ),
+                        Text('Quotation Successfully Sent'),
+                      ],
+                    ),
+                    actions: [
+                      TextButton(
+                        onPressed: () {
+                          // Close the dialog
+                          Navigator.of(context).pop();
+                        },
+                        child: Text('OK'),
+                      ),
+                    ],
+                  );
+                },
+              );
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.green,
+              padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
             child: Text(
               'Make Quotation Now',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w700,
                 color: Colors.white,
-              ),
-            ),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.green,
-              padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
               ),
             ),
           ),

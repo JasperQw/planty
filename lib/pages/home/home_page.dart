@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:planty/components/home/activities_suggestion_model.dart';
 import 'package:planty/components/home/news_model.dart';
-import 'package:planty/pages/home/weather.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -41,6 +40,7 @@ class _HomePageState extends State<HomePage> {
               ),
               child: Stack(
                 children: <Widget>[
+                  //Search bar
                   Container(
                     padding:
                         const EdgeInsets.only(top: 30, left: 20, right: 20),
@@ -63,6 +63,8 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
+
+                  //Weather Card
                   Align(
                     alignment: const Alignment(0.0, 1.0),
                     child: SizedBox(
@@ -101,7 +103,7 @@ class _HomePageState extends State<HomePage> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          SizedBox(height: 15),
+                                          SizedBox(height: 10),
                                           Padding(
                                             padding: EdgeInsets.only(
                                                 left:
@@ -121,7 +123,7 @@ class _HomePageState extends State<HomePage> {
                                             padding: EdgeInsets.only(
                                                 left: 20,
                                                 bottom:
-                                                    10), // Add your desired padding here
+                                                    7), // Add your desired padding here
                                             child: Text(
                                               'Thursday, 7 March',
                                               textAlign: TextAlign.start,
@@ -137,7 +139,7 @@ class _HomePageState extends State<HomePage> {
                                             padding: EdgeInsets.only(
                                                 left: 20,
                                                 bottom:
-                                                    10), // Add your desired padding here
+                                                    8), // Add your desired padding here
                                             child: Row(
                                               children: <Widget>[
                                                 Icon(
@@ -164,6 +166,8 @@ class _HomePageState extends State<HomePage> {
                                       Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.end,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
                                         children: [
                                           SizedBox(height: 30),
                                           Align(
@@ -174,7 +178,7 @@ class _HomePageState extends State<HomePage> {
                                               size: 50,
                                             ),
                                           ),
-                                          SizedBox(height: 50),
+                                          SizedBox(height: 28),
                                           Padding(
                                             padding: EdgeInsets.only(
                                                 left: 20,
@@ -219,6 +223,8 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+
+            //Weather alert
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: Column(
@@ -227,14 +233,14 @@ class _HomePageState extends State<HomePage> {
                   const SizedBox(height: 130),
                   GestureDetector(
                     // Add this
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                WeatherScreen()), // Replace with your next page
-                      );
-                    },
+                    // onTap: () {
+                    //   Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) =>
+                    //             WeatherScreen()), // Replace with your next page
+                    //   );
+                    // },
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
@@ -263,6 +269,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   const SizedBox(height: 20),
+
+                  //Activities suggestion
                   const Text(
                     'Activities suggestion',
                     style: TextStyle(
@@ -274,43 +282,45 @@ class _HomePageState extends State<HomePage> {
                   const SizedBox(height: 5),
                   SizedBox(
                     height: 170,
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: activitiesData.length,
-                      padding:
-                          const EdgeInsets.only(right: 10, bottom: 10, top: 10),
-                      itemBuilder: (context, index) => Padding(
-                        padding: const EdgeInsets.only(right: 10),
-                        child: Material(
-                          elevation: 3,
-                          borderRadius: BorderRadius.circular(10),
-                          child: Container(
-                            height: 150,
-                            width: 120,
-                            decoration: BoxDecoration(
+                    child: Flex(
+                      direction: Axis.horizontal,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: activitiesData.map((data) {
+                        return Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(right: 10),
+                            child: Material(
+                              elevation: 3,
                               borderRadius: BorderRadius.circular(10),
-                              color: Color.fromARGB(255, 233, 250, 209),
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(activitiesData[index].icon, size: 50),
-                                const SizedBox(height: 5),
-                                Text(
-                                  activitiesData[index].name,
-                                  textAlign: TextAlign.center,
-                                  style: const TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w500,
-                                  ),
+                              child: Container(
+                                height: 150,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: Color.fromARGB(255, 233, 250, 209),
                                 ),
-                              ],
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Icon(data.icon, size: 50),
+                                    Text(
+                                      data.name,
+                                      textAlign: TextAlign.center,
+                                      style: const TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ),
                           ),
-                        ),
-                      ),
+                        );
+                      }).toList(),
                     ),
                   ),
+
                   const SizedBox(height: 20),
                   const Text(
                     'Farming News Update',
@@ -339,7 +349,8 @@ class _HomePageState extends State<HomePage> {
                                 Image.asset(
                                   newsData[index].imagePath,
                                   width: 130,
-                                  height: 150,
+                                  height: 130,
+                                  fit: BoxFit.cover,
                                 ),
                                 const SizedBox(width: 10),
                                 Expanded(

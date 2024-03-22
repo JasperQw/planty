@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planty/pages/monitoring/iot_item.dart';
 
 class Vendor1 extends StatefulWidget {
   const Vendor1({Key? key}) : super(key: key);
@@ -10,62 +11,70 @@ class Vendor1 extends StatefulWidget {
 class _Vendor1State extends State<Vendor1> {
   @override
   Widget build(BuildContext context) {
-    return FractionallySizedBox(
-      widthFactor: 1.0, // Adjust this factor as needed
-      child: Card(
-        color: const Color.fromARGB(255, 255, 255, 255),
-        elevation: 10.0,
-        shadowColor: Colors.grey.withOpacity(0.5),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15.0),
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const IOTitem()),
+        );
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          color: const Color.fromARGB(255, 255, 255, 255),
+          boxShadow: const [
+            BoxShadow(
+              color: Colors.grey,
+              blurRadius: 15.0,
+            ),
+          ],
         ),
         child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(
+            ClipRRect(
+              borderRadius: BorderRadius.circular(
+                  15), // Adjust the border radius as needed
               child: Image.asset(
-                'assets/images/smart_farm.png',
+                'assets/images/proData (2).png',
+                width: 180, // Adjust the width of the image as needed
+                height: 200, // Adjust the height of the image as needed
                 fit: BoxFit.cover,
+                // Adjust the fit of the image as needed
               ),
             ),
-            const SizedBox(width: 10),
+            const SizedBox(
+                width: 10), // Add spacing between the image and the column
             Expanded(
-              child: Container(
-                padding: const EdgeInsets.all(10.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      'PRO DATA PRECISION FARMING STARTER PACK',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xFF363f93),
-                      ),
-                      maxLines: 4,
-                      overflow: TextOverflow.ellipsis,
+              // Add this
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'PRO DATA PRECISION FARMING STARTER PACK',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
                     ),
-                    const SizedBox(height: 5),
-                    const Text(
-                      '5 years free technical support Installation provided',
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.grey,
-                      ),
-                      maxLines: 6,
-                      overflow: TextOverflow.ellipsis,
+                    maxLines: 4, // Adjust the number of lines as needed
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  const Text(
+                    '5 years free technical support Installation provided',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.grey,
                     ),
-                    const Divider(color: Colors.black),
-                    SizedBox(
-                      height: 50,
-                      width: 50,
-                      child: Image.asset(
-                        'assets/images/proData.png',
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                  Image.asset(
+                    'assets/images/proData.png',
+                    alignment: Alignment.centerLeft,
+                    width: 70, // Adjust the width of the image as needed
+                    height: 70, // Adjust the height of the image as needed
+                    fit:
+                        BoxFit.contain, // Adjust the fit of the image as needed
+                  ),
+                ],
               ),
             ),
           ],

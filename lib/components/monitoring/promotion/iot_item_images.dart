@@ -17,8 +17,25 @@ class _iotItemImagesState extends State<iotItemImages> {
           Expanded(
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10), // Set the border radius
-              child: Image.asset('assets/images/startup_farmer.png',
-                  fit: BoxFit.cover),
+              child: Image.asset(
+                  'assets/images/Autoflo-Fertigation-System.webp',
+                  fit: BoxFit.fitHeight),
+            ),
+          ),
+          const SizedBox(width: 10),
+          Expanded(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10), // Set the border radius
+              child: Image.asset('assets/images/sensor1.png',
+                  fit: BoxFit.fitHeight),
+            ),
+          ),
+          const SizedBox(width: 10),
+          Expanded(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10), // Set the border radius
+              child: Image.asset('assets/images/whyIOT.png',
+                  fit: BoxFit.fitHeight),
             ),
           ),
           const SizedBox(width: 10),
@@ -26,23 +43,7 @@ class _iotItemImagesState extends State<iotItemImages> {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10), // Set the border radius
               child: Image.asset('assets/images/startup_farmer.png',
-                  fit: BoxFit.cover),
-            ),
-          ),
-          const SizedBox(width: 10),
-          Expanded(
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10), // Set the border radius
-              child: Image.asset('assets/images/startup_farmer.png',
-                  fit: BoxFit.cover),
-            ),
-          ),
-          const SizedBox(width: 10),
-          Expanded(
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10), // Set the border radius
-              child: Image.asset('assets/images/startup_farmer.png',
-                  fit: BoxFit.cover),
+                  fit: BoxFit.fitHeight),
             ),
           ),
         ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planty/components/monitoring/why_image.dart';
 import 'package:planty/pages/monitoring/iot_pairing.dart';
 import 'package:planty/pages/monitoring/plant_disease_detcetion.dart';
 import 'package:planty/pages/monitoring/plant_pest_prediction.dart';
@@ -204,11 +205,7 @@ class _MonitorMainState extends State<MonitorMain> {
                               );
                             },
                             label: const Text(
-<<<<<<< HEAD
                               'Monitor your farm with IOT',
-=======
-                              'Monitor your frarm with IoT',
->>>>>>> Serena/planning
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 18,
@@ -237,7 +234,7 @@ class _MonitorMainState extends State<MonitorMain> {
                         color: const Color.fromARGB(255, 234, 195,
                             94), // set the color of the container
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: <Widget>[
                             Padding(
                               padding:
@@ -250,7 +247,10 @@ class _MonitorMainState extends State<MonitorMain> {
                                     24, // Adjust the height of the icon as needed
                               ),
                             ),
-                            Text(
+                            const SizedBox(
+                                width:
+                                    2), // Add a space of 10 between the icon and the text
+                            const Text(
                               'Your Smart Irrigation System Requires Attention',
                               style: TextStyle(
                                 color: Colors.white,
@@ -292,11 +292,28 @@ class _MonitorMainState extends State<MonitorMain> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        const Text(
-                          'Crop Health',
-                          style: TextStyle(
-                              fontSize: 25, fontWeight: FontWeight.bold),
+                        Row(
+                          children: <Widget>[
+                            const Text(
+                              'Crop Health',
+                              style: TextStyle(
+                                  fontSize: 25, fontWeight: FontWeight.bold),
+                            ),
+                            const SizedBox(width: 10),
+                            IconButton(
+                              icon: const Icon(Icons.info_outline_rounded),
+                              onPressed: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) {
+                                    return const WhyImage();
+                                  },
+                                );
+                              },
+                            ),
+                          ],
                         ),
+
                         const SizedBox(height: 10),
                         const Text(
                           'From Leaves to Algorithms: Safeguarding Crops with AI',
@@ -339,8 +356,30 @@ class _MonitorMainState extends State<MonitorMain> {
                                       ),
                                     ],
                                   ),
-                                  child: Image.asset(
-                                    "assets/images/plant pest prediction.png",
+                                  child: const Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: <Widget>[
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 10.0, right: 10.0, top: 10.0),
+                                        child: Text(
+                                          'Plant Pest Prediction',
+                                          style: TextStyle(
+                                            fontSize: 23,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                      ),
+                                      Image(
+                                        image: AssetImage(
+                                            "assets/images/image 95.png"),
+                                        width: 200,
+                                        height: 150,
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),
@@ -382,8 +421,30 @@ class _MonitorMainState extends State<MonitorMain> {
                                       ),
                                     ],
                                   ),
-                                  child: Image.asset(
-                                    "assets/images/plant disease detction.png", // Replace 'your_image.png' with your image path // adjust the fit of the image within the container
+                                  child: const Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: <Widget>[
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 10.0, right: 10.0, top: 10.0),
+                                        child: Text(
+                                          'Plant Disease Detection',
+                                          style: TextStyle(
+                                            fontSize: 23,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                      ),
+                                      Image(
+                                        image: AssetImage(
+                                            "assets/images/image 94.png"),
+                                        width: 200,
+                                        height: 150,
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),

@@ -1,4 +1,7 @@
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:planty/utilities/color.dart';
 
 class Header extends StatefulWidget {
   const Header({Key? key}) : super(key: key);
@@ -7,36 +10,60 @@ class Header extends StatefulWidget {
 }
 
 class _HeaderState extends State<Header> {
+  int currentIndex = 0; // Add this line
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      height: 200,
-      width: MediaQuery.of(context).size.width - 20,
-      padding: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        color: const Color.fromARGB(255, 249, 253, 192),
-      ),
-      child: Row(
-        children: <Widget>[
-          const Expanded(
-            child: Text(
-              'Boost your crop productivity through precision farming devices now !',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-              textAlign: TextAlign.center,
-            ),
+    final List<String> images = [
+      'assets/images/carousel-iot-1.png',
+      'assets/images/carousel-iot-2.jpg',
+      'assets/images/carousel-iot-3.png',
+    ];
+    return Column(
+      children: [
+        CarouselSlider(
+          options: CarouselOptions(
+            height: MediaQuery.of(context).size.width * 0.3,
+            autoPlay: true,
+            initialPage: 1,
+            onPageChanged: (index, reason) {
+              setState(() {
+                currentIndex = index;
+              });
+            },
           ),
-          Image.asset(
-            'assets/images/iot promotion.png',
-            height: 100,
-            width: 100,
+          items: images.map((i) {
+            return Builder(
+              builder: (BuildContext context) {
+                return Container(
+                  clipBehavior: Clip.hardEdge,
+                  width: MediaQuery.of(context).size.width,
+                  margin: const EdgeInsets.symmetric(horizontal: 16.0),
+                  decoration: BoxDecoration(
+                    color: black,
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Image.asset(
+                    i,
+                    fit: BoxFit.cover,
+                  ),
+                );
+              },
+            );
+          }).toList(),
+        ),
+        const SizedBox(
+          height: 16,
+        ),
+        DotsIndicator(
+          dotsCount: images.length,
+          position: currentIndex.toInt(), // Convert to double
+          decorator: const DotsDecorator(
+            color: borderGrey, // Inactive color
+            activeColor: green,
           ),
-        ],
-      ),
+        )
+      ],
     );
   }
 }

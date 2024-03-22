@@ -22,30 +22,26 @@ class SensorFeedback extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
+                //Daily Crop Health Score
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: const Color.fromARGB(255, 255, 255, 255),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset:
-                            const Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
+                    color: const Color.fromARGB(255, 249, 249, 249),
                   ),
                   height: 350,
                   width: MediaQuery.of(context).size.width -
                       20, // Set the height of the graph
-                  child: const DailyCropHealthScore(),
+                  child: Image.asset(
+                    'assets/images/daily_crop_health_score.png',
+                    fit: BoxFit.contain,
+                  ),
                 ),
 
                 const SizedBox(
                   height: 20,
                 ),
 
+                //IOT Parameters
                 const Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
@@ -60,15 +56,23 @@ class SensorFeedback extends StatelessWidget {
                 ), // Add the IOT parameters
 
                 const SizedBox(
-                  height: 20,
+                  height: 40,
                 ),
 
+                //Pair Your IoT Devices Here
                 Container(
                   width: MediaQuery.of(context).size.width,
                   height: 100,
                   decoration: BoxDecoration(
                     color: const Color(0xFFF2F2F7),
                     borderRadius: BorderRadius.circular(20),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black12,
+                        offset: Offset(0, 2),
+                        blurRadius: 2,
+                      ),
+                    ],
                   ),
                   child: const Center(
                     child: Text(
@@ -84,6 +88,97 @@ class SensorFeedback extends StatelessWidget {
 
                 const SizedBox(
                   height: 20,
+                ),
+
+                //Air Humidity
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: const Color.fromARGB(255, 249, 249, 249),
+                  ),
+                  height: 350,
+                  width: MediaQuery.of(context).size.width -
+                      20, // Set the height of the graph
+                  child: Image.asset(
+                    'assets/images/air_humidity1.png',
+                    fit: BoxFit.contain,
+                  ),
+                ),
+
+                const SizedBox(
+                  height: 20,
+                ),
+
+                //Soil salinity
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: const Color.fromARGB(255, 249, 249, 249),
+                  ),
+                  height: 350,
+                  width: MediaQuery.of(context).size.width -
+                      20, // Set the height of the graph
+                  child: Image.asset(
+                    'assets/images/soil_salinity1.png',
+                    fit: BoxFit.contain,
+                  ),
+                ),
+
+                const SizedBox(
+                  height: 20,
+                ),
+
+                //Soil pH
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: const Color.fromARGB(255, 249, 249, 249),
+                  ),
+                  height: 350,
+                  width: MediaQuery.of(context).size.width -
+                      20, // Set the height of the graph
+                  child: Image.asset(
+                    'assets/images/soil_pH1.png',
+                    fit: BoxFit.contain,
+                  ),
+                ),
+
+                const SizedBox(
+                  height: 20,
+                ),
+
+                //soil moisture
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: const Color.fromARGB(255, 249, 249, 249),
+                  ),
+                  height: 350,
+                  width: MediaQuery.of(context).size.width -
+                      20, // Set the height of the graph
+                  child: Image.asset(
+                    'assets/images/soil_moisture1.png',
+                    fit: BoxFit.contain,
+                  ),
+                ),
+
+                const SizedBox(
+                  height: 20,
+                ),
+
+                //Temperature
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: const Color.fromARGB(255, 249, 249, 249),
+                  ),
+                  height: 350,
+                  width: MediaQuery.of(context).size.width -
+                      20, // Set the height of the graph
+                  child: Image.asset(
+                    'assets/images/temperature.png',
+                    fit: BoxFit.contain,
+                  ),
                 ),
               ],
             ),
