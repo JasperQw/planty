@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planty/components/common/appbar_with_shadow.dart';
 import 'package:planty/components/community/home/search_bar.dart';
 import 'package:planty/components/monitoring/promotion/header.dart';
 import 'package:planty/components/monitoring/promotion/pop_up_before_promotion.dart';
@@ -41,18 +42,14 @@ class _PromotionIOTState extends State<PromotionIOT> {
 
   @override
   Widget build(BuildContext context) {
+    //IOT Services
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'IOT SERVICES',
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
-        centerTitle: true,
-      ),
+      appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(80),
+          child: AppBarWithShadow(
+            title: "IOT Services",
+            withBackBtn: true,
+          )),
       body: Container(
         color: const Color.fromARGB(255, 249, 249, 249),
         width: MediaQuery.of(context).size.width,

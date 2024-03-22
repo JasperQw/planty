@@ -16,6 +16,7 @@ class _ItemsTitlePriceState extends State<ItemsTitlePrice> {
   Widget build(BuildContext context) {
     NumberFormat formatter = NumberFormat.decimalPattern();
     formatter.maximumFractionDigits = 2;
+    formatter.minimumFractionDigits = 2;
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(16.0),

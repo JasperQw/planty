@@ -45,7 +45,7 @@ class _CommunityPostState extends State<CommunityPost> {
               children: [
                 Avatar(
                   image:
-                      "https://www.shutterstock.com/image-photo/confident-caucasian-young-man-casual-600nw-2141122925.jpg",
+                      "https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg",
                   size: 64,
                 ),
                 SizedBox(
@@ -55,7 +55,7 @@ class _CommunityPostState extends State<CommunityPost> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Kriston Watshon",
+                      "梵克 Frankie",
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w700,
@@ -77,7 +77,7 @@ class _CommunityPostState extends State<CommunityPost> {
               height: 24,
             ),
             const Text(
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla natoque id aenean.",
+              "Genetically modified Rose plantation success!",
               style: TextStyle(
                 color: black,
                 fontSize: 16,
@@ -94,7 +94,7 @@ class _CommunityPostState extends State<CommunityPost> {
                 ),
               ),
               child: Image.network(
-                  "https://images.pexels.com/photos/220762/pexels-photo-220762.jpeg?cs=srgb&dl=pexels-pixabay-220762.jpg&fm=jpg"),
+                  "https://minnetonkaorchards.com/wp-content/uploads/2022/02/Artificial-Rainbow-Roses-160841562.jpg"),
             ),
             const SizedBox(
               height: 24,

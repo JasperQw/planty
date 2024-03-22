@@ -1,7 +1,5 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:flutter/widgets.dart';
 import 'package:planty/components/common/appbar_with_shadow.dart';
 
 class specific_soil_method extends StatefulWidget {

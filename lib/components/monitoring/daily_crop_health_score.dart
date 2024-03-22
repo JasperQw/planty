@@ -215,23 +215,20 @@ class _LineChart extends StatelessWidget {
     return text;
   }
 
-  SideTitles get bottomTitles => SideTitles(
-        showTitles: true,
-        getTitles: (value) {
-          switch (value.toInt()) {
-            case 2:
-              return '10 January';
-            case 7:
-              return '20 January';
-            case 12:
-              return '30 January';
-            default:
-              return '';
-          }
-        },
-        interval: 1,
-        reservedSize: 32,
-      );
+  SideTitles get bottomTitles {
+    final Map<int, String> titles = {
+      2: '10 January',
+      7: '20 January',
+      12: '30 January',
+    };
+
+    return SideTitles(
+      showTitles: true,
+      //getTitles: (value) => titles[value.toInt()] ?? '',
+      interval: 1,
+      reservedSize: 32,
+    );
+  }
 
   FlGridData get gridData => FlGridData(show: false);
 
@@ -248,7 +245,7 @@ class _LineChart extends StatelessWidget {
 
   LineChartBarData get lineChartBarData1_1 => LineChartBarData(
         isCurved: true,
-        colors: [Colors.green],
+        color: Colors.green,
         barWidth: 8,
         isStrokeCapRound: true,
         dotData: FlDotData(show: false),
@@ -266,13 +263,13 @@ class _LineChart extends StatelessWidget {
 
   LineChartBarData get lineChartBarData1_2 => LineChartBarData(
         isCurved: true,
-        colors: [Colors.pink],
+        color: Colors.pink,
         barWidth: 8,
         isStrokeCapRound: true,
         dotData: FlDotData(show: false),
         belowBarData: BarAreaData(
           show: false,
-          colors: [Colors.pink.withOpacity(0)],
+          color: Colors.pink.withOpacity(0),
         ),
         spots: const [
           FlSpot(1, 1),
@@ -286,7 +283,7 @@ class _LineChart extends StatelessWidget {
 
   LineChartBarData get lineChartBarData1_3 => LineChartBarData(
         isCurved: true,
-        colors: [Colors.cyan],
+        color: Colors.cyan,
         barWidth: 8,
         isStrokeCapRound: true,
         dotData: FlDotData(show: false),
@@ -303,7 +300,7 @@ class _LineChart extends StatelessWidget {
   LineChartBarData get lineChartBarData2_1 => LineChartBarData(
         isCurved: true,
         curveSmoothness: 0,
-        colors: [Colors.green.withOpacity(0.5)],
+        color: Colors.green.withOpacity(0.5),
         barWidth: 4,
         isStrokeCapRound: true,
         dotData: FlDotData(show: false),
@@ -321,13 +318,13 @@ class _LineChart extends StatelessWidget {
 
   LineChartBarData get lineChartBarData2_2 => LineChartBarData(
         isCurved: true,
-        colors: [Colors.pink.withOpacity(0.5)],
+        color: Colors.pink.withOpacity(0.5),
         barWidth: 4,
         isStrokeCapRound: true,
         dotData: FlDotData(show: false),
         belowBarData: BarAreaData(
           show: true,
-          colors: [Colors.pink.withOpacity(0.2)],
+          color: Colors.pink.withOpacity(0.2),
         ),
         spots: const [
           FlSpot(1, 1.5),
@@ -342,7 +339,7 @@ class _LineChart extends StatelessWidget {
   LineChartBarData get lineChartBarData2_3 => LineChartBarData(
         isCurved: true,
         curveSmoothness: 0,
-        colors: [Colors.cyan.withOpacity(0.5)],
+        color: Colors.cyan.withOpacity(0.5),
         barWidth: 2,
         isStrokeCapRound: true,
         dotData: FlDotData(show: true),
@@ -357,8 +354,6 @@ class _LineChart extends StatelessWidget {
       );
 
   leftTitles() {}
+
+  getTitles() {}
 }
-
-mixin TitleMeta {}
-
-AxisTitles({required SideTitles sideTitles}) {}

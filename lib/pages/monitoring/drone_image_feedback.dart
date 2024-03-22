@@ -168,7 +168,7 @@ class DroneImageFeedback extends StatelessWidget {
             Container(
               alignment: Alignment.center,
               width: double.infinity,
-              height: 170,
+              height: 150,
               margin: const EdgeInsets.symmetric(
                 horizontal: 20,
               ),
@@ -196,7 +196,17 @@ class DroneImageFeedback extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                       color: Colors.black
                     ),
-                  )
+                  ),
+                  SizedBox(height: 20,),
+                  Text(
+                    "Sites with high temperature have a higher possibility of facing water stress",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.black
+                    ),
+                  ),
+                  
                 ],
               ),
             ),

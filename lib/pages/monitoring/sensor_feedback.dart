@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planty/components/common/appbar_with_shadow.dart';
 import 'package:planty/components/monitoring/daily_crop_health_score.dart';
 
 class SensorFeedback extends StatelessWidget {
@@ -7,17 +8,13 @@ class SensorFeedback extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'IOT SENSORS FEEDBACK',
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
-        centerTitle: true,
-      ),
+      //IOT Sensor Feedback
+      appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(80),
+          child: AppBarWithShadow(
+            title: "IOT Sensor Feedback",
+            withBackBtn: true,
+          )),
       body: Container(
         color: const Color.fromARGB(255, 249, 249, 249),
         child: Padding(

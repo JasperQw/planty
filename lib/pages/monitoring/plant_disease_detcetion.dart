@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planty/components/common/appbar_with_shadow.dart';
 import 'package:planty/components/monitoring/plant_disease_detection/icon_button.dart';
 import 'package:planty/components/monitoring/plant_disease_detection/plant_disease.dart';
 import 'package:planty/components/monitoring/plant_disease_detection/protips_button.dart';
@@ -9,17 +10,13 @@ class PlantDiseaseDetection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'PLANT DISEASE DETECTION',
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
-        centerTitle: true,
-      ),
+      //Plant Disease Detcetion
+      appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(80),
+          child: AppBarWithShadow(
+            title: "Plant Disease Detection",
+            withBackBtn: true,
+          )),
       body: Container(
         color: Colors.white,
         width: MediaQuery.of(context).size.width,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:planty/components/common/appbar_with_shadow.dart';
 import 'package:planty/components/monitoring/planted_plant.dart';
 import 'package:planty/pages/monitoring/drone_pairing.dart';
 import 'package:planty/pages/monitoring/fertigation_pairing.dart';
@@ -12,17 +13,12 @@ class iotIntergration extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'AREA 1 IOT MONITORING',
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
-        centerTitle: true,
-      ),
+      appBar: const PreferredSize(
+            preferredSize: Size.fromHeight(80),
+            child: AppBarWithShadow(
+              title: "Area 1 - IOT Integration",
+              withBackBtn: true,
+            )),
       body: Container(
         color: const Color.fromARGB(255, 249, 249, 249),
         width: MediaQuery.of(context).size.width,
@@ -121,12 +117,13 @@ class iotIntergration extends StatelessWidget {
 
                     // Smart Irrigation System
                     Expanded(
-                      child:GestureDetector(
+                      child: GestureDetector(
                         onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const IrrigationPairing()),
+                                builder: (context) =>
+                                    const IrrigationPairing()),
                           );
                         },
                         child: Container(
@@ -160,7 +157,7 @@ class iotIntergration extends StatelessWidget {
                           ),
                         ),
                       ),
-                    ),   
+                    ),
                   ],
                 ),
 
@@ -171,7 +168,7 @@ class iotIntergration extends StatelessWidget {
                   children: <Widget>[
                     //Agricultural Drone Thermal Imaging
                     Expanded(
-                      child:GestureDetector(
+                      child: GestureDetector(
                         onTap: () {
                           Navigator.push(
                             context,
@@ -216,12 +213,13 @@ class iotIntergration extends StatelessWidget {
 
                     // Smart Fertigation System
                     Expanded(
-                      child:GestureDetector(
+                      child: GestureDetector(
                         onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const FertigationPairing()),
+                                builder: (context) =>
+                                    const FertigationPairing()),
                           );
                         },
                         child: Container(

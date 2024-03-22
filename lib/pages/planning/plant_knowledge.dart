@@ -199,7 +199,7 @@ class _PlantKnowledgeState extends State<PlantKnowledge> {
                                             ],
                                           ),
                                         ),
-                                        const SizedBox(width: 50),
+                                        const SizedBox(width: 30),
                                         SvgPicture.asset(
                                             'images/humidity_icon.svg'),
                                         Container(
@@ -243,7 +243,7 @@ class _PlantKnowledgeState extends State<PlantKnowledge> {
                                             ],
                                           ),
                                         ),
-                                        const SizedBox(width: 50),
+                                        const SizedBox(width: 35),
                                         SvgPicture.asset(
                                             'images/soil_ph_icon.svg'),
                                         Container(
@@ -291,7 +291,7 @@ class _PlantKnowledgeState extends State<PlantKnowledge> {
                                             ],
                                           ),
                                         ),
-                                        const SizedBox(width: 50),
+                                        const SizedBox(width: 35),
                                         SvgPicture.asset(
                                             'images/soil_type_icon.svg'),
                                         Container(
