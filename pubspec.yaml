@@ -60,7 +60,6 @@ dependencies:
   sliding_up_panel: ^2.0.0+1
   video_player: ^2.6.0
   webview_flutter: ^4.7.0
-  table_calendar: ^3.0.8
 
 dev_dependencies:
   flutter_lints: ^3.0.1
