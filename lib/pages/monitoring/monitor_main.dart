@@ -203,7 +203,7 @@ class _MonitorMainState extends State<MonitorMain> {
                               );
                             },
                             label: const Text(
-                              'Monitor your frarm with IOT',
+                              'Monitor your farm with IOT',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 18,
