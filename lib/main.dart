@@ -7,6 +7,7 @@ import 'package:planty/pages/community/home_page.dart';
 import 'package:planty/pages/home/home_page.dart';
 import 'package:planty/pages/planning/planning_home.dart';
 import 'package:planty/pages/planning/drone_image_plotter_drawing_canva_2.dart';
+import 'package:planty/pages/profile/profile.dart';
 import 'package:planty/utilities/color.dart';
 import 'package:planty/pages/monitoring/monitor_main.dart';
 
@@ -32,7 +33,7 @@ class _MyAppState extends State<MyApp> {
     const CommunityHome(),
     const PlanningHome(),
     const MonitorMain(),
-    const CommunityHome(),
+    const Profile(),
   ];
   Widget currentFragment = const MonitorMain();
   // This widget is the root of your application.
