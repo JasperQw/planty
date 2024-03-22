@@ -204,11 +204,7 @@ class _MonitorMainState extends State<MonitorMain> {
                               );
                             },
                             label: const Text(
-<<<<<<< HEAD
                               'Monitor your farm with IOT',
-=======
-                              'Monitor your frarm with IoT',
->>>>>>> Serena/planning
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 18,
