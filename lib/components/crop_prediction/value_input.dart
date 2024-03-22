@@ -37,21 +37,22 @@ class _ValueInputState extends State<ValueInput> {
         ),
         TextField(
           keyboardType: TextInputType.multiline,
-                maxLines: null,
-                onTapOutside: (event) {
-                  FocusScope.of(context).unfocus();
-                },
+            maxLines: null,
+            onTapOutside: (event) {
+              FocusScope.of(context).unfocus();
+            },
           decoration: InputDecoration(
             filled: true,
             fillColor: Colors.grey.withOpacity(0.5),
             contentPadding: const EdgeInsets.symmetric(
               horizontal: 16,
-              vertical: 15,
+              vertical: 20,
             ),
             hintText: widget.inputHint,
             hintStyle: const TextStyle(
-                    fontSize: 14,
+                    fontSize: 16,
                     color: focusGrey,
+                  
                   ),
               enabledBorder: OutlineInputBorder(
               borderSide: BorderSide.none,
@@ -61,7 +62,9 @@ class _ValueInputState extends State<ValueInput> {
               borderSide: BorderSide.none,
               borderRadius: BorderRadius.circular(12.0), // Set corner radius here
             ),
+            alignLabelWithHint: true, // This ensures the hint text is aligned with the input text when it is entered
           ),
+          textAlign: TextAlign.center,
         ),
         const SizedBox(
           height: 10,

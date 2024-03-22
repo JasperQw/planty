@@ -53,8 +53,9 @@ class PestContainer extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(height: 5,),
           const Text(
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "Discover how to spot and combat plant pests and diseases, safeguarding your garden's well-being.",
             style:TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.w400,

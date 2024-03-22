@@ -52,8 +52,9 @@ class TutorialContainer extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(height: 5,),
           const Text(
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "Gain comprehensive insights into gardening techniques and nurturing practices through our informative tutorials on planting and soil management,",
             style:TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.w400,
