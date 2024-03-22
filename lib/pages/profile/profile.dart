@@ -47,12 +47,12 @@ class Profile extends StatelessWidget {
             child: Container(
               width: 140, // Adjust the width of the circular image as needed
               height: 140, // Adjust the height of the circular image as needed
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 color: Color.fromARGB(255, 245, 249,
                     250), // You can set any color or use an image here
               ),
-              child: Center(
+              child: const Center(
                 child: Icon(
                   Icons.person,
                   size: 80, // Adjust the size of the icon as needed
@@ -61,7 +61,7 @@ class Profile extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             top: 300, // Adjust the position of the text as needed
             child: Text(
               'John Doe', // Adjust the text as needed
@@ -138,7 +138,7 @@ class Profile extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Row(
+              child: const Row(
                 children: [
                   Icon(
                     Icons.lock,
@@ -179,7 +179,7 @@ class Profile extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Row(
+              child: const Row(
                 children: [
                   Icon(
                     Icons.exit_to_app,
