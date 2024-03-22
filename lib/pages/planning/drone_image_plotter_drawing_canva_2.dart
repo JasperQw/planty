@@ -1,24 +1,25 @@
 import 'dart:typed_data';
 import 'dart:ui';
-
+import 'package:fl_chart/fl_chart.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
+import 'package:planty/components/common/appbar_with_shadow.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_painter/flutter_painter.dart';
-
 import 'dart:ui' as ui;
-
 import 'package:phosphor_flutter/phosphor_flutter.dart';
-
-
 
 class drone_image_plotter_drawing_canva_2 extends StatefulWidget {
   const drone_image_plotter_drawing_canva_2({Key? key}) : super(key: key);
 
   @override
-  _drone_image_plotter_drawing_canva_2State createState() => _drone_image_plotter_drawing_canva_2State();
+  _drone_image_plotter_drawing_canva_2State createState() =>
+      _drone_image_plotter_drawing_canva_2State();
 }
 
-class _drone_image_plotter_drawing_canva_2State extends State<drone_image_plotter_drawing_canva_2> {
+class _drone_image_plotter_drawing_canva_2State
+    extends State<drone_image_plotter_drawing_canva_2> {
   static const Color red = Color(0xFFFF0000);
   FocusNode textFocusNode = FocusNode();
   late PainterController controller;
@@ -30,32 +31,22 @@ class _drone_image_plotter_drawing_canva_2State extends State<drone_image_plotte
     ..strokeCap = StrokeCap.round;
 
   static const List<String> imageLinks = [
-    "https://i.imgur.com/btoI5OX.png",
-    "https://i.imgur.com/EXTQFt7.png",
-    "https://i.imgur.com/EDNjJYL.png",
-    "https://i.imgur.com/uQKD6NL.png",
-    "https://i.imgur.com/cMqVRbl.png",
-    "https://i.imgur.com/1cJBAfI.png",
-    "https://i.imgur.com/eNYfHKL.png",
-    "https://i.imgur.com/c4Ag5yt.png",
-    "https://i.imgur.com/GhpCJuf.png",
-    "https://i.imgur.com/XVMeluF.png",
-    "https://i.imgur.com/mt2yO6Z.png",
-    "https://i.imgur.com/rw9XP1X.png",
-    "https://i.imgur.com/pD7foZ8.png",
-    "https://i.imgur.com/13Y3vp2.png",
-    "https://i.imgur.com/ojv3yw1.png",
-    "https://i.imgur.com/f8ZNJJ7.png",
-    "https://i.imgur.com/BiYkHzw.png",
-    "https://i.imgur.com/snJOcEz.png",
-    "https://i.imgur.com/b61cnhi.png",
-    "https://i.imgur.com/FkDFzYe.png",
-    "https://i.imgur.com/P310x7d.png",
-    "https://i.imgur.com/5AHZpua.png",
-    "https://i.imgur.com/tmvJY4r.png",
-    "https://i.imgur.com/PdVfGkV.png",
-    "https://i.imgur.com/1PRzwBf.png",
-    "https://i.imgur.com/VeeMfBS.png",
+    "https://cdn-icons-png.freepik.com/512/4215/4215319.png?ga=GA1.1.1395355170.1710045942&",
+    "https://cdn-icons-png.freepik.com/512/5026/5026951.png?ga=GA1.1.1395355170.1710045942&",
+    "https://cdn-icons-png.freepik.com/512/3935/3935023.png?ga=GA1.1.1395355170.1710045942&",
+    "https://cdn-icons-png.freepik.com/512/712/712166.png?ga=GA1.1.1395355170.1710045942&",
+    "https://cdn-icons-png.freepik.com/512/3025/3025587.png?ga=GA1.1.1395355170.1710045942&",
+    "https://cdn-icons-png.freepik.com/512/12710/12710371.png?ga=GA1.1.1395355170.1710045942&",
+    "https://cdn-icons-png.freepik.com/512/4060/4060535.png?ga=GA1.1.1395355170.1710045942&",
+    "https://cdn-icons-png.freepik.com/512/3944/3944220.png?ga=GA1.1.1395355170.1710045942&",
+    "https://cdn-icons-png.freepik.com/512/4055/4055134.png?ga=GA1.1.1395355170.1710045942&",
+    "https://cdn-icons-png.freepik.com/512/6969/6969461.png?ga=GA1.1.1395355170.1710045942&",
+    "https://cdn-icons-png.freepik.com/512/4087/4087010.png?ga=GA1.1.1395355170.1710045942&",
+    "https://cdn-icons-png.freepik.com/512/1087/1087420.png?ga=GA1.1.1395355170.1710045942&",
+    "https://cdn-icons-png.freepik.com/512/765/765599.png?ga=GA1.1.1395355170.1710045942&",
+    "https://cdn-icons-png.freepik.com/512/7484/7484120.png?ga=GA1.1.1395355170.1710045942&",
+    "https://cdn-icons-png.freepik.com/512/5582/5582672.png?ga=GA1.1.1395355170.1710045942&",
+    "https://cdn-icons-png.freepik.com/512/13523/13523358.png?ga=GA1.1.1395355170.1710045942&"
   ];
 
   @override
@@ -78,7 +69,7 @@ class _drone_image_plotter_drawing_canva_2State extends State<drone_image_plotte
             scale: const ScaleSettings(
               enabled: true,
               minScale: 1,
-              maxScale: 5,
+              maxScale: 20,
             )));
     // Listen to focus events of the text field
     textFocusNode.addListener(onFocus);
@@ -91,7 +82,7 @@ class _drone_image_plotter_drawing_canva_2State extends State<drone_image_plotte
   void initBackground() async {
     // Extension getter (.image) to get [ui.Image] from [ImageProvider]
     final image =
-        await const NetworkImage('https://picsum.photos/1920/1080/').image;
+        await const NetworkImage('https://i.imgur.com/aQoHMS4.png').image;
 
     setState(() {
       backgroundImage = image;
@@ -106,58 +97,23 @@ class _drone_image_plotter_drawing_canva_2State extends State<drone_image_plotte
 
   Widget buildDefault(BuildContext context) {
     return Scaffold(
-        appBar: PreferredSize(
-          preferredSize: const Size(double.infinity, kToolbarHeight),
-          // Listen to the controller and update the UI when it updates.
-          child: ValueListenableBuilder<PainterControllerValue>(
-              valueListenable: controller,
-              child: const Text("Flutter Painter Example"),
-              builder: (context, _, child) {
-                return AppBar(
-                  title: child,
-                  actions: [
-                    // Delete the selected drawable
-                    IconButton(
-                      icon:  Icon(
-                        PhosphorIcons.trash(),
-                      ),
-                      onPressed: controller.selectedObjectDrawable == null
-                          ? null
-                          : removeSelectedDrawable,
-                    ),
-                    // Delete the selected drawable
-                    IconButton(
-                      icon: const Icon(
-                        Icons.flip,
-                      ),
-                      onPressed: controller.selectedObjectDrawable != null &&
-                              controller.selectedObjectDrawable is ImageDrawable
-                          ? flipSelectedImageDrawable
-                          : null,
-                    ),
-                    // Redo action
-                    IconButton(
-                      icon:  Icon(
-                        PhosphorIcons.arrowClockwise(),
-                      ),
-                      onPressed: controller.canRedo ? redo : null,
-                    ),
-                    // Undo action
-                    IconButton(
-                      icon:  Icon(
-                        PhosphorIcons.arrowCounterClockwise(),
-                      ),
-                      onPressed: controller.canUndo ? undo : null,
-                    ),
-                  ],
-                );
-              }),
+        appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(
+            80,
+          ),
+          child: AppBarWithShadow(
+            title: "Agricultural Drone Image Plotter",
+            withBackBtn: true,
+          ),
         ),
         // Generate image
         floatingActionButton: FloatingActionButton(
-          child:  Icon(
-            PhosphorIcons.image(),
+          child: Icon(
+            Icons.save_as,
           ),
+          backgroundColor: Colors.green[500],
+          hoverColor: Colors.green[700],
+          tooltip: "Save as image",
           onPressed: renderAndDisplayImage,
         ),
         body: Stack(
@@ -167,8 +123,10 @@ class _drone_image_plotter_drawing_canva_2State extends State<drone_image_plotte
               Positioned.fill(
                 child: Center(
                   child: AspectRatio(
-                    aspectRatio:
-                        backgroundImage!.width / backgroundImage!.height,
+                    // Dynamically set the aspectRatio based on the image dimensions
+                    aspectRatio: backgroundImage!.width /
+                        backgroundImage!.height, // Landscape mode,
+                    // Portrait mode
                     child: FlutterPainter(
                       controller: controller,
                     ),
@@ -374,91 +332,135 @@ class _drone_image_plotter_drawing_canva_2State extends State<drone_image_plotte
         ),
         bottomNavigationBar: ValueListenableBuilder(
           valueListenable: controller,
-          builder: (context, _, __) => Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              // Free-style eraser
-              IconButton(
-                icon: Icon(
-                  PhosphorIcons.eraser(),
-                  color: controller.freeStyleMode == FreeStyleMode.erase
-                      ? Theme.of(context).primaryColor
-                      : null,
-                ),
-                onPressed: toggleFreeStyleErase,
-              ),
-              // Free-style drawing
-              IconButton(
-                icon: Icon(
-                  PhosphorIcons.scribbleLoop(),
-                  color: controller.freeStyleMode == FreeStyleMode.draw
-                      ? Theme.of(context).primaryColor
-                      : null,
-                ),
-                onPressed: toggleFreeStyleDraw,
-              ),
-              // Add text
-              IconButton(
-                icon: Icon(
-                  PhosphorIcons.textT(),
-                  color: textFocusNode.hasFocus
-                      ? Theme.of(context).primaryColor
-                      : null,
-                ),
-                onPressed: addText,
-              ),
-              // Add sticker image
-              IconButton(
-                icon:  Icon(
-                  PhosphorIcons.sticker(),
-                ),
-                onPressed: addSticker,
-              ),
-              // Add shapes
-              if (controller.shapeFactory == null)
-                PopupMenuButton<ShapeFactory?>(
-                  tooltip: "Add shape",
-                  itemBuilder: (context) => <ShapeFactory, String>{
-                    LineFactory(): "Line",
-                    ArrowFactory(): "Arrow",
-                    DoubleArrowFactory(): "Double Arrow",
-                    RectangleFactory(): "Rectangle",
-                    OvalFactory(): "Oval",
-                  }
-                      .entries
-                      .map((e) => PopupMenuItem(
-                          value: e.key,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Icon(
-                                getShapeIcon(e.key),
-                                color: Colors.black,
-                              ),
-                              Text(" ${e.value}")
-                            ],
-                          )))
-                      .toList(),
-                  onSelected: selectShape,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Icon(
-                      getShapeIcon(controller.shapeFactory),
-                      color: controller.shapeFactory != null
-                          ? Theme.of(context).primaryColor
-                          : null,
-                    ),
-                  ),
-                )
-              else
+          builder: (context, _, __) => Container(
+            color: Colors.amber[50],
+            padding: EdgeInsets.symmetric(vertical: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                // Free-style eraser
                 IconButton(
                   icon: Icon(
-                    getShapeIcon(controller.shapeFactory),
-                    color: Theme.of(context).primaryColor,
+                    PhosphorIcons.eraser(),
+                    color: controller.freeStyleMode == FreeStyleMode.erase
+                        ? Theme.of(context).primaryColor
+                        : null,
                   ),
-                  onPressed: () => selectShape(null),
+                  tooltip: "Erase",
+                  onPressed: toggleFreeStyleErase,
                 ),
-            ],
+                // Free-style drawing
+                IconButton(
+                  icon: Icon(
+                    PhosphorIcons.scribbleLoop(),
+                    color: controller.freeStyleMode == FreeStyleMode.draw
+                        ? Theme.of(context).primaryColor
+                        : null,
+                  ),
+                  tooltip: "Draw",
+                  onPressed: toggleFreeStyleDraw,
+                ),
+                // Add text
+                IconButton(
+                  icon: Icon(
+                    PhosphorIcons.textT(),
+                    color: textFocusNode.hasFocus
+                        ? Theme.of(context).primaryColor
+                        : null,
+                  ),
+                  tooltip: "Annotate",
+                  onPressed: addText,
+                ),
+                // Add sticker image
+                IconButton(
+                  icon: Icon(
+                    PhosphorIcons.plant(),
+                  ),
+                  tooltip: "Add plants statue",
+                  onPressed: addSticker,
+                ),
+                // Add shapes
+                if (controller.shapeFactory == null)
+                  PopupMenuButton<ShapeFactory?>(
+                    tooltip: "Add shape",
+                    itemBuilder: (context) => <ShapeFactory, String>{
+                      LineFactory(): "Line",
+                      ArrowFactory(): "Arrow",
+                      DoubleArrowFactory(): "Double Arrow",
+                      RectangleFactory(): "Rectangle",
+                      OvalFactory(): "Oval",
+                    }
+                        .entries
+                        .map((e) => PopupMenuItem(
+                            value: e.key,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  getShapeIcon(e.key),
+                                  color: Colors.black,
+                                ),
+                                Text(" ${e.value}")
+                              ],
+                            )))
+                        .toList(),
+                    onSelected: selectShape,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(
+                        getShapeIcon(controller.shapeFactory),
+                        color: controller.shapeFactory != null
+                            ? Theme.of(context).primaryColor
+                            : null,
+                      ),
+                    ),
+                  )
+                else
+                  IconButton(
+                    icon: Icon(
+                      getShapeIcon(controller.shapeFactory),
+                      color: Theme.of(context).primaryColor,
+                    ),
+                    onPressed: () => selectShape(null),
+                  ),
+                IconButton(
+                  icon: Icon(
+                    PhosphorIcons.trash(),
+                  ),
+                  tooltip: "Remove items",
+                  onPressed: controller.selectedObjectDrawable == null
+                      ? null
+                      : removeSelectedDrawable,
+                ),
+                // Delete the selected drawable
+                IconButton(
+                  icon: const Icon(
+                    Icons.flip,
+                  ),
+                  tooltip: "Flip items",
+                  onPressed: controller.selectedObjectDrawable != null &&
+                          controller.selectedObjectDrawable is ImageDrawable
+                      ? flipSelectedImageDrawable
+                      : null,
+                ),
+                // Redo action
+                IconButton(
+                  icon: Icon(
+                    PhosphorIcons.arrowClockwise(),
+                  ),
+                  tooltip: "Undo",
+                  onPressed: controller.canRedo ? redo : null,
+                ),
+                // Undo action
+                IconButton(
+                  icon: Icon(
+                    PhosphorIcons.arrowCounterClockwise(),
+                  ),
+                  tooltip: "Redo",
+                  onPressed: controller.canUndo ? undo : null,
+                ),
+              ],
+            ),
           ),
         ));
   }
@@ -476,7 +478,7 @@ class _drone_image_plotter_drawing_canva_2State extends State<drone_image_plotte
     }
     if (shapeFactory is RectangleFactory) return PhosphorIcons.rectangle();
     if (shapeFactory is OvalFactory) return PhosphorIcons.circle();
-    return PhosphorIcons.polygon();
+    return PhosphorIcons.shapes();
   }
 
   void undo() {
@@ -628,9 +630,13 @@ class SelectStickerImageDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Text("Select sticker"),
+      title: const Text(
+        "Select plant(s)",
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 19, fontWeight: FontWeight.w800),
+      ),
       content: imagesLinks.isEmpty
-          ? const Text("No images")
+          ? const Text("No plant(s) currently")
           : FractionallySizedBox(
               heightFactor: 0.5,
               child: SingleChildScrollView(
@@ -650,7 +656,10 @@ class SelectStickerImageDialog extends StatelessWidget {
             ),
       actions: [
         TextButton(
-          child: const Text("Cancel"),
+          child: const Text(
+            "Cancel",
+            style: TextStyle(color: Colors.black, fontSize: 17),
+          ),
           onPressed: () => Navigator.pop(context),
         )
       ],

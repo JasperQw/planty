@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
     const MonitorMain(),
     const CommunityHome(),
   ];
-  Widget currentFragment = const drone_image_plotter_drawing_canva_2();
+  Widget currentFragment = const MonitorMain();
   // This widget is the root of your application.
 
   Color iconColor(index) {
@@ -50,8 +50,9 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Planty',
-      theme: ThemeData.light().copyWith(scaffoldBackgroundColor: background,),
-
+      theme: ThemeData.light().copyWith(
+        scaffoldBackgroundColor: background,
+      ),
       home: Scaffold(
         appBar: const PreferredSize(
           preferredSize: Size.fromHeight(
