@@ -35,7 +35,7 @@ class _CommunityHomeState extends State<CommunityHome> {
                   height: 16,
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  padding: EdgeInsets.symmetric(horizontal: 16),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [

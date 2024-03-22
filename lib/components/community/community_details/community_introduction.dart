@@ -19,7 +19,8 @@ class CommunityIntroduction extends StatefulWidget {
 class _CommunityIntroductionState extends State<CommunityIntroduction> {
   @override
   Widget build(BuildContext context) {
-    NumberFormat formatter = NumberFormat.decimalPatternDigits();
+    NumberFormat formatter = NumberFormat.decimalPattern();
+    formatter.maximumFractionDigits = 2;
     return Container(
       padding: const EdgeInsets.symmetric(
         horizontal: 16,

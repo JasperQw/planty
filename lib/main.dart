@@ -4,7 +4,11 @@ import 'package:flutter_svg/svg.dart';
 import 'package:planty/components/layout/appbar.dart';
 import 'package:planty/firebase_options.dart';
 import 'package:planty/pages/community/home_page.dart';
+import 'package:planty/pages/home/home_page.dart';
+import 'package:planty/pages/planning/planning_home.dart';
+import 'package:planty/pages/planning/smart_plot_planner_input_data.dart';
 import 'package:planty/utilities/color.dart';
+import 'package:planty/pages/monitoring/monitor_main.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,13 +28,13 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   int currentPageIndex = 1;
   List<Widget> fragmentList = [
+    const HomePage(),
     const CommunityHome(),
-    const CommunityHome(),
-    const CommunityHome(),
-    const CommunityHome(),
+    const PlanningHome(),
+    const MonitorMain(),
     const CommunityHome(),
   ];
-  Widget currentFragment = const CommunityHome();
+  Widget currentFragment = const smart_plot_planner_input_data();
   // This widget is the root of your application.
 
   Color iconColor(index) {
