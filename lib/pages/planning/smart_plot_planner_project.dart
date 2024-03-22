@@ -19,7 +19,7 @@ class smart_plot_planner_project extends StatelessWidget {
           top: true,
           child: SingleChildScrollView(
             child: Container(
-                margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+                margin: const EdgeInsets.fromLTRB(0, 70, 0, 20),
                 color: Colors.white,
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
