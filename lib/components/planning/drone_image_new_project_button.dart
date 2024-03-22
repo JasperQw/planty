@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planty/pages/planning/drone_image_plotter_new_project.dart';
+import 'package:planty/pages/planning/drone_image_plotter_drawing_canva_2.dart';
 
 class drone_image_new_project_button extends StatelessWidget {
   const drone_image_new_project_button({
@@ -11,7 +11,8 @@ class drone_image_new_project_button extends StatelessWidget {
     return ElevatedButton(
         onPressed: () {
           Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => const drone_image_plotter_new_project()));
+              builder: (context) =>
+                  const drone_image_plotter_drawing_canva_2()));
         },
         style: ElevatedButton.styleFrom(
           minimumSize: const Size(230, 60),

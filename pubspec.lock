@@ -649,6 +649,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
+<<<<<<< HEAD
   simple_gesture_detector:
     dependency: transitive
     description:
@@ -657,6 +658,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.2.1"
+=======
+>>>>>>> Serena/planning
   sky_engine:
     dependency: transitive
     description: flutter
