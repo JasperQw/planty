@@ -25,13 +25,13 @@ class _AnotherImageListState extends State<AnotherImageList> {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  AnotherImage(),
-                  AnotherImage(),
-                  AnotherImage(),
-                  AnotherImage(),
-                  AnotherImage(),
-                  AnotherImage(),
-                  AnotherImage(),
+                  AnotherImage(
+                    image:
+                        "https://media.istockphoto.com/id/157180820/photo/lawnmower-man.jpg?s=612x612&w=0&k=20&c=Ca9Y5S9YetkwFCjmIYpeooEiqZT8MjpA7oA_Hp6xWZk=",
+                  ),
+                  AnotherImage(
+                      image:
+                          "https://cdn.thewirecutter.com/wp-content/media/2023/09/string-trimmer-2048px-0003.jpg?auto=webp&quality=75&width=1024"),
                 ],
               ),
             ),

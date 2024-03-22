@@ -42,7 +42,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                   ),
                   const ItemsTitlePrice(
                     title: "Nvidia Grass Trimmer",
-                    price: 4000.3,
+                    price: 420,
                   ),
                   const AnotherImageList(),
                   const TitleWidget(

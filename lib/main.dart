@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
     const MonitorMain(),
     const CommunityHome(),
   ];
-  Widget currentFragment = const smart_plot_planner_input_data();
+  Widget currentFragment = const CommunityHome();
   // This widget is the root of your application.
 
   Color iconColor(index) {
