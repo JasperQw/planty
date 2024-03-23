@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
     const MonitorMain(),
     const Profile(),
   ];
-  Widget currentFragment = const MonitorMain();
+  Widget currentFragment = const HomePage();
   // This widget is the root of your application.
 
   Color iconColor(index) {
