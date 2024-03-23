@@ -19,13 +19,13 @@ class _PredictionButtonState extends State<PredictionButton> {
         },
         child: Container(
           alignment: Alignment.center,
-          width: 300,
+          width: 200,
           margin: const EdgeInsets.symmetric(
             horizontal: 16,
           ),
           padding: const EdgeInsets.symmetric(
             horizontal: 18,
-            vertical: 15,
+            vertical: 12,
           ),
           decoration: BoxDecoration(
               color: green,
