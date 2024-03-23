@@ -49,6 +49,7 @@ class _general_soil_method_carouselState
             options: CarouselOptions(
               height: MediaQuery.of(context).size.height - 130,
               autoPlay: true,
+              autoPlayInterval: Duration(seconds: 2),
               initialPage: 0,
               onPageChanged: (index, reason) {
                 setState(() {

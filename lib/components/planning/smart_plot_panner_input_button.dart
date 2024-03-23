@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planty/pages/planning/drone_image_plotter_drawing_canva.dart';
 import 'package:planty/pages/planning/smart_plot_drafting.dart';
 
 class smart_plot_panner_input_button extends StatelessWidget {
@@ -11,7 +12,7 @@ class smart_plot_panner_input_button extends StatelessWidget {
     return ElevatedButton(
         onPressed: () {
           Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => const smart_plot_drafting()));
+              builder: (context) => const drone_image_plotter_drawing_canva()));
         },
         style: ElevatedButton.styleFrom(
           minimumSize: const Size(230, 60),

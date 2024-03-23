@@ -33,7 +33,7 @@ class _MaskedImageCollectionState extends State<MaskedImageCollection> {
                       introductionTitle: "FRUIT FARMER",
                       membersAmount: 1000,
                       introduction:
-                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
+                          "Welcome to the vibrant world of fruit farming in Malaysia, where lush landscapes and diverse climates converge to create a haven for fruit cultivation. The Malaysian fruit farming community stands as a beacon of agricultural prowess, renowned for its rich heritage of cultivating an array of tropical fruits, including durian, mangosteen, rambutan, and jackfruit. With a tradition deeply rooted in sustainable practices and innovation, Malaysian fruit farmers employ cutting-edge techniques alongside time-honored wisdom to yield bountiful harvests year-round. Embracing a spirit of collaboration and camaraderie, this community fosters a culture of knowledge sharing and support, ensuring the continued prosperity of Malaysia's fruit farming industry amidst an ever-evolving agricultural landscape."),
                 ),
               ],
             ),

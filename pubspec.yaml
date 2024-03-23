@@ -40,6 +40,7 @@ dependencies:
   firebase_auth: ^4.17.8
   firebase_core: ^2.27.0
   firebase_storage: ^11.6.9
+  fl_chart: ^0.66.2
   flutter:
     sdk: flutter
   flutter_drawing_board: ^0.7.0+2
@@ -57,10 +58,9 @@ dependencies:
   path_provider: ^2.1.2
   phosphor_flutter: ^2.0.1
   sliding_up_panel: ^2.0.0+1
+  table_calendar: ^3.0.8
   video_player: ^2.6.0
   webview_flutter: ^4.7.0
-  table_calendar: ^3.0.8
-  fl_chart: ^0.66.2
 
 dev_dependencies:
   flutter_lints: ^3.0.1
