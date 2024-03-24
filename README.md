@@ -14,6 +14,9 @@ Beyond that, Planty is a community hub. Connect with other farmers on social med
 
 Aligned with National Agro Policy 2.0, Planty promotes technology and sustainability in agriculture. We're here to support farmers and gardeners every step of the way. Join Planty today and grow smarter, together.
 
+## Suitable Technology To Build Solution
+![image](https://github.com/JasperQw/planty/assets/116553010/14e22f28-d82f-4063-ab47-ce024de804ad)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
