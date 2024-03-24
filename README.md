@@ -14,6 +14,12 @@ Beyond that, Planty is a community hub. Connect with other farmers on social med
 
 Aligned with National Agro Policy 2.0, Planty promotes technology and sustainability in agriculture. We're here to support farmers and gardeners every step of the way. Join Planty today and grow smarter, together.
 
+## Planty Proposal Deck
+https://www.canva.com/design/DAGATm6p-Qo/Ys40SJuXs_-riOLDuvZSLA/edit?utm_content=DAGATm6p-Qo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+## Frontend Showcase & Presentation
+https://www.youtube.com/watch?v=MAI4uuJXOQg&feature=youtu.be
+
 ## Suitable Technology To Build Solution
 ![image](https://github.com/JasperQw/planty/assets/116553010/14e22f28-d82f-4063-ab47-ce024de804ad)
 
