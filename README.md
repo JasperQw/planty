@@ -12,7 +12,7 @@ But we're not just about data – Planty automates irrigation and fertigation, s
 
 Beyond that, Planty is a community hub. Connect with other farmers on social media, trade resources in our Marketplace, and get personalized advice and predictions for your crops.
 
-Aligned with National Agro Policy 2.0, Planty promotes technology and sustainability in agriculture. We're here to support farmers and gardeners every step of the way. Join Planty today and grow smarter, together.
+Aligned with National AgroFood Policy 2.0, Planty promotes technology and sustainability in agriculture. We're here to support farmers and gardeners every step of the way. Join Planty today and grow smarter, together.
 
 ## Planty Proposal Deck
 https://www.canva.com/design/DAGATm6p-Qo/wpoR7nUmNuHk0oTZwexOTw/view?utm_content=DAGATm6p-Qo&utm_campaign=designshare&utm_medium=link&utm_source=viewer
